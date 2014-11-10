@@ -1,0 +1,35 @@
+{% load i18n %}
+
+<!-- TODO: Replace by default edit view once available in Studio -->
+<div class="wrapper-comp-settings is-active editor-with-buttons " id="settings-tab">
+  <ul class="list-input settings-list">
+      <li class="field comp-setting-entry is-set">
+          <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="edit_display_name">{% trans "Display Name" %}</label>
+            <input class="input setting-input edit-display-name" id="edit_display_name" value="{{ self.display_name }}" type="text">
+          </div>
+          <span class="tip setting-help">{% trans "This name appears in the horizontal navigation at the top of the page." %}</span>
+      </li>
+      <li class="field comp-setting-entry is-set">
+          <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="edit_embed_code">{% trans "Embed Code" %}</label>
+            <textarea rows="4" class="input setting-input edit-embed-code" id="edit_embed_code">
+              {{ self.embed_code }}
+            </textarea>
+          </div>
+          <span class="tip setting-help">{% trans "Google provides an embed code for Drive documents with a variety of settings. From inside a Google Drive document, select Publish to the Web from within the File menuto get to your Embed Code with your desired settings." %}</span>
+      </li>
+  </ul>
+  <div class="xblock-actions">
+    <span class="xblock-editor-error-message"></span>
+    <ul>
+      <li class="action-item">
+        <a href="#" class="button action-primary save-button">{% trans "Save" %}</a>
+      </li>
+
+      <li class="action-item">
+        <a href="#" class="button cancel-button">{% trans "Cancel" %}</a>
+      </li>
+    </ul>
+  </div>
+</div>

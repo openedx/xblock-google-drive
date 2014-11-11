@@ -44,13 +44,12 @@ class GoogleCalendarBlock(XBlock):
         scope=Scope.settings,
         default=textwrap.dedent("""
             <iframe
-                src="https://docs.google.com/presentation/d/1B22AsMwG7jgE39vm1BuiJClir_JUz1q077cPEKJR2mI/embed?start=false&loop=false&delayms=3000"
+                src="https://www.google.com/calendar/embed?src=ode5942aqjk6g9lm0r1p6kripo%40group.calendar.google.com&ctz=Europe/Belgrade"
+                style="border: 0"
+                width="800"
+                height="600"
                 frameborder="0"
-                width="960"
-                height="569"
-                allowfullscreen="true"
-                mozallowfullscreen="true"
-                webkitallowfullscreen="true">
+                scrolling="no">
             </iframe>
         """))
 

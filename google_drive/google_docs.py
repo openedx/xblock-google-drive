@@ -40,7 +40,7 @@ class GoogleDocumentBlock(XBlock):
 
     embed_code = String(
         display_name="Embed Code",
-        help="Google provides an embed code for Drive documents with a variety of settings. From inside a Google Drive document, select Publish to the Web from within the File menuto get to your Embed Code with your desired settings.",
+        help="Google provides an embed code for Drive documents with a variety of settings. From inside a Google Drive document, select Publish to the Web from within the File menu to get to your Embed Code with your desired settings.",
         scope=Scope.settings,
         default=textwrap.dedent("""
             <iframe

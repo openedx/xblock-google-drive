@@ -58,7 +58,7 @@ Access it at [http://localhost:8000/](http://localhost:8000).
 Running tests
 -------------
 
-From the xblock-mentoring repository root, run the tests with the
+From the xblock-google-drive repository root, run the tests with the
 following command:
 
 ```bash
@@ -78,6 +78,6 @@ you might also have to prepend `PYTHONPATH=".:/path/to/xblock"` to the command a
 License
 -------
 
-The Image Explorer XBlock is available under the GNU Affero General
+The Google Drive & Calendar XBlocks are available under the GNU Affero General
 Public License (AGPLv3).
 

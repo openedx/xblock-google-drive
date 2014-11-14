@@ -12,7 +12,7 @@ import textwrap
 #from xml.etree import ElementTree as ET
 
 from xblock.core import XBlock
-from xblock.fields import Scope, String
+from xblock.fields import Scope, String, Integer
 from xblock.fragment import Fragment
 
 # from StringIO import StringIO
@@ -38,20 +38,22 @@ class GoogleCalendarBlock(XBlock):
         default="Example Google Calendar"
     )
 
-    embed_code = String(
-        display_name="Embed Code",
-        help="Google provides an embed code for Drive calendars with a variety of settings. From inside a Google Drive calendar, select Publish to the Web from within the File menu to get to your Embed Code with your desired settings.",
+    calendar_id = String(
+        display_name="Public Calendar ID",
+        help="This is the Calendar ID for the publically available Google calendar you would like to embed. To find this ID, go to your Calendar Settings and copy the ID found in the Calendar Address section.",
         scope=Scope.settings,
-        default=textwrap.dedent("""
-            <iframe
-                src="https://www.google.com/calendar/embed?src=ode5942aqjk6g9lm0r1p6kripo%40group.calendar.google.com&ctz=Europe/Belgrade"
-                style="border: 0"
-                width="800"
-                height="600"
-                frameborder="0"
-                scrolling="no">
-            </iframe>
-        """))
+        default="edx.org_vme83q0j2v52mbhjncvfd5uqs8@group.calendar.google.com"
+    )
+
+    # 0=Week, 1=Month, 2=Agenda
+    default_view = Integer(
+        display_name="Default View",
+        help="The view of the calendar initially presented to students.",
+        scope=Scope.settings,
+        default=1
+    )
+
+    views = ["Week", "Month", "Agenda"]
 
     def student_view(self, context={}):
         """
@@ -59,14 +61,20 @@ class GoogleCalendarBlock(XBlock):
         """
 
         fragment = Fragment()
+
+        view = "Week" if self.default_view==0 else "Month" if self.default_view==1 else "Agenda"
+
+        iframe = "<iframe src=\"https://www.google.com/calendar/embed?mode={}&amp;src={}\"></iframe>".format(view, self.calendar_id)
+
         context.update({
             "self": self,
+            "iframe": iframe
         })
-        fragment.add_content(render_template('/templates/html/google_docs.html', context))
-        fragment.add_css(load_resource('public/css/google_docs.css'))
-        fragment.add_javascript(load_resource('public/js/google_docs.js'))
+        fragment.add_content(render_template('/templates/html/google_calendar.html', context))
+        fragment.add_css(load_resource('public/css/google_calendar.css'))
+        fragment.add_javascript(load_resource('public/js/google_calendar.js'))
 
-        fragment.initialize_js('GoogleDocumentBlock')
+        fragment.initialize_js('GoogleCalendarBlock')
 
         return fragment
 
@@ -75,12 +83,12 @@ class GoogleCalendarBlock(XBlock):
         Editing view in Studio
         """
         fragment = Fragment()
-        fragment.add_content(render_template('/templates/html/google_docs_edit.html', {
-            'self': self,
+        fragment.add_content(render_template('/templates/html/google_calendar_edit.html', {
+            'self': self
         }))
-        fragment.add_javascript(load_resource('public/js/google_docs_edit.js'))
+        fragment.add_javascript(load_resource('public/js/google_calendar_edit.js'))
 
-        fragment.initialize_js('GoogleDocumentEditBlock')
+        fragment.initialize_js('GoogleCalendarEditBlock')
 
         return fragment
 
@@ -88,7 +96,8 @@ class GoogleCalendarBlock(XBlock):
     def studio_submit(self, submissions, suffix=''):
 
         self.display_name = submissions['display_name']
-        self.embed_code = submissions['embed_code']
+        self.calendar_id = submissions['calendar_id']
+        self.default_view = submissions['default_view']
 
         return {
             'result': 'success',

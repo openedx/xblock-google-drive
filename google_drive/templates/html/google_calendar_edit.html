@@ -1,0 +1,51 @@
+{% load i18n %}
+
+<!-- TODO: Replace by default edit view once available in Studio -->
+<div class="wrapper-comp-settings is-active editor-with-buttons " id="settings-tab">
+  <ul class="list-input settings-list">
+      <li class="field comp-setting-entry is-set">
+          <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="edit_display_name">{% trans "Display Name" %}</label>
+            <input class="input setting-input edit-display-name" id="edit_display_name" value="{{ self.display_name }}" type="text">
+          </div>
+          <span class="tip setting-help">{% trans "This name appears in the horizontal navigation at the top of the page." %}</span>
+      </li>
+      <li class="field comp-setting-entry is-set">
+          <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="edit_calendar_id">{% trans "Public Calendar ID" %}</label>
+            <textarea rows="3" cols="60" class="input setting-input edit-calendar-id" id="edit_calendar_id">
+              {{ self.calendar_id }}
+            </textarea>
+          </div>
+          <span class="tip setting-help">{% trans "This is the Calendar ID for the publically available Google calendar you would like to embed. To find this ID, go to your Calendar Settings and copy the ID found in the Calendar Address section. You can also " %}
+            <a href="https://support.google.com/calendar/answer/34578?ctx=tltp" target="_blank">learn more here</a>.
+          </span>
+      </li>
+      <li class="field comp-setting-entry is-set">
+          <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="edit_default_view">{% trans "Default View" %}</label>
+            <select class="input setting-input edit-label_type" id="edit_label_type" value="{{self.default_view}}">
+              {% for view in self.views %}
+                  <option value="{{forloop.counter0}}" {% if forloop.counter0 == self.default_view %}selected="selected"{% endif %}>
+                      {{view}}
+                  </option>
+              {% endfor %}
+            </select>
+          </div>
+          <span class="tip setting-help">{% trans "The view of the calendar initially presented to students." %}</span>
+      </li>
+      <li class="field comp-setting-entry is-set"></li>
+  </ul>
+  <div class="xblock-actions">
+    <span class="xblock-editor-error-message"></span>
+    <ul>
+      <li class="action-item">
+        <a href="#" class="button action-primary save-button">{% trans "Save" %}</a>
+      </li>
+
+      <li class="action-item">
+        <a href="#" class="button cancel-button">{% trans "Cancel" %}</a>
+      </li>
+    </ul>
+  </div>
+</div>

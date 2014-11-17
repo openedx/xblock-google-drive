@@ -33,7 +33,7 @@ setup(
     entry_points={
         'xblock.v1': [
             'google-document = google_drive:GoogleDocumentBlock',
-            #'google-calendar = google_drive:GoogleCalendarBlock',
+            'google-calendar = google_drive:GoogleCalendarBlock'
         ]
     },
     package_data=package_data("google_drive", ["static", "templates", "public"]),

@@ -35,12 +35,12 @@ class GoogleCalendarBlock(XBlock):
         display_name="Display Name",
         help="This name appears in the horizontal navigation at the top of the page.",
         scope=Scope.settings,
-        default="Example Google Calendar"
+        default="Google Calendar"
     )
 
     calendar_id = String(
         display_name="Public Calendar ID",
-        help="This is the Calendar ID for the publically available Google calendar you would like to embed. To find this ID, go to your Calendar Settings and copy the ID found in the Calendar Address section.",
+        help="Google provides an ID for publicly available calendars. In the Google Calendar, open Settings and copy the ID from the Calendar Address section into this field.",
         scope=Scope.settings,
         default="edx.org_vme83q0j2v52mbhjncvfd5uqs8@group.calendar.google.com"
     )
@@ -48,7 +48,7 @@ class GoogleCalendarBlock(XBlock):
     # 0=Week, 1=Month, 2=Agenda
     default_view = Integer(
         display_name="Default View",
-        help="The view of the calendar initially presented to students.",
+        help="The calendar view that students see by default. A student can change this view.",
         scope=Scope.settings,
         default=1
     )

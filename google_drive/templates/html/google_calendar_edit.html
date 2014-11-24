@@ -17,7 +17,7 @@
               {{ self.calendar_id }}
             </textarea>
           </div>
-          <span class="tip setting-help">{% trans "This is the Calendar ID for the publically available Google calendar you would like to embed. To find this ID, go to your Calendar Settings and copy the ID found in the Calendar Address section. You can also " %}
+          <span class="tip setting-help">{% trans "Google provides an ID for publicly available calendars. In the Google Calendar, open Settings and copy the ID from the Calendar Address section into this field. You can " %}
             <a href="https://support.google.com/calendar/answer/34578?ctx=tltp" target="_blank">learn more here</a>.
           </span>
       </li>
@@ -32,7 +32,7 @@
               {% endfor %}
             </select>
           </div>
-          <span class="tip setting-help">{% trans "The view of the calendar initially presented to students." %}</span>
+          <span class="tip setting-help">{% trans "The calendar view that students see by default. A student can change this view." %}</span>
       </li>
       <li class="field comp-setting-entry is-set"></li>
   </ul>

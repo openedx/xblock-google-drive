@@ -1,6 +1,15 @@
 /* Javascript for GoogleDocumentBlock. */
 function GoogleDocumentBlock(runtime, element) {
 
+    var iframe = $('iframe', element);
+    var iframe_src = iframe.attr('src');
+
+    if ((iframe_src.indexOf("document") >= 0) ||
+        (iframe_src.indexOf("spreadsheets") >= 0)){
+        /* add class to iframe containing Google document or spreadsheet*/
+        iframe.addClass('no-width-height');
+    }
+
     $('iframe', element).load(function(){
         var iframe_url = $(this).attr('src');
         $.ajax({

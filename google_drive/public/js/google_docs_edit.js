@@ -5,17 +5,18 @@ function GoogleDocumentEditBlock(runtime, element, defaults) {
     var validation_alert = $('#validation_alert', element);
     var embed_code_textbox = $('#edit_embed_code', element);
     var xblock_inputs_wrapper = $('#xblock-inputs', element);
+    var edit_display_name_input = $('#edit_display_name', element);
+    var error_message_div = $('.xblock-editor-error-message', element);
 
     ToggleClearDefaultName();
-
     IsUrlValid();
 
     $('.clear-display-name', element).bind('click', function() {
         $(this).addClass('inactive');
-        $('#edit_display_name', element).val(defaults.defaultName);
+        edit_display_name_input.val(defaults.defaultName);
     });
 
-    $('#edit_display_name', element).bind('keyup', function(){
+    edit_display_name_input.bind('keyup', function(){
         ToggleClearDefaultName();
     });
 
@@ -28,7 +29,7 @@ function GoogleDocumentEditBlock(runtime, element, defaults) {
     });
 
     function ToggleClearDefaultName(name, button){
-        if ($('#edit_display_name').val() == defaults.defaultName){
+        if (edit_display_name_input.val() == defaults.defaultName){
             if (!clear_name_button.hasClass('inactive')){
                 clear_name_button.addClass('inactive');
             }
@@ -40,28 +41,28 @@ function GoogleDocumentEditBlock(runtime, element, defaults) {
 
     function SaveEditing(){
         var data = {
-            'display_name': $('.edit-display-name', element).val(),
-            'embed_code': $('.edit-embed-code', element).val(),
+            'display_name': edit_display_name_input.val(),
+            'embed_code': embed_code_textbox.val(),
         };
 
-        $('.xblock-editor-error-message', element).html();
-        $('.xblock-editor-error-message', element).css('display', 'none');
+        error_message_div.html();
+        error_message_div.css('display', 'none');
         var handlerUrl = runtime.handlerUrl(element, 'studio_submit');
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
             if (response.result === 'success') {
                 window.location.reload(false);
             } else {
-                $('.xblock-editor-error-message', element).html('Error: '+response.message);
-                $('.xblock-editor-error-message', element).css('display', 'block');
+                error_message_div.html('Error: '+response.message);
+                error_message_div.css('display', 'block');
             }
         });
     }
 
     function IsUrlValid(){
-        var embed_html = $("#edit_embed_code", element).val();
+        var embed_html = embed_code_textbox.val();
 
         var google_doc = $(embed_html);
-        $('#edit_embed_code', element).css({'cursor':'wait'});
+        embed_code_textbox.css({'cursor':'wait'});
         save_button.addClass('disabled').unbind('click');
 
         $.ajax({
@@ -89,7 +90,7 @@ function GoogleDocumentEditBlock(runtime, element, defaults) {
                 xblock_inputs_wrapper.addClass('alerted');
             },
             complete: function() {
-                $('#edit_embed_code', element).css({'cursor':'auto'});
+                embed_code_textbox.css({'cursor':'auto'});
             }
         });
     }

@@ -10,6 +10,7 @@ import textwrap
 #import webob
 #from lxml import etree
 #from xml.etree import ElementTree as ET
+import requests
 
 from xblock.core import XBlock
 from xblock.fields import Scope, String
@@ -81,7 +82,7 @@ class GoogleDocumentBlock(XBlock):
         }))
         fragment.add_javascript(load_resource('public/js/google_docs_edit.js'))
 
-        fragment.initialize_js('GoogleDocumentEditBlock')
+        fragment.initialize_js('GoogleDocumentEditBlock', {'defaultName': self.fields['display_name']._default})
 
         return fragment
 
@@ -111,4 +112,18 @@ class GoogleDocumentBlock(XBlock):
 
         return {
             'result': 'success',
+        }
+
+    @XBlock.json_handler
+    def check_url(self, data, suffix=''):
+
+        try:
+            r = requests.head(data['url'])
+        except:
+            return {
+                'status_code': 404,
+            }
+
+        return {
+            'status_code': r.status_code,
         }

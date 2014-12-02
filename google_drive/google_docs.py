@@ -94,3 +94,21 @@ class GoogleDocumentBlock(XBlock):
         return {
             'result': 'success',
         }
+
+    @XBlock.json_handler
+    def iframe_loaded(self, iframe_data, suffix=''):
+
+        self.runtime.publish(self, 'iframe.loaded', iframe_data)
+
+        return {
+            'result': 'success',
+        }
+
+    @XBlock.json_handler
+    def image_loaded(self, image_data, suffix=''):
+
+        self.runtime.publish(self, 'image.loaded', image_data)
+
+        return {
+            'result': 'success',
+        }

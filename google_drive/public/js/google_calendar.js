@@ -1,6 +1,15 @@
 /* Javascript for GoogleDocumentBlock. */
 function GoogleCalendarBlock(runtime, element) {
 
+    $('iframe', element).load(function(){
+        var iframe_url = $(this).attr('src');
+        $.ajax({
+            type: "POST",
+            url: runtime.handlerUrl(element, 'calendar_loaded'),
+            data: JSON.stringify({url: iframe_url})
+        });
+    });
+
     $(function ($) {
         /* Here's where you'd do things on page load. */
     });

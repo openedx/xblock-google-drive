@@ -102,3 +102,12 @@ class GoogleCalendarBlock(XBlock):
         return {
             'result': 'success',
         }
+
+    @XBlock.json_handler
+    def calendar_loaded(self, calendar_data, suffix=''):
+
+        self.runtime.publish(self, 'calendar.loaded', calendar_data)
+
+        return {
+            'result': 'success',
+        }

@@ -69,7 +69,7 @@ function GoogleDocumentEditBlock(runtime, element, defaults) {
             url: runtime.handlerUrl(element, 'check_url'),
             data: JSON.stringify({url: google_doc.attr("src")}),
             success: function(result) {
-                if (result.status_code != 200){
+                if (result.status_code >= 400){
                     validation_alert.removeClass('covered');
                     embed_code_textbox.addClass('error');
                     xblock_inputs_wrapper.addClass('alerted');

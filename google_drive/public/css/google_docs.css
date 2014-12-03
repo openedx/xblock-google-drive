@@ -1,11 +1,10 @@
 .google-docs-xblock-wrapper iframe{
     max-width: 100%;
-    max-height: 100%;
     display:block;
     margin: 0 auto;
 }
 
-iframe.no-width-height{
+.google-docs-xblock-wrapper iframe.no-width-height{
     top: 0;
     left: 0;
     width: 100%;
@@ -16,7 +15,6 @@ iframe.no-width-height{
     width: auto;
     height : auto;
     max-width: 100%;
-    max-height: 100%;
 }
 
 #validation_alert{

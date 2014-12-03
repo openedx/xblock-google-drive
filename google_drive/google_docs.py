@@ -45,7 +45,7 @@ class GoogleDocumentBlock(XBlock):
         scope=Scope.settings,
         default=textwrap.dedent("""
             <iframe
-                src="https://docs.google.com/presentation/d/1B22AsMwG7jgE39vm1BuiJClir_JUz1q077cPEKJR2mI/embed?start=false&loop=false&delayms=3000"
+                src="https://docs.google.com/presentation/d/1x2ZuzqHsMoh1epK8VsGAlanSo7r9z55ualwQlj-ofBQ/embed?start=true&loop=true&delayms=10000"
                 frameborder="0"
                 width="960"
                 height="569"

@@ -78,7 +78,7 @@ you might also have to prepend `PYTHONPATH=".:/path/to/xblock"` to the command a
 Changes to be documented
 ------------------------
 
-1. Calendar width & height is set to 100% of parent element's width & height
+1. Calendar width is set to 100% of parent element's width; this optimizes the display of google document content within the LMS user interface
 2. Max width of Google images is set to 100% to prevent images from overflowing outside the parent element's boundaries
 3. Since Google WordProcessing documents and Spreadsheets don't allow users to explicitly define width and height, their width is set to 100%. Also, min height is set to 450px, so that documents and/or spreadsheets with larger number of rows are displayed in their natural size. Overflow scroll is automatically turned on when the height of the document becomes larger than the height of the parent.
 

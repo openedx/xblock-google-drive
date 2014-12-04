@@ -42,7 +42,7 @@ class GoogleCalendarBlock(XBlock):
         display_name="Public Calendar ID",
         help="Google provides an ID for publicly available calendars. In the Google Calendar, open Settings and copy the ID from the Calendar Address section into this field.",
         scope=Scope.settings,
-        default="edx.org_vme83q0j2v52mbhjncvfd5uqs8@group.calendar.google.com"
+        default="edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com"
     )
 
     # 0=Week, 1=Month, 2=Agenda

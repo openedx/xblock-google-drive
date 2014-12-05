@@ -4,27 +4,14 @@
 # Imports ###########################################################
 
 import pkg_resources
-#import logging
 import textwrap
-#import json
-#import webob
-#from lxml import etree
-#from xml.etree import ElementTree as ET
 import requests
 
 from xblock.core import XBlock
 from xblock.fields import Scope, String
 from xblock.fragment import Fragment
 
-# from StringIO import StringIO
-
-from .utils import render_template, AttrDict, load_resource
-
-
-# Globals ###########################################################
-
-#log = logging.getLogger(__name__)
-
+from .utils import loader, AttrDict
 
 # Classes ###########################################################
 
@@ -64,9 +51,9 @@ class GoogleDocumentBlock(XBlock):
         context.update({
             "self": self,
         })
-        fragment.add_content(render_template('/templates/html/google_docs.html', context))
-        fragment.add_css(load_resource('public/css/google_docs.css'))
-        fragment.add_javascript(load_resource('public/js/google_docs.js'))
+        fragment.add_content(loader.render_template('/templates/html/google_docs.html', context))
+        fragment.add_css(loader.load_unicode('public/css/google_docs.css'))
+        fragment.add_javascript(loader.load_unicode('public/js/google_docs.js'))
 
         fragment.initialize_js('GoogleDocumentBlock')
 
@@ -77,12 +64,14 @@ class GoogleDocumentBlock(XBlock):
         Editing view in Studio
         """
         fragment = Fragment()
-        fragment.add_content(render_template('/templates/html/google_docs_edit.html', {
+        fragment.add_content(loader.render_template('/templates/html/google_docs_edit.html', {
             'self': self,
+            'defaultName': self.fields['display_name']._default
         }))
-        fragment.add_javascript(load_resource('public/js/google_docs_edit.js'))
+        fragment.add_javascript(loader.load_unicode('public/js/google_docs_edit.js'))
+        fragment.add_css(loader.load_unicode('public/css/google_edit.css'))
 
-        fragment.initialize_js('GoogleDocumentEditBlock', {'defaultName': self.fields['display_name']._default})
+        fragment.initialize_js('GoogleDocumentEditBlock')
 
         return fragment
 
@@ -97,18 +86,9 @@ class GoogleDocumentBlock(XBlock):
         }
 
     @XBlock.json_handler
-    def iframe_loaded(self, iframe_data, suffix=''):
+    def document_loaded(self, data, suffix=''):
 
-        self.runtime.publish(self, 'iframe.loaded', iframe_data)
-
-        return {
-            'result': 'success',
-        }
-
-    @XBlock.json_handler
-    def image_loaded(self, image_data, suffix=''):
-
-        self.runtime.publish(self, 'image.loaded', image_data)
+        self.runtime.publish(self, "edx.googlecomponent.document.displayed", data)
 
         return {
             'result': 'success',
@@ -127,3 +107,10 @@ class GoogleDocumentBlock(XBlock):
         return {
             'status_code': r.status_code,
         }
+
+    @staticmethod
+    def workbench_scenarios():
+        """
+        A canned scenario for display in the workbench.
+        """
+        return [("Google Docs scenario", "<vertical_demo><google-document/></vertical_demo>")]

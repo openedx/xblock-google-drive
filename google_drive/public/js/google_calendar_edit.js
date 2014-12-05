@@ -1,29 +1,30 @@
-function GoogleCalendarEditBlock(runtime, element, defaults) {
-
+function GoogleCalendarEditBlock(runtime, element) {
     var clear_name_button = $('.clear-display-name', element);
     var clear_id_button = $('.clear-calendar-id', element);
     var save_button = $('.save-button', element);
-    var validation_alert = $('#validation_alert', element);
-    var xblock_inputs_wrapper = $('#xblock-inputs', element);
+    var validation_alert = $('.validation_alert', element);
+    var xblock_inputs_wrapper = $('.xblock-inputs', element);
     var edit_calendar_id_input = $('#edit_calendar_id', element);
     var edit_display_name_input = $('#edit_display_name', element);
     var error_message_div = $('.xblock-editor-error-message', element);
+    var defaultName = edit_display_name_input.attr('data-default-value');
+    var defaultID = edit_calendar_id_input.attr('data-default-value');
 
-    ToggleClearDefaultName();
-    ToggleClearCalendarID();
+    ToggleClear(edit_display_name_input, defaultName, clear_name_button);
+    ToggleClear(edit_calendar_id_input, defaultID, clear_id_button);
 
     $('.clear-display-name', element).bind('click', function() {
         $(this).addClass('inactive');
-        edit_display_name_input.val(defaults.defaultName);
+        edit_display_name_input.val(defaultName);
     });
 
     edit_display_name_input.bind('keyup', function(){
-        ToggleClearDefaultName();
+        ToggleClear(edit_display_name_input, defaultName, clear_name_button);
     });
 
     $('.clear-calendar-id', element).bind('click', function() {
         $(this).addClass('inactive');
-        edit_calendar_id_input.val(defaults.defaultID);
+        edit_calendar_id_input.val(defaultID);
         save_button.unbind('click').bind('click', SaveEditing);
 
         if (!validation_alert.hasClass('covered')) {
@@ -37,7 +38,7 @@ function GoogleCalendarEditBlock(runtime, element, defaults) {
     });
 
     edit_calendar_id_input.bind('keyup', function(){
-        ToggleClearCalendarID();
+        ToggleClear(edit_calendar_id_input, defaultID, clear_id_button);
 
 
         var inputVal = $(this).val();
@@ -61,25 +62,14 @@ function GoogleCalendarEditBlock(runtime, element, defaults) {
         runtime.notify('cancel', {});
     });
 
-    function ToggleClearDefaultName(){
-        if (edit_display_name_input.val() == defaults.defaultName){
-            if (!clear_name_button.hasClass('inactive')){
-                clear_name_button.addClass('inactive');
+    function ToggleClear(inputElement, defaultValue, clearButtonElement){
+        if (inputElement.val() == defaultValue){
+            if (!clearButtonElement.hasClass('inactive')){
+                clearButtonElement.addClass('inactive');
             }
         }
         else {
-            clear_name_button.removeClass('inactive');
-        }
-    }
-
-    function ToggleClearCalendarID(){
-        if (edit_calendar_id_input.val() == defaults.defaultID){
-            if (!clear_id_button.hasClass('inactive')){
-                clear_id_button.addClass('inactive');
-            }
-        }
-        else {
-            clear_id_button.removeClass('inactive');
+            clearButtonElement.removeClass('inactive');
         }
     }
 

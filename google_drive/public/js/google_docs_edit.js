@@ -2,18 +2,19 @@ function GoogleDocumentEditBlock(runtime, element, defaults) {
 
     var clear_name_button = $('.clear-display-name', element);
     var save_button = $('.save-button', element);
-    var validation_alert = $('#validation_alert', element);
+    var validation_alert = $('.validation_alert', element);
     var embed_code_textbox = $('#edit_embed_code', element);
-    var xblock_inputs_wrapper = $('#xblock-inputs', element);
+    var xblock_inputs_wrapper = $('.xblock-inputs', element);
     var edit_display_name_input = $('#edit_display_name', element);
     var error_message_div = $('.xblock-editor-error-message', element);
+    var defaultName = edit_display_name_input.attr('data-default-value');
 
     ToggleClearDefaultName();
     IsUrlValid();
 
     $('.clear-display-name', element).bind('click', function() {
         $(this).addClass('inactive');
-        edit_display_name_input.val(defaults.defaultName);
+        edit_display_name_input.val(defaultName);
     });
 
     edit_display_name_input.bind('keyup', function(){
@@ -29,7 +30,7 @@ function GoogleDocumentEditBlock(runtime, element, defaults) {
     });
 
     function ToggleClearDefaultName(name, button){
-        if (edit_display_name_input.val() == defaults.defaultName){
+        if (edit_display_name_input.val() == defaultName){
             if (!clear_name_button.hasClass('inactive')){
                 clear_name_button.addClass('inactive');
             }

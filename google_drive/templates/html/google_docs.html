@@ -1,5 +1,3 @@
-{% autoescape off %}
 <div class="google-docs-xblock-wrapper">
-{{ self.embed_code }}
+{{ self.embed_code|safe }}
 </div>
-{% endautoescape %}

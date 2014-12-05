@@ -14,23 +14,18 @@ function GoogleDocumentBlock(runtime, element) {
             }
         }
 
-        $('iframe', element).load(function(){
-            var iframe_url = $(this).attr('src');
-            $.ajax({
-                type: "POST",
-                url: runtime.handlerUrl(element, 'iframe_loaded'),
-                data: JSON.stringify({url: iframe_url})
-            });
-        });
+        $('iframe', element).load(SignalDocumentLoaded('iframe.loaded'));
 
-        $('img', element).load(function(){
-            var image_url = $(this).attr('src');
+        $('img', element).load(SignalDocumentLoaded('image.loaded'));
+
+        function SignalDocumentLoaded(event_name){
+            var document_url = $(this).attr('src');
             $.ajax({
                 type: "POST",
-                url: runtime.handlerUrl(element, 'image_loaded'),
-                data: JSON.stringify({url: image_url})
+                url: runtime.handlerUrl(element, 'document_loaded'),
+                data: JSON.stringify({url: document_url, eventName: event_name})
             });
-        });
+        }
 
     });
 }

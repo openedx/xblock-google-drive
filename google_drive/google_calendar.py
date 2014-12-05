@@ -4,26 +4,13 @@
 # Imports ###########################################################
 
 import pkg_resources
-#import logging
 import textwrap
-#import json
-#import webob
-#from lxml import etree
-#from xml.etree import ElementTree as ET
 
 from xblock.core import XBlock
 from xblock.fields import Scope, String, Integer
 from xblock.fragment import Fragment
 
-# from StringIO import StringIO
-
-from .utils import render_template, AttrDict, load_resource
-
-
-# Globals ###########################################################
-
-#log = logging.getLogger(__name__)
-
+from .utils import loader, AttrDict
 
 # Classes ###########################################################
 
@@ -70,9 +57,9 @@ class GoogleCalendarBlock(XBlock):
             "self": self,
             "iframe": iframe
         })
-        fragment.add_content(render_template('/templates/html/google_calendar.html', context))
-        fragment.add_css(load_resource('public/css/google_calendar.css'))
-        fragment.add_javascript(load_resource('public/js/google_calendar.js'))
+        fragment.add_content(loader.render_template('/templates/html/google_calendar.html', context))
+        fragment.add_css(loader.load_unicode('public/css/google_calendar.css'))
+        fragment.add_javascript(loader.load_unicode('public/js/google_calendar.js'))
 
         fragment.initialize_js('GoogleCalendarBlock')
 
@@ -83,17 +70,14 @@ class GoogleCalendarBlock(XBlock):
         Editing view in Studio
         """
         fragment = Fragment()
-        fragment.add_content(render_template('/templates/html/google_calendar_edit.html', {
-            'self': self
-        }))
-        fragment.add_javascript(load_resource('public/js/google_calendar_edit.js'))
-
-        defaults = {
+        fragment.add_content(loader.render_template('/templates/html/google_calendar_edit.html', {
+            'self': self,
             'defaultName': self.fields['display_name']._default,
             'defaultID': self.fields['calendar_id']._default
-        }
+        }))
+        fragment.add_javascript(loader.load_unicode('public/js/google_calendar_edit.js'))
 
-        fragment.initialize_js('GoogleCalendarEditBlock', defaults)
+        fragment.initialize_js('GoogleCalendarEditBlock')
 
         return fragment
 
@@ -116,3 +100,10 @@ class GoogleCalendarBlock(XBlock):
         return {
             'result': 'success',
         }
+
+    @staticmethod
+    def workbench_scenarios():
+        """
+        A canned scenario for display in the workbench.
+        """
+        return [("Google Calendar scenario", "<vertical_demo><google-calendar/></vertical_demo>")]

@@ -17,7 +17,7 @@
     max-width: 100%;
 }
 
-#validation_alert{
+.user-inputs-and-validation .validation_alert{
     width: 100%;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
@@ -30,14 +30,19 @@
     max-height: 200px;
 }
 
-.alert_icon{
+.user-inputs-and-validation .validation_alert.covered {
+    display: none;
+    visibility: hidden;
+}
+
+.user-inputs-and-validation .validation_alert .alert_icon{
     position: absolute;
     top: 35%;
     font-size: 200%;
     left: 3%;
 }
 
-.alert_icon:before{
+.user-inputs-and-validation .validation_alert .alert_icon:before{
     font-family: "FontAwesome";
     content: "\f071";
     display: inline-block;
@@ -47,62 +52,28 @@
     width: 0;
 }
 
-.alert_header {
+.user-inputs-and-validation .validation_alert .alert_header {
     width: 85%;
     margin: 0 5% 0 10%;
 }
 
-.alert_title {
+.user-inputs-and-validation .validation_alert .alert_header .alert_title {
     width: auto;
     color: white;
 }
 
-.alert_message {
+.user-inputs-and-validation .validation_alert .alert_header .alert_message {
     font-size: 80%;
     color: darkgray;
 }
 
-[class^="icon"] {
+.user-inputs-and-validation .validation_alert [class^="icon"] {
     width: auto;
     margin: 0;
     padding: 2px;
 }
 
-&:hover {
-    color: rgb(128, 169, 204);
-}
-
-.is--hidden {
-    height: 0;
-    width: 0;
-    padding: 0;
-    margin: 0;
-    pointer-events: none;
-    outline: none;
-}
-
-.covered, .is--hidden {
-    display: none;
-    visibility: hidden;
-}
-
-.error {
-    outline: none !important;
-    border:2px solid red;
-    box-shadow: 0 0 10px #719ECE;
-}
-
-#save-button.disabled {
-    background-color: gray;
-    cursor: auto;
-}
-
-#google-docs-actions{
-    position: absolute;
-    bottom: 0;
-}
-
-.editor_content_wrapper {
+.xblock-inputs {
     width: 100%;
     overflow-y: scroll;
     position: absolute;
@@ -110,6 +81,22 @@
     top: 0;
 }
 
-#xblock-inputs.alerted {
+.xblock-inputs.alerted {
     top: 69px;
+}
+
+.xblock-inputs .error {
+    outline: none !important;
+    border:2px solid red !important;
+    box-shadow: 0 0 10px #719ECE !important;
+}
+
+.xblock-actions{
+    position: absolute;
+    bottom: 0;
+}
+
+.xblock-actions .save-button.disabled {
+    background-color: gray;
+    cursor: auto;
 }

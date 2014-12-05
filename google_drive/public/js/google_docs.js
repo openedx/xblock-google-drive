@@ -12,8 +12,8 @@ function GoogleDocumentBlock(runtime, element) {
         }
     }
 
-    function SignalDocumentLoaded(presented_within){
-        var document_url = $(this).attr('src');
+    function SignalDocumentLoaded(ev, presented_within){
+        var document_url = $(ev.target).attr('src');
         $.ajax({
             type: "POST",
             url: runtime.handlerUrl(element, 'document_loaded'),
@@ -23,7 +23,7 @@ function GoogleDocumentBlock(runtime, element) {
              })
         });
     }
-    $('iframe', element).load(SignalDocumentLoaded('iframe'));
-    $('img', element).load(SignalDocumentLoaded('img'));
+    $('iframe', element).load(function(e){SignalDocumentLoaded(e, 'iframe');});
+    $('img', element).load(function(e){SignalDocumentLoaded(e, 'img');});
 
 }

@@ -76,6 +76,7 @@ class GoogleCalendarBlock(XBlock):
             'defaultID': self.fields['calendar_id']._default
         }))
         fragment.add_javascript(loader.load_unicode('public/js/google_calendar_edit.js'))
+        fragment.add_css(loader.load_unicode('public/css/google_edit.css'))
 
         fragment.initialize_js('GoogleCalendarEditBlock')
 

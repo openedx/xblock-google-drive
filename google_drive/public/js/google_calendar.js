@@ -9,8 +9,4 @@ function GoogleCalendarBlock(runtime, element) {
             data: JSON.stringify({url: iframe_url})
         });
     });
-
-    $(function ($) {
-        /* Here's where you'd do things on page load. */
-    });
 }

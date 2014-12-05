@@ -69,6 +69,7 @@ class GoogleDocumentBlock(XBlock):
             'defaultName': self.fields['display_name']._default
         }))
         fragment.add_javascript(loader.load_unicode('public/js/google_docs_edit.js'))
+        fragment.add_css(loader.load_unicode('public/css/google_edit.css'))
 
         fragment.initialize_js('GoogleDocumentEditBlock')
 

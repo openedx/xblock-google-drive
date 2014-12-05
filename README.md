@@ -30,27 +30,17 @@ settings.
 Workbench installation and settings
 -----------------------------------
 
-Install to the workbench's virtualenv by running the following command form the mentoring repo root:
+Install to the workbench's virtualenv by running the following command form the google-drive repo root:
 
 ```bash
 pip install -r requirements.txt
-```
-
-In the main XBlock repository, create the following configuration file
-in `workbench/settings_googledrive.py` in the XBlock repository:
-
-```python
-from settings import *
-
-INSTALLED_APPS += ('google_drive',)
-DATABASES['default']['NAME'] = 'workbench.sqlite'
 ```
 
 Running the workbench
 ---------------------
 
 ```bash
-$ ./manage.py runserver 8000 --settings=workbench.settings_googledrive
+$ ./manage.py runserver 8000
 ```
 
 Access it at [http://localhost:8000/](http://localhost:8000).
@@ -62,13 +52,13 @@ From the xblock-google-drive repository root, run the tests with the
 following command:
 
 ```bash
-$ DJANGO_SETTINGS_MODULE="workbench.settings_googledrive" nosetests --with-django
+$ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django
 ```
 
 If you want to run only the integration or the unit tests, append the directory to the command. You can also run separate modules in this manner.
 
 ```bash
-$ DJANGO_SETTINGS_MODULE="workbench.settings_googledrive" nosetests --with-django tests/unit
+$ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django tests/unit
 ```
 
 If you have not installed the xblock-sdk in the active virtualenv,

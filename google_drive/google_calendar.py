@@ -96,7 +96,7 @@ class GoogleCalendarBlock(XBlock):
     @XBlock.json_handler
     def calendar_loaded(self, calendar_data, suffix=''):
 
-        self.runtime.publish(self, 'calendar.loaded', calendar_data)
+        self.runtime.publish(self, 'edx.googlecomponent.calendar.displayed', calendar_data)
 
         return {
             'result': 'success',

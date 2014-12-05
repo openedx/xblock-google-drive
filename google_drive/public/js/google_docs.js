@@ -12,15 +12,18 @@ function GoogleDocumentBlock(runtime, element) {
         }
     }
 
-    function SignalDocumentLoaded(event_name){
+    function SignalDocumentLoaded(presented_within){
         var document_url = $(this).attr('src');
         $.ajax({
             type: "POST",
             url: runtime.handlerUrl(element, 'document_loaded'),
-            data: JSON.stringify({url: document_url, eventName: event_name})
+            data: JSON.stringify({
+                url: document_url,
+                displayedin: presented_within
+             })
         });
     }
-    $('iframe', element).load(SignalDocumentLoaded('googledoc.iframe.loaded'));
-    $('img', element).load(SignalDocumentLoaded('googledoc.image.loaded'));
+    $('iframe', element).load(SignalDocumentLoaded('iframe'));
+    $('img', element).load(SignalDocumentLoaded('img'));
 
 }

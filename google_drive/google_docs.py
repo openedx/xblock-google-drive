@@ -87,12 +87,8 @@ class GoogleDocumentBlock(XBlock):
 
     @XBlock.json_handler
     def document_loaded(self, data, suffix=''):
-        try:
-            event_name = data.pop('eventName')
-        except KeyError as e:
-            return {'result': 'error', 'message': 'Missing eventName in JSON data'}
 
-        self.runtime.publish(self, event_name, data)
+        self.runtime.publish(self, "edx.googlecomponent.document.displayed", data)
 
         return {
             'result': 'success',

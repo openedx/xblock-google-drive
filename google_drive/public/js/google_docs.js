@@ -2,6 +2,9 @@
 function GoogleDocumentBlock(runtime, element) {
 
     var iframe = $('iframe', element);
+    var image = $('img', element);
+    var display_name = $('.google-docs-xblock-wrapper', element).attr('data-display-name');
+
     if(iframe.length > 0){
         var iframe_src = iframe.attr('src');
 
@@ -10,6 +13,10 @@ function GoogleDocumentBlock(runtime, element) {
             /* add class to iframe containing Google document or spreadsheet*/
             iframe.addClass('no-width-height');
         }
+
+        iframe.attr('title', display_name);
+    }else if(image.length > 0){
+        image.attr('title', display_name);
     }
 
     function SignalDocumentLoaded(ev, presented_within){
@@ -24,7 +31,7 @@ function GoogleDocumentBlock(runtime, element) {
              })
         });
     }
-    $('iframe', element).load(function(e){SignalDocumentLoaded(e, 'iframe');});
-    $('img', element).load(function(e){SignalDocumentLoaded(e, 'img');});
+    iframe.load(function(e){SignalDocumentLoaded(e, 'iframe');});
+    image.load(function(e){SignalDocumentLoaded(e, 'img');});
 
 }

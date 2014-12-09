@@ -50,8 +50,9 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
 
         fragment = Fragment()
         context.update({
-            "self": self,
+            "self": self
         })
+
         fragment.add_content(loader.render_template('/templates/html/google_docs.html', context))
         fragment.add_css(loader.load_unicode('public/css/google_docs.css'))
         fragment.add_javascript(loader.load_unicode('public/js/google_docs.js'))

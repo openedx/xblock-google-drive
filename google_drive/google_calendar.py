@@ -51,7 +51,7 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):
 
         view = self.views[self.default_view][1]
 
-        iframe = "<iframe src=\"https://www.google.com/calendar/embed?mode={}&amp;src={}&amp;showCalendars=0\"></iframe>".format(view, self.calendar_id)
+        iframe = '<iframe src="https://www.google.com/calendar/embed?mode={}&amp;src={}&amp;showCalendars=0" title="{}"></iframe>'.format(view, self.calendar_id, self.display_name)
 
         context.update({
             "self": self,

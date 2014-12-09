@@ -16,10 +16,11 @@ function GoogleDocumentBlock(runtime, element) {
         var document_url = $(ev.target).attr('src');
         $.ajax({
             type: "POST",
-            url: runtime.handlerUrl(element, 'document_loaded'),
+            url: runtime.handlerUrl(element, 'publish_event'),
             data: JSON.stringify({
                 url: document_url,
-                displayedin: presented_within
+                displayedin: presented_within,
+                event_name: 'edx.googlecomponent.document.displayed',
              })
         });
     }

@@ -86,9 +86,10 @@ class GoogleDocumentBlock(XBlock):
         }
 
     @XBlock.json_handler
-    def document_loaded(self, data, suffix=''):
+    def publish_event(self, data, suffix=''):
 
-        self.runtime.publish(self, "edx.googlecomponent.document.displayed", data)
+        event_name = data.pop('event_name')
+        self.runtime.publish(self, event_name, data)
 
         return {
             'result': 'success',
@@ -101,7 +102,7 @@ class GoogleDocumentBlock(XBlock):
             r = requests.head(data['url'])
         except:
             return {
-                'status_code': 404,
+                'status_code': 400,
             }
 
         return {

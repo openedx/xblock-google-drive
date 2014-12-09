@@ -32,7 +32,6 @@ class GoogleCalendarBlock(XBlock):
         default="edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com"
     )
 
-    # 0=Week, 1=Month, 2=Agenda
     default_view = Integer(
         display_name="Default View",
         help="The calendar view that students see by default. A student can change this view.",
@@ -40,7 +39,7 @@ class GoogleCalendarBlock(XBlock):
         default=1
     )
 
-    views = ["Week", "Month", "Agenda"]
+    views = [(0, 'Week'), (1, 'Month'), (2, 'Agenda')]
 
     def student_view(self, context={}):
         """
@@ -49,7 +48,7 @@ class GoogleCalendarBlock(XBlock):
 
         fragment = Fragment()
 
-        view = "Week" if self.default_view==0 else "Month" if self.default_view==1 else "Agenda"
+        view = self.views[self.default_view][1]
 
         iframe = "<iframe src=\"https://www.google.com/calendar/embed?mode={}&amp;src={}&amp;showCalendars=0\"></iframe>".format(view, self.calendar_id)
 
@@ -94,9 +93,10 @@ class GoogleCalendarBlock(XBlock):
         }
 
     @XBlock.json_handler
-    def calendar_loaded(self, calendar_data, suffix=''):
+    def publish_event(self, calendar_data, suffix=''):
 
-        self.runtime.publish(self, 'edx.googlecomponent.calendar.displayed', calendar_data)
+        event_name = calendar_data.pop('event_name')
+        self.runtime.publish(self, event_name, calendar_data)
 
         return {
             'result': 'success',

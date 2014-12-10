@@ -41,8 +41,8 @@
               <label class="label setting-label" for="edit_default_view">{% trans "Default View" %}</label>
               <select class="input setting-input edit-label_type" id="edit_label_type" value="{{self.default_view}}">
                 {% for view in self.views %}
-                    <option value="{{forloop.counter0}}" {% if forloop.counter0 == self.default_view %}selected="selected"{% endif %}>
-                        {{view}}
+                    <option value="{{view.0}}" {% if view.0 == self.default_view %}selected="selected"{% endif %}>
+                        {{view.1}}
                     </option>
                 {% endfor %}
               </select>

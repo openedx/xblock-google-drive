@@ -40,7 +40,6 @@ function GoogleCalendarEditBlock(runtime, element) {
     edit_calendar_id_input.bind('keyup', function(){
         ToggleClear(edit_calendar_id_input, defaultID, clear_id_button);
 
-
         var inputVal = $(this).val();
         var calendarIDReg = /[\w-\.]+@+[\w-\.]/;
         if(!calendarIDReg.test(inputVal)) {
@@ -61,6 +60,8 @@ function GoogleCalendarEditBlock(runtime, element) {
     $('.cancel-button', element).bind('click', function() {
         runtime.notify('cancel', {});
     });
+
+    save_button.bind('click', SaveEditing);
 
     function ToggleClear(inputElement, defaultValue, clearButtonElement){
         if (inputElement.val() == defaultValue){

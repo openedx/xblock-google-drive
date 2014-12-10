@@ -11,10 +11,11 @@ from xblock.fields import Scope, String, Integer
 from xblock.fragment import Fragment
 
 from .utils import loader, AttrDict
+from xblockutils.publish_event import PublishEventMixin
 
 # Classes ###########################################################
 
-class GoogleCalendarBlock(XBlock):
+class GoogleCalendarBlock(XBlock, PublishEventMixin):
     """
     XBlock providing a google calendar view for a specific calendar
     """
@@ -32,7 +33,6 @@ class GoogleCalendarBlock(XBlock):
         default="edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com"
     )
 
-    # 0=Week, 1=Month, 2=Agenda
     default_view = Integer(
         display_name="Default View",
         help="The calendar view that students see by default. A student can change this view.",
@@ -40,7 +40,7 @@ class GoogleCalendarBlock(XBlock):
         default=1
     )
 
-    views = ["Week", "Month", "Agenda"]
+    views = [(0, 'Week'), (1, 'Month'), (2, 'Agenda')]
 
     def student_view(self, context={}):
         """
@@ -49,7 +49,7 @@ class GoogleCalendarBlock(XBlock):
 
         fragment = Fragment()
 
-        view = "Week" if self.default_view==0 else "Month" if self.default_view==1 else "Agenda"
+        view = self.views[self.default_view][1]
 
         iframe = '<iframe src="https://www.google.com/calendar/embed?mode={}&amp;src={}&amp;showCalendars=0" title="{}"></iframe>'.format(view, self.calendar_id, self.display_name)
 
@@ -88,15 +88,6 @@ class GoogleCalendarBlock(XBlock):
         self.display_name = submissions['display_name']
         self.calendar_id = submissions['calendar_id']
         self.default_view = submissions['default_view']
-
-        return {
-            'result': 'success',
-        }
-
-    @XBlock.json_handler
-    def calendar_loaded(self, calendar_data, suffix=''):
-
-        self.runtime.publish(self, 'edx.googlecomponent.calendar.displayed', calendar_data)
 
         return {
             'result': 'success',

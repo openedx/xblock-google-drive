@@ -12,10 +12,11 @@ from xblock.fields import Scope, String
 from xblock.fragment import Fragment
 
 from .utils import loader, AttrDict
+from xblockutils.publish_event import PublishEventMixin
 
 # Classes ###########################################################
 
-class GoogleDocumentBlock(XBlock):
+class GoogleDocumentBlock(XBlock, PublishEventMixin):
     """
     XBlock providing a google document embed link
     """
@@ -80,16 +81,6 @@ class GoogleDocumentBlock(XBlock):
 
         self.display_name = submissions['display_name']
         self.embed_code = submissions['embed_code']
-
-        return {
-            'result': 'success',
-        }
-
-    @XBlock.json_handler
-    def publish_event(self, data, suffix=''):
-
-        event_name = data.pop('event_name')
-        self.runtime.publish(self, event_name, data)
 
         return {
             'result': 'success',

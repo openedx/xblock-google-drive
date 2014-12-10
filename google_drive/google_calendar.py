@@ -11,10 +11,11 @@ from xblock.fields import Scope, String, Integer
 from xblock.fragment import Fragment
 
 from .utils import loader, AttrDict
+from xblockutils.publish_event import PublishEventMixin
 
 # Classes ###########################################################
 
-class GoogleCalendarBlock(XBlock):
+class GoogleCalendarBlock(XBlock, PublishEventMixin):
     """
     XBlock providing a google calendar view for a specific calendar
     """
@@ -87,16 +88,6 @@ class GoogleCalendarBlock(XBlock):
         self.display_name = submissions['display_name']
         self.calendar_id = submissions['calendar_id']
         self.default_view = submissions['default_view']
-
-        return {
-            'result': 'success',
-        }
-
-    @XBlock.json_handler
-    def publish_event(self, calendar_data, suffix=''):
-
-        event_name = calendar_data.pop('event_name')
-        self.runtime.publish(self, event_name, calendar_data)
 
         return {
             'result': 'success',

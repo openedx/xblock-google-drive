@@ -20,7 +20,7 @@ function GoogleDocumentBlock(runtime, element) {
             data: JSON.stringify({
                 url: document_url,
                 displayedin: presented_within,
-                event_name: 'edx.googlecomponent.document.displayed',
+                event_type: 'edx.googlecomponent.document.displayed',
              })
         });
     }

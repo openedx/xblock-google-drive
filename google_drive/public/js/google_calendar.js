@@ -6,7 +6,7 @@ function GoogleCalendarBlock(runtime, element) {
         $.ajax({
             type: "POST",
             url: runtime.handlerUrl(element, 'publish_event'),
-            data: JSON.stringify({url: iframe_url, displayedin: 'iframe', event_name: 'edx.googlecomponent.calendar.displayed'})
+            data: JSON.stringify({url: iframe_url, displayedin: 'iframe', event_type: 'edx.googlecomponent.calendar.displayed'})
         });
     });
 }

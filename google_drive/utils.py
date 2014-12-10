@@ -9,7 +9,7 @@ import pkg_resources
 from django.template import Context, Template
 
 from xblockutils.resources import ResourceLoader
-
+from xblockutils.publish_event import PublishEventMixin
 
 # Globals ###########################################################
 

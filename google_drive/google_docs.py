@@ -12,10 +12,11 @@ from xblock.fields import Scope, String
 from xblock.fragment import Fragment
 
 from .utils import loader, AttrDict
+from xblockutils.publish_event import PublishEventMixin
 
 # Classes ###########################################################
 
-class GoogleDocumentBlock(XBlock):
+class GoogleDocumentBlock(XBlock, PublishEventMixin):
     """
     XBlock providing a google document embed link
     """
@@ -87,22 +88,13 @@ class GoogleDocumentBlock(XBlock):
         }
 
     @XBlock.json_handler
-    def document_loaded(self, data, suffix=''):
-
-        self.runtime.publish(self, "edx.googlecomponent.document.displayed", data)
-
-        return {
-            'result': 'success',
-        }
-
-    @XBlock.json_handler
     def check_url(self, data, suffix=''):
 
         try:
             r = requests.head(data['url'])
         except:
             return {
-                'status_code': 404,
+                'status_code': 400,
             }
 
         return {

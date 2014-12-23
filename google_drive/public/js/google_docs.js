@@ -16,7 +16,7 @@ function GoogleDocumentBlock(runtime, element) {
 
         iframe.attr('title', display_name);
     }else if(image.length > 0){
-        image.attr('title', display_name);
+        image.attr('alt', display_name);
     }
 
     function SignalDocumentLoaded(ev, presented_within){
@@ -26,7 +26,7 @@ function GoogleDocumentBlock(runtime, element) {
             url: runtime.handlerUrl(element, 'publish_event'),
             data: JSON.stringify({
                 url: document_url,
-                displayedin: presented_within,
+                displayed_in: presented_within,
                 event_type: 'edx.googlecomponent.document.displayed',
              })
         });

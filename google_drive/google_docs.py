@@ -43,6 +43,13 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
             </iframe>
         """))
 
+    alt_text = String(
+        display_name="Alternative Text",
+        help="In situations where image is not available to the reader, the alternative text ensures that no information or functionality is lost.",
+        scope=Scope.settings,
+        default=""
+    )
+
     def student_view(self, context={}):
         """
         Player view, displayed to the student
@@ -82,6 +89,7 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
 
         self.display_name = submissions['display_name']
         self.embed_code = submissions['embed_code']
+        self.alt_text = submissions['alt_text']
 
         return {
             'result': 'success',

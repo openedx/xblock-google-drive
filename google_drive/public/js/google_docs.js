@@ -3,7 +3,9 @@ function GoogleDocumentBlock(runtime, element) {
 
     var iframe = $('iframe', element);
     var image = $('img', element);
-    var display_name = $('.google-docs-xblock-wrapper', element).attr('data-display-name');
+    var xblock_wrapper = $('.google-docs-xblock-wrapper', element);
+    var display_name = xblock_wrapper.attr('data-display-name');
+    var alt_text = xblock_wrapper.attr('data-alt-text');
 
     if(iframe.length > 0){
         var iframe_src = iframe.attr('src');
@@ -16,7 +18,7 @@ function GoogleDocumentBlock(runtime, element) {
 
         iframe.attr('title', display_name);
     }else if(image.length > 0){
-        image.attr('alt', display_name);
+        image.attr('alt', alt_text);
     }
 
     function SignalDocumentLoaded(ev, presented_within){

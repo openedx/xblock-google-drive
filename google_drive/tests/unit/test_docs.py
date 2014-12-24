@@ -63,7 +63,8 @@ def test_studio_document_submit():
 
     body = json.dumps({
         'display_name': "Google Document",
-        'embed_code': "<iframe>"
+        'embed_code': "<iframe>",
+        'alt_text': "This is alt text",
     })
     res = block.handle('studio_submit', make_request(body))
 
@@ -71,6 +72,7 @@ def test_studio_document_submit():
 
     assert_equals(block.display_name, "Google Document")
     assert_equals(block.embed_code, "<iframe>")
+    assert_equals(block.alt_text, "This is alt text")
 
 def test_calendar_document_submit():
     block = make_calendar_block()

@@ -30,6 +30,13 @@
           </div>
           <span class="tip setting-help">{% trans "Google provides an embed code for Drive documents. In the Google Drive document, from the File menu, select Publish to the Web. Modify settings as needed, click Publish, and copy the embed code into this field." %}</span>
         </li>
+        <li class="field comp-setting-entry is-set covered" id="alt_text_item">
+          <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="edit_alt_text">{% trans "Alternative text" %}</label>
+            <input class="input setting-input edit-alt-text" id="edit_alt_text" value="{{ self.alt_text }}" type="text">
+          </div>
+          <span class="tip setting-help">{% trans "In situations where image is not available to the reader, the alternative text ensures that no information or functionality is lost." %}</span>
+        </li>
       </ul>
     </div>
   </div>

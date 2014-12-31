@@ -29,10 +29,14 @@ function GoogleDocumentBlock(runtime, element) {
             data: JSON.stringify({
                 url: document_url,
                 displayed_in: presented_within,
-                event_type: 'edx.googlecomponent.document.displayed',
-             })
+                event_type: 'edx.googlecomponent.document.displayed'
+            }),
+            success: function(){
+                $('.load_event_complete', element).val("I've published the event that indicates that the load has completed");
+            }
         });
     }
+
     iframe.load(function(e){SignalDocumentLoaded(e, 'iframe');});
     image.load(function(e){SignalDocumentLoaded(e, 'img');});
 

@@ -50,17 +50,14 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
         default=""
     )
 
-    def student_view(self, context={}):
+    def student_view(self, context):
         """
         Player view, displayed to the student
         """
 
         fragment = Fragment()
-        context.update({
-            "self": self
-        })
 
-        fragment.add_content(loader.render_template('/templates/html/google_docs.html', context))
+        fragment.add_content(loader.render_template('/templates/html/google_docs.html', {"self": self}))
         fragment.add_css(loader.load_unicode('public/css/google_docs.css'))
         fragment.add_javascript(loader.load_unicode('public/js/google_docs.js'))
 

@@ -42,7 +42,7 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):
 
     views = [(0, 'Week'), (1, 'Month'), (2, 'Agenda')]
 
-    def student_view(self, context={}):
+    def student_view(self, context):
         """
         Player view, displayed to the student
         """
@@ -53,11 +53,10 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):
 
         iframe = '<iframe src="https://www.google.com/calendar/embed?mode={}&amp;src={}&amp;showCalendars=0" title="{}"></iframe>'.format(view, self.calendar_id, self.display_name)
 
-        context.update({
+        fragment.add_content(loader.render_template('/templates/html/google_calendar.html', {
             "self": self,
             "iframe": iframe
-        })
-        fragment.add_content(loader.render_template('/templates/html/google_calendar.html', context))
+        }))
         fragment.add_css(loader.load_unicode('public/css/google_calendar.css'))
         fragment.add_javascript(loader.load_unicode('public/js/google_calendar.js'))
 

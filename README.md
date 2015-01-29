@@ -108,3 +108,12 @@ License
 The Google Drive & Calendar XBlocks are available under the GNU Affero General
 Public License (AGPLv3).
 
+## Installation Troubleshooting
+On a Mac, some people have received errors when installing lxml, trying to find a specific header file for the compiler
+
+Try the following if you encounter a problem:
+```
+CPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2 CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments pip install lxml
+```
+
+

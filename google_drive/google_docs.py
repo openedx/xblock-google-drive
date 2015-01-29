@@ -1,9 +1,11 @@
+"""
+Google Document XBlock implementation
+"""
 # -*- coding: utf-8 -*-
 #
 
 # Imports ###########################################################
-
-import pkg_resources
+import logging
 import textwrap
 import requests
 
@@ -11,10 +13,14 @@ from xblock.core import XBlock
 from xblock.fields import Scope, String
 from xblock.fragment import Fragment
 
-from .utils import loader, AttrDict
 from xblockutils.publish_event import PublishEventMixin
+from xblockutils.resources import ResourceLoader
+
+log = logging.getLogger(__name__)
+RESOURCE_LOADER = ResourceLoader(__name__)
 
 # Classes ###########################################################
+
 
 class GoogleDocumentBlock(XBlock, PublishEventMixin):
     """
@@ -29,7 +35,11 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
 
     embed_code = String(
         display_name="Embed Code",
-        help="Google provides an embed code for Drive documents. In the Google Drive document, from the File menu, select Publish to the Web. Modify settings as needed, click Publish, and copy the embed code into this field.",
+        help=(
+            "Google provides an embed code for Drive documents. In the Google Drive document, "
+            "from the File menu, select Publish to the Web. Modify settings as needed, click "
+            "Publish, and copy the embed code into this field."
+        ),
         scope=Scope.settings,
         default=textwrap.dedent("""
             <iframe
@@ -45,45 +55,54 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
 
     alt_text = String(
         display_name="Alternative Text",
-        help="In situations where image is not available to the reader, the alternative text ensures that no information or functionality is lost.",
+        help=(
+            "In situations where image is not available to the reader, the alternative "
+            "text ensures that no information or functionality is lost."
+        ),
         scope=Scope.settings,
         default=""
     )
 
-    def student_view(self, context):
+    # Context argument is specified for xblocks, but we are not using herein
+    def student_view(self, context):  # pylint: disable=unused-argument
         """
         Player view, displayed to the student
         """
 
         fragment = Fragment()
 
-        fragment.add_content(loader.render_template('/templates/html/google_docs.html', {"self": self}))
-        fragment.add_css(loader.load_unicode('public/css/google_docs.css'))
-        fragment.add_javascript(loader.load_unicode('public/js/google_docs.js'))
+        fragment.add_content(RESOURCE_LOADER.render_template('/templates/html/google_docs.html', {"self": self}))
+        fragment.add_css(RESOURCE_LOADER.load_unicode('public/css/google_docs.css'))
+        fragment.add_javascript(RESOURCE_LOADER.load_unicode('public/js/google_docs.js'))
 
         fragment.initialize_js('GoogleDocumentBlock')
 
         return fragment
 
-    def studio_view(self, context):
+    # Context argument is specified for xblocks, but we are not using herein
+    def studio_view(self, context):  # pylint: disable=unused-argument
         """
         Editing view in Studio
         """
         fragment = Fragment()
-        fragment.add_content(loader.render_template('/templates/html/google_docs_edit.html', {
+        # Need to access protected members of fields to get their default value
+        fragment.add_content(RESOURCE_LOADER.render_template('/templates/html/google_docs_edit.html', {
             'self': self,
-            'defaultName': self.fields['display_name']._default
+            'defaultName': self.fields['display_name']._default  # pylint: disable=protected-access
         }))
-        fragment.add_javascript(loader.load_unicode('public/js/google_docs_edit.js'))
-        fragment.add_css(loader.load_unicode('public/css/google_edit.css'))
+        fragment.add_javascript(RESOURCE_LOADER.load_unicode('public/js/google_docs_edit.js'))
+        fragment.add_css(RESOURCE_LOADER.load_unicode('public/css/google_edit.css'))
 
         fragment.initialize_js('GoogleDocumentEditBlock')
 
         return fragment
 
+    # suffix argument is specified for xblocks, but we are not using herein
     @XBlock.json_handler
-    def studio_submit(self, submissions, suffix=''):
-
+    def studio_submit(self, submissions, suffix=''):  # pylint: disable=unused-argument
+        """
+        Change the settings for this XBlock given by the Studio user
+        """
         self.display_name = submissions['display_name']
         self.embed_code = submissions['embed_code']
         self.alt_text = submissions['alt_text']
@@ -92,18 +111,24 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
             'result': 'success',
         }
 
+    # suffix argument is specified for xblocks, but we are not using herein
     @XBlock.json_handler
-    def check_url(self, data, suffix=''):
-
+    def check_url(self, data, suffix=''):  # pylint: disable=unused-argument
+        """
+        Checks that the given document url is accessible, and therfore assumed to be valid
+        """
+        test_url = data['url']
         try:
-            r = requests.head(data['url'])
-        except:
+            url_response = requests.head(test_url)
+        # Catch wide range of errors
+        except requests.exceptions.RequestException as ex:
+            log.debug("Unable to connect to %s - %s", test_url, unicode(ex))
             return {
                 'status_code': 400,
             }
 
         return {
-            'status_code': r.status_code,
+            'status_code': url_response.status_code,
         }
 
     @staticmethod

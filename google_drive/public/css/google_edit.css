@@ -11,7 +11,7 @@
     max-height: 200px;
 }
 
-.google-edit-wrapper .user-inputs-and-validation .validation_alert.covered {
+.google-edit-wrapper .user-inputs-and-validation .validation_alert.covered, .google-edit-wrapper .xblock-inputs li.comp-setting-entry.covered {
     display: none;
     visibility: hidden;
 }

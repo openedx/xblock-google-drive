@@ -48,11 +48,11 @@ Access it at [http://localhost:8000/](http://localhost:8000).
 Running tests
 -------------
 
-From the xblock-google-drive repository root, run the tests with the
+From google-drive directory, run the tests with the
 following command:
 
 ```bash
-$ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django
+$ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django tests/*
 ```
 
 If you want to run only the integration or the unit tests, append the directory to the command. You can also run separate modules in this manner.
@@ -83,6 +83,24 @@ Analogically, validation takes place for embedded code of Google Drive File.
 2. Embedded code of Google Drive file is being validated on the server side, by checking the status code of the HTTP response.
    Since error status codes start with 400, it's assumed that each status code that's larger than or equal to 400 states that file is invalid.
    If for any reason exception occurs while getting an HTTP response, error code is returned, thus overriding default signalization that is invoked by edx platform when the 500 status code is reported.
+
+a11y
+----
+
+For users with a visual impairment:
+
+1. Iframes in which Google calendars and Google Drive files (except images) are shown now have title attribute with alternative text content which describes what the iframe contains.
+2. Images have alt attribute which contains alternative text that has the same purpose as the title attribute of an iframe has
+
+Analytics
+---------
+
+For analytics purposes, each time an image or iframe containing a calendar or Google Drive file is loaded, an event will be triggered.
+
+There are two types of events:
+
+1. edx.googlecomponent.calendar.displayed (if an iframe containing a Google calendar is loaded)
+2. edx.googlecomponent.document.displayed (if an image or an iframe containing a Google Drive File is loaded)
 
 License
 -------

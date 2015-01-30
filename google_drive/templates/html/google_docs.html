@@ -1,3 +1,4 @@
-<div class="google-docs-xblock-wrapper" data-display-name="{{self.display_name}}">
-{{ self.embed_code|safe }}
+<div class="google-docs-xblock-wrapper" data-display-name="{{self.display_name}}" data-alt-text="{{self.alt_text}}">
+    <input type="hidden" class="load_event_complete">
+    {{ self.embed_code|safe }}
 </div>

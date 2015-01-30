@@ -8,6 +8,8 @@ function GoogleDocumentEditBlock(runtime, element) {
     var edit_display_name_input = $('#edit_display_name', element);
     var error_message_div = $('.xblock-editor-error-message', element);
     var defaultName = edit_display_name_input.attr('data-default-value');
+    var edit_alt_text_input = $('#edit_alt_text', element);
+    var alt_text_item = $('li#alt_text_item', element);
 
     ToggleClearDefaultName();
     IsUrlValid();
@@ -44,6 +46,7 @@ function GoogleDocumentEditBlock(runtime, element) {
         var data = {
             'display_name': edit_display_name_input.val(),
             'embed_code': embed_code_textbox.val(),
+            'alt_text': edit_alt_text_input.val(),
         };
 
         error_message_div.html();
@@ -57,6 +60,11 @@ function GoogleDocumentEditBlock(runtime, element) {
                 error_message_div.css('display', 'block');
             }
         });
+    }
+
+    function HideAltTextInput(){
+        edit_alt_text_input.val('');
+        alt_text_item.addClass('covered');
     }
 
     function IsUrlValid(){
@@ -75,6 +83,7 @@ function GoogleDocumentEditBlock(runtime, element) {
                     validation_alert.removeClass('covered');
                     embed_code_textbox.addClass('error');
                     xblock_inputs_wrapper.addClass('alerted');
+                    HideAltTextInput();
                 } else {
                     validation_alert.addClass('covered');
                     save_button.removeClass('disabled');
@@ -82,6 +91,16 @@ function GoogleDocumentEditBlock(runtime, element) {
                     xblock_inputs_wrapper.removeClass('alerted');
 
                     save_button.bind('click', SaveEditing);
+
+                    if (embed_html.toLowerCase().indexOf("<img") >= 0){
+                        if (alt_text_item.hasClass('covered')){
+                            alt_text_item.removeClass('covered');
+                        }
+                    } else {
+                        if (!alt_text_item.hasClass('covered')){
+                            HideAltTextInput();
+                        }
+                    }
                 }
             },
             error: function(result) {

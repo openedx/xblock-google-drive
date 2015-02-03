@@ -52,8 +52,10 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         assert_in('Google Document', student_fragment.content)
         assert_in(
             (
-                'https://docs.google.com/presentation/d/1x2ZuzqHsMoh1epK8VsGAlanSo7r9z55ualwQlj-ofBQ/embed?start=true&loop'
-                '=true&delayms=10000"\n    frameborder="0"\n    width="960"\n    height="569"\n    allowfullscreen="true"'
+                'https://docs.google.com/presentation/d/1x2ZuzqHsMoh1epK8VsGAlanSo7r9z55ualwQlj-ofBQ'
+                '/embed?start=true&loop'
+                '=true&delayms=10000"\n    frameborder="0"\n    width="960"\n    height="569"\n    '
+                'allowfullscreen="true"'
             ),
             student_fragment.content
         )
@@ -132,7 +134,9 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         assert_equals(json.loads(res.body), {'result': 'success'})
 
         body = json.dumps({
-            'url': 'https://docs.google.com/drawings/d/1LHGzCTLRb--CDvFFjoYp62TiIN5KgsE7QOy9Sift_eg/pub?w=882&amp;h=657',
+            'url': (
+                'https://docs.google.com/drawings/d/1LHGzCTLRb--CDvFFjoYp62TiIN5KgsE7QOy9Sift_eg/'
+                'pub?w=882&amp;h=657'),
             'displayed_in': 'img',
             'event_type': 'edx.googlecomponent.document.displayed',
         })

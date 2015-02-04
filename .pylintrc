@@ -39,7 +39,12 @@ load-plugins=
 # no Warning level messages displayed, use"--disable=all --enable=classes
 # --disable=W"
 # I0011     locally-disabled   (module-level pylint overrides)
-disable=I0011,W0232
+# disabling ```duplicate-code``` due to 5 lines that are the same near the top of
+# both xblock files - of course these are similar because it is a core pattern to
+# use - if we separated out into a separate file, we'd have the 5 lines in a separate
+# file and have 2 import statements within each file to get back the stuff - pretty
+# useless warning in this specific case
+disable=I0011,W0232,duplicate-code
 
 
 [REPORTS]

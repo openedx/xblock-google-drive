@@ -42,12 +42,13 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         ids = generate_scope_ids(runtime, 'google_document')
         return GoogleDocumentBlock(runtime, db_model, scope_ids=ids)
 
-    def test_document_templates_contents(self):
+    def test_document_template_content(self):  # pylint: disable=no-self-use
         """ Test content of GoogleDocumentBlock's rendered views """
         block = TestGoogleDocumentBlock.make_document_block()
         block.usage_id = Mock()
 
         student_fragment = block.render('student_view', Mock())
+        # pylint: disable=no-value-for-parameter
         assert_in('<div class="google-docs-xblock-wrapper"', student_fragment.content)
         assert_in('Google Document', student_fragment.content)
         assert_in(
@@ -69,7 +70,7 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         assert_in('<div class="xblock-inputs editor_content_wrapper">', studio_fragment.content)
         assert_in('<div class="xblock-actions">', studio_fragment.content)
 
-    def test_studio_document_submit(self):
+    def test_studio_document_submit(self):  # pylint: disable=no-self-use
         """ Test studio submission of GoogleDocumentBlock """
         block = TestGoogleDocumentBlock.make_document_block()
 
@@ -79,14 +80,14 @@ class TestGoogleDocumentBlock(unittest.TestCase):
             'alt_text': "This is alt text",
         })
         res = block.handle('studio_submit', make_request(body))
-
+        # pylint: disable=no-value-for-parameter
         assert_equals(json.loads(res.body), {'result': 'success'})
 
         assert_equals(block.display_name, "Google Document")
         assert_equals(block.embed_code, "<iframe>")
         assert_equals(block.alt_text, "This is alt text")
 
-    def test_check_document_url(self):
+    def test_check_document_url(self):  # pylint: disable=no-self-use
         """ Test verification of the provided Google Document URL"""
         block = TestGoogleDocumentBlock.make_document_block()
 
@@ -97,7 +98,7 @@ class TestGoogleDocumentBlock(unittest.TestCase):
             )
         })
         res = block.handle('check_url', make_request(data))
-
+        # pylint: disable=no-value-for-parameter
         assert_equals(json.loads(res.body), {'status_code': 200})
 
         data = json.dumps({
@@ -117,7 +118,7 @@ class TestGoogleDocumentBlock(unittest.TestCase):
 
         assert_equals(json.loads(res.body), {'status_code': 404})
 
-    def test_document_publish_event(self):
+    def test_document_publish_event(self):  # pylint: disable=no-self-use
         """ Test event publishing in GoogleDocumentBlock"""
         block = TestGoogleDocumentBlock.make_document_block()
 
@@ -130,7 +131,7 @@ class TestGoogleDocumentBlock(unittest.TestCase):
             'event_type': 'edx.googlecomponent.document.displayed',
         })
         res = block.handle('publish_event', make_request(body))
-
+        # pylint: disable=no-value-for-parameter
         assert_equals(json.loads(res.body), {'result': 'success'})
 
         body = json.dumps({
@@ -168,12 +169,13 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         ids = generate_scope_ids(runtime, 'google_calendar')
         return GoogleCalendarBlock(runtime, db_model, scope_ids=ids)
 
-    def test_calendar_templates_contents(self):
+    def test_calendar_template_content(self):  # pylint: disable=no-self-use
         """ Test content of GoogleCalendarBlock's rendered views """
         block = TestGoogleCalendarBlock.make_calendar_block()
         block.usage_id = Mock()
 
         student_fragment = block.render('student_view', Mock())
+        # pylint: disable=no-value-for-parameter
         assert_in('<div class="google-calendar-xblock-wrapper">', student_fragment.content)
         assert_in(
             (
@@ -193,7 +195,7 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         assert_in('<div class="xblock-inputs editor_content_wrapper">', studio_fragment.content)
         assert_in('<div class="xblock-actions">', studio_fragment.content)
 
-    def test_calendar_document_submit(self):
+    def test_calendar_document_submit(self):  # pylint: disable=no-self-use
         """ Test studio submission of GoogleCalendarBlock """
         block = TestGoogleCalendarBlock.make_calendar_block()
 
@@ -203,14 +205,14 @@ class TestGoogleCalendarBlock(unittest.TestCase):
             'default_view': 1
         })
         res = block.handle('studio_submit', make_request(body))
-
+        # pylint: disable=no-value-for-parameter
         assert_equals(json.loads(res.body), {'result': 'success'})
 
         assert_equals(block.display_name, "Google Calendar")
         assert_equals(block.calendar_id, "google1234")
         assert_equals(block.default_view, 1)
 
-    def test_calendar_publish_event(self):
+    def test_calendar_publish_event(self):  # pylint: disable=no-self-use
         """ Test event publishing in GoogleCalendarBlock"""
         block = TestGoogleCalendarBlock.make_calendar_block()
 
@@ -223,7 +225,7 @@ class TestGoogleCalendarBlock(unittest.TestCase):
             'event_type': 'edx.googlecomponent.calendar.displayed'
         })
         res = block.handle('publish_event', make_request(body))
-
+        # pylint: disable=no-value-for-parameter
         assert_equals(json.loads(res.body), {'result': 'success'})
 
         body = json.dumps({

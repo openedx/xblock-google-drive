@@ -2,7 +2,10 @@
 lxml
 mock
 selenium
+pep8
+pylint
 coverage==3.7
+coveralls
 django==1.4.18
 -e git+https://github.com/nosedjango/nosedjango.git@ed7d7f9aa969252ff799ec159f828eaa8c1cbc5a#egg=nosedjango-dev
 -e git+https://github.com/edx-solutions/xblock-utils.git#egg=xblock-utils

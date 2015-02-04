@@ -1,5 +1,14 @@
 language: python
+
 python:
   - "2.7"
-install: pip install -r requirements.txt
-script: DJANGO_SETTINGS_MODULE="settings" nosetests --with-coverage --with-django
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - DJANGO_SETTINGS_MODULE="settings" nosetests --with-coverage --cover-package="google_drive" --with-django
+  - pep8 --config=.pep8 google_drive
+  - pylint --rcfile=.pylintrc google_drive --report=no
+
+after_success: coveralls

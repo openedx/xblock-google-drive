@@ -14,13 +14,13 @@ from xblock.fragment import Fragment
 from xblockutils.publish_event import PublishEventMixin
 from xblockutils.resources import ResourceLoader
 
-log = logging.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 RESOURCE_LOADER = ResourceLoader(__name__)
 
 # Classes ###########################################################
 
 
-class GoogleCalendarBlock(XBlock, PublishEventMixin):
+class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-many-ancestors
     """
     XBlock providing a google calendar view for a specific calendar
     """

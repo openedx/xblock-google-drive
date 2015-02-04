@@ -16,13 +16,13 @@ from xblock.fragment import Fragment
 from xblockutils.publish_event import PublishEventMixin
 from xblockutils.resources import ResourceLoader
 
-log = logging.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 RESOURCE_LOADER = ResourceLoader(__name__)
 
 # Classes ###########################################################
 
 
-class GoogleDocumentBlock(XBlock, PublishEventMixin):
+class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-many-ancestors
     """
     XBlock providing a google document embed link
     """
@@ -113,16 +113,16 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
 
     # suffix argument is specified for xblocks, but we are not using herein
     @XBlock.json_handler
-    def check_url(self, data, suffix=''):  # pylint: disable=unused-argument
+    def check_url(self, data, suffix=''):  # pylint: disable=unused-argument,no-self-use
         """
-        Checks that the given document url is accessible, and therfore assumed to be valid
+        Checks that the given document url is accessible, and therefore assumed to be valid
         """
         test_url = data['url']
         try:
             url_response = requests.head(test_url)
         # Catch wide range of errors
         except requests.exceptions.RequestException as ex:
-            log.debug("Unable to connect to %s - %s", test_url, unicode(ex))
+            LOG.debug("Unable to connect to %s - %s", test_url, unicode(ex))
             return {
                 'status_code': 400,
             }

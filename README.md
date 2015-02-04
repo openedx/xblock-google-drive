@@ -64,7 +64,7 @@ $ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django tests/unit
 To see the coverage, run the tests using the following command:
 
 ```bash
-$ DJANGO_SETTINGS_MODULE="settings" nosetests --with-coverage --with-django
+$ DJANGO_SETTINGS_MODULE="settings" nosetests --with-coverage --cover-package="google_drive" --with-django
 ```
 
 If you have not installed the xblock-sdk in the active virtualenv,

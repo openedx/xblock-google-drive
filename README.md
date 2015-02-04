@@ -1,4 +1,4 @@
-Google Drive & Calendar XBlock
+Google Drive & Calendar XBlock [![Build Status](https://travis-ci.org/edx-solutions/xblock-google-drive.svg?branch=master)](https://travis-ci.org/edx-solutions/xblock-google-drive)
 ------------------------------
 
 This XBlock allows embedding of Google documents and calendar,

@@ -19,9 +19,23 @@ from xblockutils.resources import ResourceLoader
 LOG = logging.getLogger(__name__)
 RESOURCE_LOADER = ResourceLoader(__name__)
 
+# Constants ###########################################################
+DEFAULT_EMBED_CODE = textwrap.dedent("""
+            <iframe
+                src="https://docs.google.com/presentation/d/1x2ZuzqHsMoh1epK8VsGAlanSo7r9z55ualwQlj-ofBQ/embed?start=true&loop=true&delayms=10000"
+                frameborder="0"
+                width="960"
+                height="569"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true">
+            </iframe>
+        """)
+DOCUMENT_TEMPLATE = "/templates/html/google_docs.html"
+DOCUMENT_EDIT_TEMPLATE = "/templates/html/google_docs_edit.html"
+
+
 # Classes ###########################################################
-
-
 class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-many-ancestors
     """
     XBlock providing a google document embed link
@@ -41,17 +55,8 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
             "Publish, and copy the embed code into this field."
         ),
         scope=Scope.settings,
-        default=textwrap.dedent("""
-            <iframe
-                src="https://docs.google.com/presentation/d/1x2ZuzqHsMoh1epK8VsGAlanSo7r9z55ualwQlj-ofBQ/embed?start=true&loop=true&delayms=10000"
-                frameborder="0"
-                width="960"
-                height="569"
-                allowfullscreen="true"
-                mozallowfullscreen="true"
-                webkitallowfullscreen="true">
-            </iframe>
-        """))
+        default=DEFAULT_EMBED_CODE
+    )
 
     alt_text = String(
         display_name="Alternative Text",
@@ -68,10 +73,9 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         Player view, displayed to the student
         """
-
         fragment = Fragment()
 
-        fragment.add_content(RESOURCE_LOADER.render_template('/templates/html/google_docs.html', {"self": self}))
+        fragment.add_content(RESOURCE_LOADER.render_template(DOCUMENT_TEMPLATE, {"self": self}))
         fragment.add_css(RESOURCE_LOADER.load_unicode('public/css/google_docs.css'))
         fragment.add_javascript(RESOURCE_LOADER.load_unicode('public/js/google_docs.js'))
 
@@ -86,7 +90,7 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         fragment = Fragment()
         # Need to access protected members of fields to get their default value
-        fragment.add_content(RESOURCE_LOADER.render_template('/templates/html/google_docs_edit.html', {
+        fragment.add_content(RESOURCE_LOADER.render_template(DOCUMENT_EDIT_TEMPLATE, {
             'self': self,
             'defaultName': self.fields['display_name']._default  # pylint: disable=protected-access
         }))

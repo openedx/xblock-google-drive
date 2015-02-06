@@ -1,6 +1,5 @@
 /* Javascript for GoogleDocumentBlock. */
 function GoogleDocumentBlock(runtime, element) {
-
     var iframe = $('iframe', element);
     var image = $('img', element);
     var xblock_wrapper = $('.google-docs-xblock-wrapper', element);

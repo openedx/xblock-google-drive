@@ -1,5 +1,4 @@
 function GoogleDocumentEditBlock(runtime, element) {
-
     var clear_name_button = $('.clear-display-name', element);
     var save_button = $('.save-button', element);
     var validation_alert = $('.validation_alert', element);

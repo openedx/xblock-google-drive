@@ -17,9 +17,18 @@ from xblockutils.resources import ResourceLoader
 LOG = logging.getLogger(__name__)
 RESOURCE_LOADER = ResourceLoader(__name__)
 
+
+# Constants ###########################################################
+DEFAULT_CALENDAR_ID = "edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com"
+CALENDAR_TEMPLATE = "/templates/html/google_calendar.html"
+CALENDAR_EDIT_TEMPLATE = "/templates/html/google_calendar_edit.html"
+CALENDAR_IFRAME = (
+    '<iframe src="https://www.google.com/calendar/embed'
+    '?mode={}&amp;src={}&amp;showCalendars=0" title="{}"></iframe>'
+)
+
+
 # Classes ###########################################################
-
-
 class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-many-ancestors
     """
     XBlock providing a google calendar view for a specific calendar
@@ -38,7 +47,7 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
             "open Settings and copy the ID from the Calendar Address section into this field."
         ),
         scope=Scope.settings,
-        default="edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com"
+        default=DEFAULT_CALENDAR_ID
     )
 
     default_view = Integer(
@@ -55,19 +64,12 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         Player view, displayed to the student
         """
-
         fragment = Fragment()
 
         view = self.views[self.default_view][1]
+        iframe = CALENDAR_IFRAME.format(view, self.calendar_id, self.display_name)
 
-        iframe = (
-            '<iframe src="https://www.google.com/calendar/embed'
-            '?mode={}&amp;src={}&amp;showCalendars=0" title="{}"></iframe>'
-        ).format(
-            view, self.calendar_id, self.display_name
-        )
-
-        fragment.add_content(RESOURCE_LOADER.render_template('/templates/html/google_calendar.html', {
+        fragment.add_content(RESOURCE_LOADER.render_template(CALENDAR_TEMPLATE, {
             "self": self,
             "iframe": iframe
         }))
@@ -85,7 +87,7 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         fragment = Fragment()
         # Need to access protected members of fields to get their default value
-        fragment.add_content(RESOURCE_LOADER.render_template('/templates/html/google_calendar_edit.html', {
+        fragment.add_content(RESOURCE_LOADER.render_template(CALENDAR_EDIT_TEMPLATE, {
             'self': self,
             'defaultName': self.fields['display_name']._default,  # pylint: disable=protected-access
             'defaultID': self.fields['calendar_id']._default  # pylint: disable=protected-access

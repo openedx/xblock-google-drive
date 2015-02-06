@@ -1,1 +1,1 @@
-""" Unit tests for google drive components """
+""" Integration tests for google drive components """

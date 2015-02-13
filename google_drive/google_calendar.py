@@ -1,6 +1,4 @@
-"""
-Google Calendar XBlock implementation
-"""
+""" Google Calendar XBlock implementation """
 # -*- coding: utf-8 -*-
 #
 
@@ -22,10 +20,6 @@ RESOURCE_LOADER = ResourceLoader(__name__)
 DEFAULT_CALENDAR_ID = "edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com"
 CALENDAR_TEMPLATE = "/templates/html/google_calendar.html"
 CALENDAR_EDIT_TEMPLATE = "/templates/html/google_calendar_edit.html"
-CALENDAR_IFRAME = (
-    '<iframe src="https://www.google.com/calendar/embed'
-    '?mode={}&amp;src={}&amp;showCalendars=0" title="{}"></iframe>'
-)
 
 
 # Classes ###########################################################
@@ -66,12 +60,10 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         fragment = Fragment()
 
-        view = self.views[self.default_view][1]
-        iframe = CALENDAR_IFRAME.format(view, self.calendar_id, self.display_name)
-
         fragment.add_content(RESOURCE_LOADER.render_template(CALENDAR_TEMPLATE, {
-            "self": self,
-            "iframe": iframe
+            "mode": self.views[self.default_view][1],
+            "src": self.calendar_id,
+            "title": self.display_name,
         }))
         fragment.add_css(RESOURCE_LOADER.load_unicode('public/css/google_calendar.css'))
         fragment.add_javascript(RESOURCE_LOADER.load_unicode('public/js/google_calendar.js'))
@@ -105,9 +97,18 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         Change the settings for this XBlock given by the Studio user
         """
-        self.display_name = submissions['display_name']
-        self.calendar_id = submissions['calendar_id']
-        self.default_view = submissions['default_view']
+        if not isinstance(submissions, dict):
+            LOG.error("submissions object from Studio is not a dict - %r", submissions)
+            return {
+                'result': 'error'
+            }
+
+        if 'display_name' in submissions:
+            self.display_name = submissions['display_name']
+        if 'calendar_id' in submissions:
+            self.calendar_id = submissions['calendar_id']
+        if 'default_view' in submissions:
+            self.default_view = submissions['default_view']
 
         return {
             'result': 'success',

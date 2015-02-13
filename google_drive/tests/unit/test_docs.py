@@ -68,6 +68,10 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         assert_equals(block.embed_code, "<iframe>")
         assert_equals(block.alt_text, "This is alt text")
 
+        body = json.dumps('')
+        res = block.handle('studio_submit', make_request(body))
+        assert_equals(json.loads(res.body), {'result': 'error'})
+
     def test_check_document_url(self):  # pylint: disable=no-self-use
         """ Test verification of the provided Google Document URL"""
         block = TestGoogleDocumentBlock.make_document_block()

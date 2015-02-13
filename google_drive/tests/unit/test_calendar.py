@@ -65,6 +65,11 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         assert_equals(block.calendar_id, "google1234")
         assert_equals(block.default_view, 1)
 
+        body = json.dumps('')
+        res = block.handle('studio_submit', make_request(body))
+        # pylint: disable=no-value-for-parameter
+        assert_equals(json.loads(res.body), {'result': 'error'})
+
     def test_calendar_publish_event(self):  # pylint: disable=no-self-use
         """ Test event publishing in GoogleCalendarBlock"""
         block = TestGoogleCalendarBlock.make_calendar_block()

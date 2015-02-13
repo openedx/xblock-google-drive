@@ -90,7 +90,7 @@ Analogically, validation takes place for embedded code of Google Drive File.
    Since error status codes start with 400, it's assumed that each status code that's larger than or equal to 400 states that file is invalid.
    If for any reason exception occurs while getting an HTTP response, error code is returned, thus overriding default signalization that is invoked by edx platform when the 500 status code is reported.
 
-a11y
+Accessibility (a11y)
 ----
 
 For users with a visual impairment:

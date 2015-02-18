@@ -1,4 +1,5 @@
 # May need to do this on a Mac - CPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2 CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments pip install lxml
+ddt
 lxml
 mock
 selenium

@@ -44,7 +44,10 @@ class TestGoogleDocumentBlock(unittest.TestCase):
 
         studio_fragment = block.render('studio_view', Mock())
         assert_in(
-            '<div class="wrapper-comp-settings is-active editor-with-buttons google-edit-wrapper" id="settings-tab">',
+            (
+                '<div class="wrapper-comp-settings is-active editor-with-buttons google-edit-wrapper" '
+                'id="document-settings-tab">'
+            ),
             studio_fragment.content
         )
         assert_in('<div class="user-inputs-and-validation">', studio_fragment.content)
@@ -98,6 +101,11 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         res = block.handle('check_url', make_request(data))
 
         assert_equals(json.loads(res.body), {'status_code': 404})
+
+        data = json.dumps({})
+        res = block.handle('check_url', make_request(data))
+
+        assert_equals(json.loads(res.body), {'status_code': 400})
 
     def test_document_publish_event(self):  # pylint: disable=no-self-use
         """ Test event publishing in GoogleDocumentBlock"""

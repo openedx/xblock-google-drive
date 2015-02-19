@@ -1,4 +1,4 @@
-Google Drive & Calendar XBlock
+Google Drive & Calendar XBlock [![Build Status](https://travis-ci.org/edx-solutions/xblock-google-drive.svg?branch=master)](https://travis-ci.org/edx-solutions/xblock-google-drive)
 ------------------------------
 
 This XBlock allows embedding of Google documents and calendar,
@@ -61,6 +61,12 @@ If you want to run only the integration or the unit tests, append the directory 
 $ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django tests/unit
 ```
 
+To see the coverage, run the tests using the following command:
+
+```bash
+$ DJANGO_SETTINGS_MODULE="settings" nosetests --with-coverage --cover-package="google_drive" --with-django
+```
+
 If you have not installed the xblock-sdk in the active virtualenv,
 you might also have to prepend `PYTHONPATH=".:/path/to/xblock"` to the command above.
 (`/path/to/xblock` is the path to the xblock-sdk, where the workbench resides).
@@ -84,7 +90,7 @@ Analogically, validation takes place for embedded code of Google Drive File.
    Since error status codes start with 400, it's assumed that each status code that's larger than or equal to 400 states that file is invalid.
    If for any reason exception occurs while getting an HTTP response, error code is returned, thus overriding default signalization that is invoked by edx platform when the 500 status code is reported.
 
-a11y
+Accessibility (a11y)
 ----
 
 For users with a visual impairment:
@@ -107,4 +113,13 @@ License
 
 The Google Drive & Calendar XBlocks are available under the GNU Affero General
 Public License (AGPLv3).
+
+## Installation Troubleshooting
+On a Mac, some people have received errors when installing lxml, trying to find a specific header file for the compiler
+
+Try the following if you encounter a problem:
+```
+CPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2 CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments pip install lxml
+```
+
 

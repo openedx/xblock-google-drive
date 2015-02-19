@@ -8,7 +8,8 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
 
 install:
-  - pip install -r requirements.txt
+  - "pip install -r requirements.txt"
+  - "pip uninstall -y xblock-google-drive && python setup.py sdist && pip install dist/xblock-google-drive-0.1.tar.gz"
 
 script:
   - DJANGO_SETTINGS_MODULE="settings" nosetests --with-coverage --cover-package="google_drive" --with-django

@@ -130,10 +130,15 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         Checks that the given document url is accessible, and therefore assumed to be valid
         """
-        test_url = data['url']
         try:
+            test_url = data['url']
             url_response = requests.head(test_url)
-        # Catch wide range of errors
+        except KeyError as ex:
+            LOG.debug("URL not provided - %s", unicode(ex))
+            return {
+                'status_code': 400,
+            }
+        # Catch wide range of request exceptions
         except requests.exceptions.RequestException as ex:
             LOG.debug("Unable to connect to %s - %s", test_url, unicode(ex))
             return {

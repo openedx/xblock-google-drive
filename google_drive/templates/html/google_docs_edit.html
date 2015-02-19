@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <!-- TODO: Replace by default edit view once available in Studio -->
-<div class="wrapper-comp-settings is-active editor-with-buttons google-edit-wrapper" id="settings-tab">
+<div class="wrapper-comp-settings is-active editor-with-buttons google-edit-wrapper" id="document-settings-tab">
   <div class="user-inputs-and-validation">
     <div class="validation_alert covered">
       <i class="alert_icon"></i>
@@ -17,7 +17,7 @@
             <label class="label setting-label" for="edit_display_name">{% trans "Display Name" %}</label>
             <input class="input setting-input edit-display-name" id="edit_display_name" value="{{ self.display_name }}" type="text" data-default-value="{{defaultName}}">
             <button class="action setting-clear clear-display-name" type="button" name="setting-clear">
-              <i class="icon-undo"></i>
+              <i class="icon fa fa-undo"></i>
               <span class="sr">"<%= gettext("Clear Value") %>"</span>
             </button>
           </div>
@@ -44,7 +44,7 @@
     <span class="xblock-editor-error-message"></span>
     <ul>
       <li class="action-item">
-        <a href="#" class="button action-primary save-button">{% trans "Save" %}</a>
+        <a href="#" id="document-submit-options" class="button action-primary save-button">{% trans "Save" %}</a>
       </li>
 
       <li class="action-item">

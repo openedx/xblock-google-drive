@@ -13,6 +13,7 @@ from google_drive.tests.unit.test_utils import generate_scope_ids, make_request
 
 class TestGoogleCalendarBlock(unittest.TestCase):
     """ Tests for GoogleCalendarBlock """
+
     @classmethod
     def make_calendar_block(cls):
         """ helper to construct a GoogleCalendarBlock """
@@ -41,7 +42,10 @@ class TestGoogleCalendarBlock(unittest.TestCase):
 
         studio_fragment = block.render('studio_view', Mock())
         assert_in(
-            '<div class="wrapper-comp-settings is-active editor-with-buttons google-edit-wrapper" id="settings-tab">',
+            (
+                '<div class="wrapper-comp-settings is-active editor-with-buttons google-edit-wrapper" '
+                'id="calendar-settings-tab">'
+            ),
             studio_fragment.content
         )
         assert_in('<div class="user-inputs-and-validation">', studio_fragment.content)

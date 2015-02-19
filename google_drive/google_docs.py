@@ -107,9 +107,18 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         Change the settings for this XBlock given by the Studio user
         """
-        self.display_name = submissions['display_name']
-        self.embed_code = submissions['embed_code']
-        self.alt_text = submissions['alt_text']
+        if not isinstance(submissions, dict):
+            LOG.error("submissions object from Studio is not a dict - %r", submissions)
+            return {
+                'result': 'error'
+            }
+
+        if 'display_name' in submissions:
+            self.display_name = submissions['display_name']
+        if 'embed_code' in submissions:
+            self.embed_code = submissions['embed_code']
+        if 'alt_text' in submissions:
+            self.alt_text = submissions['alt_text']
 
         return {
             'result': 'success',

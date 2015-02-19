@@ -132,12 +132,14 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         try:
             test_url = data['url']
-            url_response = requests.head(test_url)
         except KeyError as ex:
             LOG.debug("URL not provided - %s", unicode(ex))
             return {
                 'status_code': 400,
             }
+
+        try:
+            url_response = requests.head(test_url)
         # Catch wide range of request exceptions
         except requests.exceptions.RequestException as ex:
             LOG.debug("Unable to connect to %s - %s", test_url, unicode(ex))

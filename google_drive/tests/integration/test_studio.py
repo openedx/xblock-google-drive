@@ -1,24 +1,17 @@
 """ Runs tests for the studio views """
+# -*- coding: utf-8 -*-
+#
 
+# Imports ###########################################################
 from ddt import ddt, unpack, data
 from .base_test import GoogleCalendarBaseTest, GoogleDocumentBaseTest
 from .studio_scenarios import CALENDAR_SCENARIOS, DOCUMENT_SCENARIOS, IMAGE_SCENARIOS
-
-DEFAULT_CALENDAR_SRC = (
-    'https://www.google.com/calendar/embed?'
-    'mode=Month&'
-    'src=edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com&'
-    'showCalendars=0'
-)
-
-DEFAULT_DOCUMENT_SRC = (
-    'https://docs.google.com/presentation/d/1x2ZuzqHsMoh1epK8VsGAlanSo7r9z55ualwQlj-ofBQ/embed?'
-    'start=true&loop=true&delayms=10000'
-)
-
-TEST_IMAGE_SRC = 'https://docs.google.com/drawings/d/1lmmxboBM5c_0WCTjhAxBdkpqQb3T8VSwtuG0TRR1ODQ/pub?w=960&h=720'
+from google_drive.google_calendar import DEFAULT_CALENDAR_URL
+from google_drive.google_docs import DEFAULT_DOCUMENT_URL
+from google_drive.tests.test_const import TEST_IMAGE_URL
 
 
+# Classes ###########################################################
 @ddt  # pylint: disable=too-many-ancestors
 class GoogleCalendarStudioTest(GoogleCalendarBaseTest):
     """
@@ -65,7 +58,7 @@ class GoogleCalendarStudioTest(GoogleCalendarBaseTest):
         self.go_to_page(page_name, css_selector='div.google-calendar-xblock-wrapper')
         calendar_iframe = self.browser.find_element_by_css_selector('iframe')
         # Expecting that default calendar is the one loaded in the IFrame
-        self.assertEqual(calendar_iframe.get_attribute("src"), DEFAULT_CALENDAR_SRC)
+        self.assertEqual(calendar_iframe.get_attribute("src"), DEFAULT_CALENDAR_URL)
         # Expecting that the new display name is the title of the IFrame
         self.assertEqual(calendar_iframe.get_attribute("title"), 'My Meetings')
 
@@ -102,7 +95,7 @@ class GoogleDocumentStudioTest(GoogleDocumentBaseTest):
         self.go_to_page(page_name, css_selector='div.google-docs-xblock-wrapper')
         document_iframe = self.browser.find_element_by_css_selector('iframe')
         # Expecting that default calendar is the one loaded in the IFrame
-        self.assertEqual(document_iframe.get_attribute("src"), DEFAULT_DOCUMENT_SRC)
+        self.assertEqual(document_iframe.get_attribute("src"), DEFAULT_DOCUMENT_URL)
         # Expecting that the new display name is the title of the IFrame
         self.assertEqual(document_iframe.get_attribute("title"), 'My Document')
 
@@ -130,6 +123,6 @@ class GoogleDocumentStudioTest(GoogleDocumentBaseTest):
         self.go_to_page(page_name, css_selector='div.google-docs-xblock-wrapper')
         image_iframe = self.browser.find_element_by_css_selector('img')
         # Expecting that default calendar is the one loaded in the IFrame
-        self.assertEqual(image_iframe.get_attribute("src"), TEST_IMAGE_SRC)
+        self.assertEqual(image_iframe.get_attribute("src"), TEST_IMAGE_URL)
         # Expecting that the new display name is the title of the IFrame
         self.assertEqual(image_iframe.get_attribute("alt"), 'Alternative text for my image')

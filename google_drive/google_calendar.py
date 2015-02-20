@@ -15,9 +15,10 @@ from xblockutils.resources import ResourceLoader
 LOG = logging.getLogger(__name__)
 RESOURCE_LOADER = ResourceLoader(__name__)
 
-
 # Constants ###########################################################
 DEFAULT_CALENDAR_ID = "edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com"
+DEFAULT_CALENDAR_URL = (
+    'https://www.google.com/calendar/embed?mode=Month&src={}&showCalendars=0'.format(DEFAULT_CALENDAR_ID))
 CALENDAR_TEMPLATE = "/templates/html/google_calendar.html"
 CALENDAR_EDIT_TEMPLATE = "/templates/html/google_calendar_edit.html"
 
@@ -33,7 +34,6 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         scope=Scope.settings,
         default="Google Calendar"
     )
-
     calendar_id = String(
         display_name="Public Calendar ID",
         help=(
@@ -43,14 +43,12 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         scope=Scope.settings,
         default=DEFAULT_CALENDAR_ID
     )
-
     default_view = Integer(
         display_name="Default View",
         help="The calendar view that students see by default. A student can change this view.",
         scope=Scope.settings,
         default=1
     )
-
     views = [(0, 'Week'), (1, 'Month'), (2, 'Agenda')]
 
     # Context argument is specified for xblocks, but we are not using herein

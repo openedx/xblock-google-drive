@@ -1,6 +1,4 @@
-"""
-Google Document XBlock implementation
-"""
+""" Google Document XBlock implementation """
 # -*- coding: utf-8 -*-
 #
 
@@ -20,17 +18,21 @@ LOG = logging.getLogger(__name__)
 RESOURCE_LOADER = ResourceLoader(__name__)
 
 # Constants ###########################################################
+DEFAULT_DOCUMENT_URL = (
+    'https://docs.google.com/presentation/d/1x2ZuzqHsMoh1epK8VsGAlanSo7r9z55ualwQlj-ofBQ/embed?'
+    'start=true&loop=true&delayms=10000'
+)
 DEFAULT_EMBED_CODE = textwrap.dedent("""
-            <iframe
-                src="https://docs.google.com/presentation/d/1x2ZuzqHsMoh1epK8VsGAlanSo7r9z55ualwQlj-ofBQ/embed?start=true&loop=true&delayms=10000"
-                frameborder="0"
-                width="960"
-                height="569"
-                allowfullscreen="true"
-                mozallowfullscreen="true"
-                webkitallowfullscreen="true">
-            </iframe>
-        """)
+    <iframe
+        src="{}"
+        frameborder="0"
+        width="960"
+        height="569"
+        allowfullscreen="true"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true">
+    </iframe>
+""") .format(DEFAULT_DOCUMENT_URL)
 DOCUMENT_TEMPLATE = "/templates/html/google_docs.html"
 DOCUMENT_EDIT_TEMPLATE = "/templates/html/google_docs_edit.html"
 
@@ -46,7 +48,6 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         scope=Scope.settings,
         default="Google Document"
     )
-
     embed_code = String(
         display_name="Embed Code",
         help=(
@@ -57,13 +58,9 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         scope=Scope.settings,
         default=DEFAULT_EMBED_CODE
     )
-
     alt_text = String(
         display_name="Alternative Text",
-        help=(
-            "In situations where image is not available to the reader, the alternative "
-            "text ensures that no information or functionality is lost."
-        ),
+        help="Alternative text describes an image and appears if the image is unavailable.",
         scope=Scope.settings,
         default=""
     )

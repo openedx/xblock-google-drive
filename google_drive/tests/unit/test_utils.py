@@ -1,9 +1,14 @@
 """ Utility functions used within unit tests """
+# -*- coding: utf-8 -*-
+#
+
+# Imports ###########################################################
 from webob import Request
 
 from xblock.fields import ScopeIds
 
 
+# Methods ###########################################################
 def generate_scope_ids(runtime, block_type):
     """ helper to generate scope IDs for an XBlock """
     def_id = runtime.id_generator.create_definition(block_type)

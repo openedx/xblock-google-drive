@@ -1,7 +1,12 @@
 """ Runs tests for publish event functionality """
+# -*- coding: utf-8 -*-
+#
+
+# Imports ###########################################################
 from .base_test import GoogleCalendarBaseTest, GoogleDocumentBaseTest
 
 
+# Classes ###########################################################
 class GoogleCalendarPublishTestCase(GoogleCalendarBaseTest):  # pylint: disable=too-few-public-methods, too-many-ancestors
     """
     Tests for Google Calendar event publishing functionality.

@@ -1,7 +1,12 @@
 """ Base classes for integration tests """
+# -*- coding: utf-8 -*-
+#
+
+# Imports ###########################################################
 from xblockutils.base_test import SeleniumBaseTest
 
 
+# Classes ###########################################################
 class GoogleCalendarBaseTest(SeleniumBaseTest):  # pylint: disable=too-many-ancestors, too-few-public-methods
     """ Base class for Google Calendar integration tests """
     module_name = __name__

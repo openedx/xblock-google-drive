@@ -13,7 +13,7 @@ root folder:
 
 .. code:: bash
 
-    $ pip install -r requirements.txt
+    $ make requirements
 
 Enabling in Studio
 ------------------
@@ -36,7 +36,8 @@ form the google-drive repo root:
 
 .. code:: bash
 
-    pip install -r requirements.txt
+    pip install -r requirements/base.in
+    pip install -e .
 
 Running the workbench
 ---------------------
@@ -54,7 +55,7 @@ From google-drive directory, run the tests with the following command:
 
 .. code:: bash
 
-    $ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django tests/*
+    $ pytest
 
 If you want to run only the integration or the unit tests, append the
 directory to the command. You can also run separate modules in this
@@ -62,13 +63,14 @@ manner.
 
 .. code:: bash
 
-    $ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django tests/unit
+    $ pytest tests/unit
 
-To see the coverage, run the tests using the following command:
+To see the coverage report in HTML format, run the tests using the
+following command:
 
 .. code:: bash
 
-    $ DJANGO_SETTINGS_MODULE="settings" nosetests --with-coverage --cover-package="google_drive" --with-django
+    $ make coverage
 
 If you have not installed the xblock-sdk in the active virtualenv, you
 might also have to prepend ``PYTHONPATH=".:/path/to/xblock"`` to the
@@ -138,18 +140,6 @@ License
 
 The Google Drive & Calendar XBlocks are available under the GNU Affero
 General Public License (AGPLv3).
-
-Installation Troubleshooting
-----------------------------
-
-On a Mac, some people have received errors when installing lxml, trying
-to find a specific header file for the compiler
-
-Try the following if you encounter a problem:
-
-::
-
-    CPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2 CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments pip install lxml
 
 .. |Build Status| image:: https://travis-ci.org/edx-solutions/xblock-google-drive.svg?branch=master
    :target: https://travis-ci.org/edx-solutions/xblock-google-drive

@@ -1,4 +1,22 @@
+var/
 xblock_google_drive.egg-info
 *.log
 *.pyc
 *~
+
+# Unit test / coverage reports
+.cache/
+.pytest_cache/
+.coverage
+.coverage.*
+.tox
+coverage.xml
+htmlcov/
+
+# IDEs and text editors
+*~
+*.swp
+.idea/
+.project
+.pycharm_helpers/
+.pydevproject

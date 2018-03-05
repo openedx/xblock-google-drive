@@ -23,11 +23,12 @@ def package_data(pkg, roots):
 setup(
     name='xblock-google-drive',
     version='0.1',
-    description='my_google_drive XBlock',   # TODO: write a better description.
+    description='An XBlock which allows embedding of Google documents and calendar within an edX course',
     packages=[
         'google_drive',
     ],
     install_requires=[
+        'mako',
         'XBlock',
         'xblock-utils',
     ],

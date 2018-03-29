@@ -4,11 +4,13 @@
 
 # Imports ###########################################################
 from ddt import ddt, unpack, data
-from .base_test import GoogleCalendarBaseTest, GoogleDocumentBaseTest
-from .studio_scenarios import CALENDAR_SCENARIOS, DOCUMENT_SCENARIOS, IMAGE_SCENARIOS
+
 from google_drive.google_calendar import DEFAULT_CALENDAR_URL
 from google_drive.google_docs import DEFAULT_DOCUMENT_URL
 from google_drive.tests.test_const import TEST_IMAGE_URL
+
+from .base_test import GoogleCalendarBaseTest, GoogleDocumentBaseTest
+from .studio_scenarios import CALENDAR_SCENARIOS, DOCUMENT_SCENARIOS, IMAGE_SCENARIOS
 
 
 # Classes ###########################################################
@@ -23,7 +25,7 @@ class GoogleCalendarStudioTest(GoogleCalendarBaseTest):
         """ Save changes made in studio for Google Calendar """
         self.browser.find_element_by_css_selector('#calendar-submit-options').click()
 
-    @data(*CALENDAR_SCENARIOS)  # pylint: disable=star-args
+    @data(*CALENDAR_SCENARIOS)
     @unpack
     def test_save_calendar(self, page_name):
         """
@@ -74,7 +76,7 @@ class GoogleDocumentStudioTest(GoogleDocumentBaseTest):
         """ Save changes made in studio for Google Document """
         self.browser.find_element_by_css_selector('#document-submit-options').click()
 
-    @data(*DOCUMENT_SCENARIOS)  # pylint: disable=star-args
+    @data(*DOCUMENT_SCENARIOS)
     @unpack
     def test_save_document(self, page_name):
         """
@@ -99,7 +101,7 @@ class GoogleDocumentStudioTest(GoogleDocumentBaseTest):
         # Expecting that the new display name is the title of the IFrame
         self.assertEqual(document_iframe.get_attribute("title"), 'My Document')
 
-    @data(*IMAGE_SCENARIOS)  # pylint: disable=star-args
+    @data(*IMAGE_SCENARIOS)
     @unpack
     def test_save_image(self, page_name):
         """

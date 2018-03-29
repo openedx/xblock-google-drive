@@ -1,0 +1,4 @@
+# Additional requirements for development of this application
+
+diff-cover                # Changeset diff test coverage
+pip-tools                 # Requirements file management

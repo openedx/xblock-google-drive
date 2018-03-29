@@ -7,7 +7,7 @@ from .base_test import GoogleCalendarBaseTest, GoogleDocumentBaseTest
 
 
 # Classes ###########################################################
-class GoogleCalendarPublishTestCase(GoogleCalendarBaseTest):  # pylint: disable=too-few-public-methods, too-many-ancestors
+class GoogleCalendarPublishTestCase(GoogleCalendarBaseTest):  # pylint: disable=too-many-ancestors
     """
     Tests for Google Calendar event publishing functionality.
     """

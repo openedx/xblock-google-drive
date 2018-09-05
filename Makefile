@@ -1,4 +1,4 @@
-.PHONY: clean coverage docs help quality requirements selfcheck test test-all upgrade validate
+.PHONY: build_dummy_translations clean compile_translations coverage detect_changed_source_translations docs dummy_translations extract_translations help pull_translations push_translations quality requirements selfcheck test test-all upgrade validate validate_translations
 
 .DEFAULT_GOAL := help
 
@@ -61,7 +61,38 @@ test-all: ## run tests on every supported Python/Django combination
 	tox -e quality
 	tox
 
-validate: quality test ## run tests and quality checks
+validate: quality test validate_translations ## run tests and quality checks
+
+## Localization targets
+extract_translations: ## extract strings to be translated, outputting .po files
+	rm -rf docs/_build
+
+	# Extract Python and Django template strings
+	mkdir -p locale/en/LC_MESSAGES/
+	rm -f locale/en/LC_MESSAGES/{django,text}.po
+	django-admin makemessages -l en -v1 -d django
+	mv locale/en/LC_MESSAGES/django.po locale/en/LC_MESSAGES/text.po
+
+compile_translations: ## compile translation files, outputting .mo files for each supported language
+	i18n_tool generate
+	make clean
+
+detect_changed_source_translations: ## Determines if the source translation files are up-to-date, otherwise exit with a non-zero code.
+	i18n_tool changed
+
+pull_translations: ## pull translations from Transifex
+	i18n_tool transifex pull
+	make compile_translations
+
+push_translations: extract_translations ## push source translation files (.po) to Transifex
+	i18n_tool transifex push
+
+dummy_translations: ## generate dummy translation (.po) files
+	i18n_tool dummy
+
+build_dummy_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
+
+validate_translations: build_dummy_translations detect_changed_source_translations ## validate translations
 
 selfcheck: ## check that the Makefile is well-formed
 	@echo "The Makefile is well-formed."

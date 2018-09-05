@@ -77,6 +77,40 @@ might also have to prepend ``PYTHONPATH=".:/path/to/xblock"`` to the
 command above. (``/path/to/xblock`` is the path to the xblock-sdk, where
 the workbench resides).
 
+Working with translations
+-------------------------
+
+For information about working with translations, see the `Internationalization Support`_ section of
+the `Open edX XBlock Tutorial`_.
+
+Prepare your virtualenv and ensure that the `Transifex authentication file`_
+(``~/.transifexrc``) is properly set up.
+
+Push new strings to Transifex:
+
+.. code:: bash
+
+    $ make push_translations
+
+
+To get the latest translations from Transifex:
+
+.. code:: bash
+
+    $ make pull_translations
+
+
+For testing purposes it's faster to avoid Transifex and work on dummy Esperanto translations:
+
+.. code:: bash
+
+    $ make build_dummy_translations
+
+
+.. _Internationalization Support: http://edx.readthedocs.io/projects/xblock-tutorial/en/latest/edx_platform/edx_lms.html#internationalization-support
+.. _Open edX XBlock Tutorial: https://xblock-tutorial.readthedocs.io/en/latest/
+.. _Transifex authentication file: https://openedx.atlassian.net/wiki/display/OpenOPS/Running+Fullstack
+
 Changes to be documented
 ------------------------
 

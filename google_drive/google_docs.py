@@ -37,20 +37,28 @@ DOCUMENT_TEMPLATE = "/templates/html/google_docs.html"
 DOCUMENT_EDIT_TEMPLATE = "/templates/html/google_docs_edit.html"
 
 
+def _(text):
+    """
+    Dummy ugettext.
+    """
+    return text
+
+
 # Classes ###########################################################
-class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-many-ancestors
+@XBlock.needs("i18n")  # pylint: disable=too-many-ancestors
+class GoogleDocumentBlock(XBlock, PublishEventMixin):
     """
     XBlock providing a google document embed link
     """
     display_name = String(
-        display_name="Display Name",
-        help="This name appears in the horizontal navigation at the top of the page.",
+        display_name=_("Display Name"),
+        help=_("This name appears in the horizontal navigation at the top of the page."),
         scope=Scope.settings,
         default="Google Document"
     )
     embed_code = String(
-        display_name="Embed Code",
-        help=(
+        display_name=_("Embed Code"),
+        help=_(
             "Google provides an embed code for Drive documents. In the Google Drive document, "
             "from the File menu, select Publish to the Web. Modify settings as needed, click "
             "Publish, and copy the embed code into this field."
@@ -59,8 +67,8 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         default=DEFAULT_EMBED_CODE
     )
     alt_text = String(
-        display_name="Alternative Text",
-        help="Alternative text describes an image and appears if the image is unavailable.",
+        display_name=_("Alternative Text"),
+        help=_("Alternative text describes an image and appears if the image is unavailable."),
         scope=Scope.settings,
         default=""
     )
@@ -72,7 +80,11 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         fragment = Fragment()
 
-        fragment.add_content(RESOURCE_LOADER.render_template(DOCUMENT_TEMPLATE, {"self": self}))
+        fragment.add_content(RESOURCE_LOADER.render_django_template(
+            DOCUMENT_TEMPLATE,
+            context={"self": self},
+            i18n_service=self.runtime.service(self, 'i18n'),
+        ))
         fragment.add_css(RESOURCE_LOADER.load_unicode('public/css/google_docs.css'))
         fragment.add_javascript(RESOURCE_LOADER.load_unicode('public/js/google_docs.js'))
 

@@ -5,10 +5,10 @@
 # Imports ###########################################################
 import logging
 
+from django import utils
 from xblock.core import XBlock
 from xblock.fields import Scope, String, Integer
 from xblock.fragment import Fragment
-
 from xblockutils.publish_event import PublishEventMixin
 from xblockutils.resources import ResourceLoader
 
@@ -18,25 +18,33 @@ RESOURCE_LOADER = ResourceLoader(__name__)
 # Constants ###########################################################
 DEFAULT_CALENDAR_ID = "edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com"
 DEFAULT_CALENDAR_URL = (
-    'https://www.google.com/calendar/embed?mode=Month&src={}&showCalendars=0'.format(DEFAULT_CALENDAR_ID))
+    'https://www.google.com/calendar/embed?mode=Month&src={}&showCalendars=0&hl=en-us'.format(DEFAULT_CALENDAR_ID))
 CALENDAR_TEMPLATE = "/templates/html/google_calendar.html"
 CALENDAR_EDIT_TEMPLATE = "/templates/html/google_calendar_edit.html"
 
 
+def _(text):
+    """
+    Dummy ugettext.
+    """
+    return text
+
+
 # Classes ###########################################################
-class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-many-ancestors
+@XBlock.needs("i18n")  # pylint: disable=too-many-ancestors
+class GoogleCalendarBlock(XBlock, PublishEventMixin):
     """
     XBlock providing a google calendar view for a specific calendar
     """
     display_name = String(
-        display_name="Display Name",
-        help="This name appears in the horizontal navigation at the top of the page.",
+        display_name=_("Display Name"),
+        help=_("This name appears in the horizontal navigation at the top of the page."),
         scope=Scope.settings,
         default="Google Calendar"
     )
     calendar_id = String(
-        display_name="Public Calendar ID",
-        help=(
+        display_name=_("Public Calendar ID"),
+        help=_(
             "Google provides an ID for publicly available calendars. In the Google Calendar, "
             "open Settings and copy the ID from the Calendar Address section into this field."
         ),
@@ -44,8 +52,8 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         default=DEFAULT_CALENDAR_ID
     )
     default_view = Integer(
-        display_name="Default View",
-        help="The calendar view that students see by default. A student can change this view.",
+        display_name=_("Default View"),
+        help=_("The calendar view that students see by default. A student can change this view."),
         scope=Scope.settings,
         default=1
     )
@@ -58,11 +66,16 @@ class GoogleCalendarBlock(XBlock, PublishEventMixin):  # pylint: disable=too-man
         """
         fragment = Fragment()
 
-        fragment.add_content(RESOURCE_LOADER.render_template(CALENDAR_TEMPLATE, {
-            "mode": self.views[self.default_view][1],
-            "src": self.calendar_id,
-            "title": self.display_name,
-        }))
+        fragment.add_content(RESOURCE_LOADER.render_django_template(
+            CALENDAR_TEMPLATE,
+            context={
+                "mode": self.views[self.default_view][1],
+                "src": self.calendar_id,
+                "title": self.display_name,
+                "language": utils.translation.get_language(),
+            },
+            i18n_service=self.runtime.service(self, "i18n"),
+        ))
         fragment.add_css(RESOURCE_LOADER.load_unicode('public/css/google_calendar.css'))
         fragment.add_javascript(RESOURCE_LOADER.load_unicode('public/js/google_calendar.js'))
 

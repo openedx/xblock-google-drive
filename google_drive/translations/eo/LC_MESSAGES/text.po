@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-05 14:27+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: google_drive/google_calendar.py google_drive/google_docs.py
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Display Name"
+msgstr "Dïspläý Nämé Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: google_drive/google_calendar.py google_drive/google_docs.py
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_docs_edit.html
+msgid "This name appears in the horizontal navigation at the top of the page."
+msgstr ""
+"Thïs nämé äppéärs ïn thé hörïzöntäl nävïgätïön ät thé töp öf thé pägé. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+
+#: google_drive/google_calendar.py
+#: google_drive/templates/html/google_calendar_edit.html
+msgid "Public Calendar ID"
+msgstr "Püßlïç Çäléndär ÌD Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
+
+#: google_drive/google_calendar.py
+msgid ""
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field."
+msgstr ""
+"Gööglé prövïdés än ÌD för püßlïçlý äväïläßlé çäléndärs. Ìn thé Gööglé "
+"Çäléndär, öpén Séttïngs änd çöpý thé ÌD fröm thé Çäléndär Àddréss séçtïön "
+"ïntö thïs fïéld. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, "
+"ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм "
+"α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ "
+"єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє"
+" νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт "
+"¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυ#"
+
+#: google_drive/google_calendar.py
+#: google_drive/templates/html/google_calendar_edit.html
+msgid "Default View"
+msgstr "Défäült Vïéw Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: google_drive/google_calendar.py
+#: google_drive/templates/html/google_calendar_edit.html
+msgid ""
+"The calendar view that students see by default. A student can change this "
+"view."
+msgstr ""
+"Thé çäléndär vïéw thät stüdénts séé ßý défäült. À stüdént çän çhängé thïs "
+"vïéw. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
+
+#: google_drive/google_docs.py
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Embed Code"
+msgstr "Émßéd Çödé Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: google_drive/google_docs.py
+#: google_drive/templates/html/google_docs_edit.html
+msgid ""
+"Google provides an embed code for Drive documents. In the Google Drive "
+"document, from the File menu, select Publish to the Web. Modify settings as "
+"needed, click Publish, and copy the embed code into this field."
+msgstr ""
+"Gööglé prövïdés än émßéd çödé för Drïvé döçüménts. Ìn thé Gööglé Drïvé "
+"döçümént, fröm thé Fïlé ménü, séléçt Püßlïsh tö thé Wéß. Mödïfý séttïngs äs "
+"néédéd, çlïçk Püßlïsh, änd çöpý thé émßéd çödé ïntö thïs fïéld. Ⱡ'σяєм ιρѕυм"
+" ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя "
+"ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ "
+"ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ "
+"¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє "
+"¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтє#"
+
+#: google_drive/google_docs.py
+msgid "Alternative Text"
+msgstr "Àltérnätïvé Téxt Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: google_drive/google_docs.py
+#: google_drive/templates/html/google_docs_edit.html
+msgid ""
+"Alternative text describes an image and appears if the image is unavailable."
+msgstr ""
+"Àltérnätïvé téxt désçrïßés än ïmägé änd äppéärs ïf thé ïmägé ïs ünäväïläßlé."
+" Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυ#"
+
+#: google_drive/templates/html/google_calendar_edit.html
+msgid "Invalid Google Calendar"
+msgstr "Ìnvälïd Gööglé Çäléndär Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Please correct the outlined fields."
+msgstr ""
+"Pléäsé çörréçt thé öütlïnéd fïélds. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
+
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Clear Value"
+msgstr "Çléär Välüé Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#: google_drive/templates/html/google_calendar_edit.html
+msgid ""
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field. You can "
+msgstr ""
+"Gööglé prövïdés än ÌD för püßlïçlý äväïläßlé çäléndärs. Ìn thé Gööglé "
+"Çäléndär, öpén Séttïngs änd çöpý thé ÌD fröm thé Çäléndär Àddréss séçtïön "
+"ïntö thïs fïéld. Ýöü çän  Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя "
+"α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα"
+" αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ "
+"ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη "
+"яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα "
+"ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι "
+"σƒ#"
+
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Save"
+msgstr "Sävé Ⱡ'σяєм ι#"
+
+#: google_drive/templates/html/google_calendar_edit.html
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Cancel"
+msgstr "Çänçél Ⱡ'σяєм ιρѕυ#"
+
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Invalid Google Document"
+msgstr "Ìnvälïd Gööglé Döçümént Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: google_drive/templates/html/google_docs_edit.html
+msgid "Alternative text"
+msgstr "Àltérnätïvé téxt Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"

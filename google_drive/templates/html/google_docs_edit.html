@@ -18,7 +18,7 @@
             <input class="input setting-input edit-display-name" id="edit_display_name" value="{{ self.display_name }}" type="text" data-default-value="{{defaultName}}">
             <button class="action setting-clear clear-display-name" type="button" name="setting-clear">
               <i class="icon fa fa-undo"></i>
-              <span class="sr">"<%= gettext("Clear Value") %>"</span>
+              <span class="sr">{% trans "Clear Value" %}</span>
             </button>
           </div>
           <span class="tip setting-help">{% trans "This name appears in the horizontal navigation at the top of the page." %}</span>

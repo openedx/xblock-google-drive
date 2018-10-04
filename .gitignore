@@ -13,6 +13,9 @@ xblock_google_drive.egg-info
 coverage.xml
 htmlcov/
 
+# Translations
+*.pot
+
 # IDEs and text editors
 *~
 *.swp

@@ -3,4 +3,4 @@
 Django>=1.8,<2            # Web application framework
 mako                      # Used by xblock-utils.resources, but not declared as a requirement for it
 XBlock[django]            # Courseware component architecture
--e git+https://github.com/edx/xblock-utils.git@v1.0.5#egg=xblock-utils==1.0.5  # Utility functions shared by many XBlocks
+-e git+https://github.com/edx/xblock-utils.git@v1.1.1#egg=xblock-utils==1.1.1  # Utility functions shared by many XBlocks

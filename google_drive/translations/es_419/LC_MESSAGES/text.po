@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Juan Camilo Montoya Franco <juan.montoya@edunext.co>, 2018
+# Laura Silva <lingison@edx.org>, 2018
+# Diego Rojas <diego.rojas@edunext.co>, 2018
+# Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-06 15:49+0300\n"
+"PO-Revision-Date: 2018-09-06 12:49+0000\n"
+"Last-Translator: Albeiro Gonzalez <albeiro.gonzalez@edunext.co>, 2018\n"
+"Language-Team: Spanish (Latin America) (https://www.transifex.com/open-edx/teams/6205/es_419/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_419\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: google_drive/google_calendar.py:40 google_drive/google_docs.py:54
+#: google_drive/templates/html/google_calendar_edit.html:17
+#: google_drive/templates/html/google_docs_edit.html:17
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#: google_drive/google_calendar.py:41 google_drive/google_docs.py:55
+#: google_drive/templates/html/google_calendar_edit.html:24
+#: google_drive/templates/html/google_docs_edit.html:24
+msgid "This name appears in the horizontal navigation at the top of the page."
+msgstr ""
+"Este nombre aparece en la barra de título superior horizontal del "
+"componente."
+
+#: google_drive/google_calendar.py:46
+#: google_drive/templates/html/google_calendar_edit.html:28
+msgid "Public Calendar ID"
+msgstr "ID del calendario público."
+
+#: google_drive/google_calendar.py:48
+msgid ""
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field."
+msgstr ""
+"Google proporciona un ID para calendarios disponibles públicamente. En "
+"Google calendar, abra ajustes y copie el ID de la sección Dirección de "
+"calendario en este campo."
+
+#: google_drive/google_calendar.py:55
+#: google_drive/templates/html/google_calendar_edit.html:41
+msgid "Default View"
+msgstr "Vista predeterminada"
+
+#: google_drive/google_calendar.py:56
+#: google_drive/templates/html/google_calendar_edit.html:50
+msgid ""
+"The calendar view that students see by default. A student can change this "
+"view."
+msgstr ""
+"La vista del calendario que los estudiantes ven por defecto. Un estudiante "
+"puede cambiar esta vista."
+
+#: google_drive/google_docs.py:60
+#: google_drive/templates/html/google_docs_edit.html:28
+msgid "Embed Code"
+msgstr "Código de inserción"
+
+#: google_drive/google_docs.py:62
+#: google_drive/templates/html/google_docs_edit.html:31
+msgid ""
+"Google provides an embed code for Drive documents. In the Google Drive "
+"document, from the File menu, select Publish to the Web. Modify settings as "
+"needed, click Publish, and copy the embed code into this field."
+msgstr ""
+"Google proporciona un código de inserción para documentos en Drive. En el "
+"documento de Google drive, desde el menú archivo, seleccione publicar en la "
+"web. Modifique la configuración según sea necesario, haga click en Publicar "
+"y copie el código de inserción en este campo."
+
+#: google_drive/google_docs.py:70
+msgid "Alternative Text"
+msgstr "Texto Alternativo"
+
+#: google_drive/google_docs.py:71
+#: google_drive/templates/html/google_docs_edit.html:38
+msgid ""
+"Alternative text describes an image and appears if the image is unavailable."
+msgstr ""
+"El texto Alternativo describe una imagen y aparece si la imagen no está "
+"disponible."
+
+#: google_drive/templates/html/google_calendar_edit.html:9
+msgid "Invalid Google Calendar"
+msgstr "Google Calendar inválido."
+
+#: google_drive/templates/html/google_calendar_edit.html:10
+#: google_drive/templates/html/google_docs_edit.html:10
+msgid "Please correct the outlined fields."
+msgstr "Por favor corrija los campos resaltados."
+
+#: google_drive/templates/html/google_calendar_edit.html:21
+#: google_drive/templates/html/google_calendar_edit.html:32
+#: google_drive/templates/html/google_docs_edit.html:21
+msgid "Clear Value"
+msgstr "Borrar"
+
+#: google_drive/templates/html/google_calendar_edit.html:35
+msgid ""
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field. You can "
+msgstr ""
+"Google proporciona un ID para calendarios disponibles públicamente. En "
+"Google calendar, abra ajustes y copie el ID de la sección Dirección de "
+"calendario en este campo. Usted puede"
+
+#: google_drive/templates/html/google_calendar_edit.html:60
+#: google_drive/templates/html/google_docs_edit.html:47
+msgid "Save"
+msgstr "Guardar"
+
+#: google_drive/templates/html/google_calendar_edit.html:64
+#: google_drive/templates/html/google_docs_edit.html:51
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: google_drive/templates/html/google_docs_edit.html:9
+msgid "Invalid Google Document"
+msgstr "Google Document inválido."
+
+#: google_drive/templates/html/google_docs_edit.html:35
+msgid "Alternative text"
+msgstr "Texto Alternativo"

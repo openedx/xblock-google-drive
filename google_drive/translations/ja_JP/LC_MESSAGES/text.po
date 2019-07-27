@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yuta_Michiyabu <bii01143190417@yahoo.co.jp>, 2018
+# Kyoto University <edxkyotoux@gmail.com>, 2018
+# 藤田 忠光 <tadamitsu.fujita@gmail.com>, 2018
+# Machida Miki <mikimachida711@gmail.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-06 15:49+0300\n"
+"PO-Revision-Date: 2018-09-06 12:49+0000\n"
+"Last-Translator: Machida Miki <mikimachida711@gmail.com>, 2018\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/open-edx/teams/6205/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: google_drive/google_calendar.py:40 google_drive/google_docs.py:54
+#: google_drive/templates/html/google_calendar_edit.html:17
+#: google_drive/templates/html/google_docs_edit.html:17
+msgid "Display Name"
+msgstr "表示名"
+
+#: google_drive/google_calendar.py:41 google_drive/google_docs.py:55
+#: google_drive/templates/html/google_calendar_edit.html:24
+#: google_drive/templates/html/google_docs_edit.html:24
+msgid "This name appears in the horizontal navigation at the top of the page."
+msgstr "名前はページ上部のナビゲーションバーに表示されます。"
+
+#: google_drive/google_calendar.py:46
+#: google_drive/templates/html/google_calendar_edit.html:28
+msgid "Public Calendar ID"
+msgstr "公開カレンダーID"
+
+#: google_drive/google_calendar.py:48
+msgid ""
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field."
+msgstr ""
+"Googleでは、公開カレンダーのIDが提供されています。Googleカレンダーで設定を開き、カレンダーアドレスセクションの "
+"IDをこのフィールドにコピーします。"
+
+#: google_drive/google_calendar.py:55
+#: google_drive/templates/html/google_calendar_edit.html:41
+msgid "Default View"
+msgstr "デフォルトビュー"
+
+#: google_drive/google_calendar.py:56
+#: google_drive/templates/html/google_calendar_edit.html:50
+msgid ""
+"The calendar view that students see by default. A student can change this "
+"view."
+msgstr "デフォルトで受講者に表示されるカレンダービュー。受講者はこのビューを変更できます。"
+
+#: google_drive/google_docs.py:60
+#: google_drive/templates/html/google_docs_edit.html:28
+msgid "Embed Code"
+msgstr "埋め込みコード"
+
+#: google_drive/google_docs.py:62
+#: google_drive/templates/html/google_docs_edit.html:31
+msgid ""
+"Google provides an embed code for Drive documents. In the Google Drive "
+"document, from the File menu, select Publish to the Web. Modify settings as "
+"needed, click Publish, and copy the embed code into this field."
+msgstr ""
+"Googleではドライブドキュメントの埋め込みコードが提供されています。Googleドライブのドキュメントで、「ファイル」メニューの「Webに公開」を選択します。必要に応じて設定を変更し、「公開」"
+" をクリックして、埋め込みコードをこのフィールドにコピーします。"
+
+#: google_drive/google_docs.py:70
+msgid "Alternative Text"
+msgstr "代替テキスト"
+
+#: google_drive/google_docs.py:71
+#: google_drive/templates/html/google_docs_edit.html:38
+msgid ""
+"Alternative text describes an image and appears if the image is unavailable."
+msgstr "代替テキストは画像を説明し、画像が使用できない場合に表示されます。"
+
+#: google_drive/templates/html/google_calendar_edit.html:9
+msgid "Invalid Google Calendar"
+msgstr "無効なGoogleカレンダー"
+
+#: google_drive/templates/html/google_calendar_edit.html:10
+#: google_drive/templates/html/google_docs_edit.html:10
+msgid "Please correct the outlined fields."
+msgstr "縁取られた欄を修正してください。"
+
+#: google_drive/templates/html/google_calendar_edit.html:21
+#: google_drive/templates/html/google_calendar_edit.html:32
+#: google_drive/templates/html/google_docs_edit.html:21
+msgid "Clear Value"
+msgstr "値をクリア"
+
+#: google_drive/templates/html/google_calendar_edit.html:35
+msgid ""
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field. You can "
+msgstr ""
+"Googleでは、公開カレンダーのIDが提供されています。Googleカレンダーで設定を開き、カレンダーアドレスセクションの "
+"IDをこのフィールドにコピーします。"
+
+#: google_drive/templates/html/google_calendar_edit.html:60
+#: google_drive/templates/html/google_docs_edit.html:47
+msgid "Save"
+msgstr "保存"
+
+#: google_drive/templates/html/google_calendar_edit.html:64
+#: google_drive/templates/html/google_docs_edit.html:51
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: google_drive/templates/html/google_docs_edit.html:9
+msgid "Invalid Google Document"
+msgstr "無効なGoogleドキュメント"
+
+#: google_drive/templates/html/google_docs_edit.html:35
+msgid "Alternative text"
+msgstr "代替テキスト"

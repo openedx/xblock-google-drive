@@ -14,6 +14,11 @@ endef
 export BROWSER_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
+
+FIREFOX_VERSION := $(shell grep firefox -- .travis.yml  | egrep -o [0-9\.]+)
+FIREFOX_LINUX_ARCH := $(shell uname -m)
+
+
 help: ## display this help message
 	@echo "Please use \`make <target>' where <target> is one of"
 	@perl -nle'print $& if m{^[a-zA-Z_-]+:.*?## .*$$}' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
@@ -53,6 +58,20 @@ test: clean ## run tests in the current virtualenv
 	mkdir -p var
 	pip install -e .
 	pytest
+
+install_linux_dev_firefox: ## Downloads custom version of firefox for Selenium in Linux
+	@echo "This works only on Linux. Please fix it for MacOSX if you can."
+
+	rm -rf .firefox
+	mkdir .firefox
+
+	curl http://ftp.mozilla.org/pub/firefox/releases/$(FIREFOX_VERSION)/linux-$(FIREFOX_LINUX_ARCH)/en-US/firefox-$(FIREFOX_VERSION).tar.bz2 \
+		                --output .firefox/firefox.tar.bz2
+
+	cd .firefox && tar -xvjf firefox.tar.bz2
+
+linux_dev_test: ## Run tests in development environment to use custom firefox
+	PATH=".firefox/firefox:$(PATH)" make test
 
 diff_cover: test ## find diff lines that need test coverage
 	diff-cover coverage.xml

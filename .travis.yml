@@ -1,6 +1,4 @@
 language: python
-sudo: false
-
 python:
   - "2.7"
 
@@ -15,7 +13,7 @@ before_install:
     - "sh -e /etc/init.d/xvfb start"
 
 addons:
-  firefox: '58.0.2'
+  firefox: '36.0'
 
 install:
   - pip install -r requirements/travis.txt

@@ -12,6 +12,7 @@ xblock_google_drive.egg-info
 .tox
 coverage.xml
 htmlcov/
+.firefox
 
 # Translations
 *.pot

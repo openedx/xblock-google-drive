@@ -4,8 +4,8 @@
 #
 #    pip-compile --output-file requirements/quality.txt requirements/base.in requirements/quality.in requirements/test.in
 #
--e git+https://github.com/edx/xblock-sdk.git@v0.1.4#egg=xblock-sdk==0.1.4
--e git+https://github.com/edx/xblock-utils.git@v1.1.1#egg=xblock-utils==1.1.1
+-e git+https://github.com/edx/xblock-sdk.git#egg=xblock-sdk
+-e git+https://github.com/edx/xblock-utils.git@v1.2.2#egg=xblock-utils==1.2.2
 appdirs==1.4.3            # via fs
 argparse==1.4.0           # via caniusepython3
 astroid==1.5.2            # via edx-lint, pylint, pylint-celery
@@ -37,7 +37,7 @@ fs-s3fs==1.0.0            # via django-pyfs
 fs==2.1.0                 # via django-pyfs, fs-s3fs, xblock
 funcsigs==1.0.2           # via mock, pytest
 future==0.16.0            # via backports.os
-futures==3.2.0            # via caniusepython3, isort, s3transfer
+futures==3.2.0; python_version == "2.7"
 idna==2.7                 # via requests
 isort==4.3.4
 jinja2==2.10              # via cookiecutter
@@ -83,4 +83,4 @@ urllib3==1.23             # via botocore, requests, selenium
 web-fragments==0.2.2      # via xblock
 webob==1.8.2              # via xblock
 wrapt==1.10.11            # via astroid
-xblock[django]==1.2.2
+xblock[django]==1.2.6

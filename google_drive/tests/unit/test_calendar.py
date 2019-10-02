@@ -2,23 +2,31 @@
 # -*- coding: utf-8 -*-
 #
 
+from __future__ import absolute_import
 # Imports ###########################################################
 import json
 import unittest
-import cgi
-import ddt
-from mock import Mock
 
+import ddt
+from django.utils.html import escape
 from django.utils.translation import override as override_language
+from mock import Mock
 from nose.tools import assert_equals, assert_in
 from workbench.runtime import WorkbenchRuntime
-from xblock.runtime import KvsFieldData, DictKeyValueStore
+from xblock.runtime import DictKeyValueStore, KvsFieldData
 
 from google_drive import GoogleCalendarBlock
 from google_drive.google_calendar import DEFAULT_CALENDAR_ID
+from google_drive.tests.test_const import (
+    BUTTONS_WRAPPER,
+    RESULT_ERROR,
+    RESULT_MISSING_EVENT_TYPE,
+    RESULT_SUCCESS,
+    STUDIO_EDIT_WRAPPER,
+    USER_INPUTS_WRAPPER,
+    VALIDATION_WRAPPER
+)
 from google_drive.tests.unit.test_utils import generate_scope_ids, make_request
-from google_drive.tests.test_const import STUDIO_EDIT_WRAPPER, VALIDATION_WRAPPER, USER_INPUTS_WRAPPER, BUTTONS_WRAPPER
-from google_drive.tests.test_const import RESULT_SUCCESS, RESULT_ERROR, RESULT_MISSING_EVENT_TYPE
 
 # Constants ###########################################################
 TEST_SUBMIT_DATA = {
@@ -101,7 +109,7 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         )
 
         assert_in('<div class="google-calendar-xblock-wrapper">', student_fragment.content)
-        assert_in(cgi.escape(src_url), student_fragment.content)
+        assert_in(escape(src_url), student_fragment.content)
         assert_in('Google Calendar', student_fragment.content)
 
         assert_in(STUDIO_EDIT_WRAPPER, studio_fragment.content)
@@ -116,7 +124,7 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         body = json.dumps(TEST_SUBMIT_DATA)
         res = block.handle('studio_submit', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equals(json.loads(res.body), RESULT_SUCCESS)
+        assert_equals(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
 
         assert_equals(block.display_name, TEST_SUBMIT_DATA['display_name'])
         assert_equals(block.calendar_id, TEST_SUBMIT_DATA['calendar_id'])
@@ -125,7 +133,7 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         body = json.dumps('')
         res = block.handle('studio_submit', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equals(json.loads(res.body), RESULT_ERROR)
+        assert_equals(json.loads(res.body.decode('utf8')), RESULT_ERROR)
 
     def test_calendar_publish_event(self):  # pylint: disable=no-self-use
         """ Test event publishing in GoogleCalendarBlock"""
@@ -134,9 +142,9 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         body = json.dumps(TEST_COMPLETE_PUBLISH_DATA)
         res = block.handle('publish_event', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equals(json.loads(res.body), RESULT_SUCCESS)
+        assert_equals(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
 
         body = json.dumps(TEST_INCOMPLETE_PUBLISH_DATA)
         res = block.handle('publish_event', make_request(body))
 
-        assert_equals(json.loads(res.body), RESULT_MISSING_EVENT_TYPE)
+        assert_equals(json.loads(res.body.decode('utf8')), RESULT_MISSING_EVENT_TYPE)

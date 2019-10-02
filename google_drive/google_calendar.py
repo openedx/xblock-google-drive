@@ -3,11 +3,12 @@
 #
 
 # Imports ###########################################################
+from __future__ import absolute_import
 import logging
 
 from django import utils
 from xblock.core import XBlock
-from xblock.fields import Scope, String, Integer
+from xblock.fields import Integer, Scope, String
 from xblock.fragment import Fragment
 from xblockutils.publish_event import PublishEventMixin
 from xblockutils.resources import ResourceLoader

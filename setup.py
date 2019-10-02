@@ -1,6 +1,8 @@
 """Setup for my_google_drive XBlock."""
 
+from __future__ import absolute_import
 import os
+
 from setuptools import setup
 
 

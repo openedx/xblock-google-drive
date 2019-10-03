@@ -15,4 +15,5 @@ STATUS_CODE_200 = {'status_code': 200}
 STATUS_CODE_400 = {'status_code': 400}
 STATUS_CODE_404 = {'status_code': 404}
 
-TEST_IMAGE_URL = 'https://docs.google.com/drawings/d/1C1hw4pLKLDAhGDD4Etd20Y1BpFeGy0rTlMfoczNZXx4/edit?usp=sharing'
+TEST_IMAGE_URL = 'https://docs.google.com/drawings/d/e/2PACX-1vR5IEdW9QtEDQG8Kr0ZyigIVJNE8PTpet3H1AcLH0LsCBIVlN' \
+                 '-onsTnmP5cfD44cwzrAS3jacvPP6q6/pub?w=960&h=720'

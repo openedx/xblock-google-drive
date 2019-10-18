@@ -3,16 +3,17 @@
 #
 
 # Imports ###########################################################
+from __future__ import absolute_import
 import logging
 import textwrap
-import requests
 
+import requests
 from xblock.core import XBlock
 from xblock.fields import Scope, String
 from xblock.fragment import Fragment
-
 from xblockutils.publish_event import PublishEventMixin
 from xblockutils.resources import ResourceLoader
+import six
 
 LOG = logging.getLogger(__name__)
 RESOURCE_LOADER = ResourceLoader(__name__)
@@ -143,7 +144,7 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
         try:
             test_url = data['url']
         except KeyError as ex:
-            LOG.debug("URL not provided - %s", unicode(ex))
+            LOG.debug("URL not provided - %s", six.text_type(ex))
             return {
                 'status_code': 400,
             }
@@ -152,7 +153,7 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
             url_response = requests.head(test_url)
         # Catch wide range of request exceptions
         except requests.exceptions.RequestException as ex:
-            LOG.debug("Unable to connect to %s - %s", test_url, unicode(ex))
+            LOG.debug("Unable to connect to %s - %s", test_url, six.text_type(ex))
             return {
                 'status_code': 400,
             }

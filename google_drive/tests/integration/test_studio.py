@@ -3,7 +3,8 @@
 #
 
 # Imports ###########################################################
-from ddt import ddt, unpack, data
+from __future__ import absolute_import
+from ddt import data, ddt, unpack
 
 from google_drive.google_calendar import DEFAULT_CALENDAR_URL
 from google_drive.google_docs import DEFAULT_DOCUMENT_URL

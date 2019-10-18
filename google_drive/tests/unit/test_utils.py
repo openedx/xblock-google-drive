@@ -3,8 +3,8 @@
 #
 
 # Imports ###########################################################
+from __future__ import absolute_import
 from webob import Request
-
 from xblock.fields import ScopeIds
 
 

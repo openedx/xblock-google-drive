@@ -3,6 +3,7 @@
 #
 
 # Imports ###########################################################
+from __future__ import absolute_import
 from xblockutils.base_test import SeleniumBaseTest
 
 

@@ -20,6 +20,9 @@ before_install:
 addons:
   firefox: latest
 
+services:
+  - xvfb
+
 install:
   - pip install -r requirements/travis.txt
 

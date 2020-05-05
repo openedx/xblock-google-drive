@@ -1,14 +1,12 @@
 language: python
 sudo: false
 
-matrix:
-  include:
-    - python: '2.7'
-      env: 'TOXENV=django111'
-    - python: '3.5'
-      env: 'TOXENV=django111'
-    - python: '3.5'
-      env: 'TOXENV=quality'
+python:
+  - 3.5
+  - 3.8
+env:
+  - TOXENV=django22
+  - TOXENV=quality
 
 before_install:
   - wget https://github.com/mozilla/geckodriver/releases/download/v0.25.0/geckodriver-v0.25.0-linux64.tar.gz

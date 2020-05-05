@@ -16,7 +16,7 @@ from .studio_scenarios import CALENDAR_SCENARIOS, DOCUMENT_SCENARIOS, IMAGE_SCEN
 
 # Classes ###########################################################
 @ddt  # pylint: disable=too-many-ancestors
-class GoogleCalendarStudioTest(GoogleCalendarBaseTest):
+class GoogleCalendarStudioTest(GoogleCalendarBaseTest):  # pylint: disable=too-many-ancestors
     """
     Tests for Google Calendar studio view.
     """
@@ -66,7 +66,7 @@ class GoogleCalendarStudioTest(GoogleCalendarBaseTest):
         self.assertEqual(calendar_iframe.get_attribute("title"), 'My Meetings')
 
 
-@ddt  # pylint: disable=too-many-ancestors
+@ddt
 class GoogleDocumentStudioTest(GoogleDocumentBaseTest):
     """
     Tests for Google Document studio view.

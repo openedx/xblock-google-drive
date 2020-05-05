@@ -1,8 +1,12 @@
 # Requirements for test runs.
+-c constraints.txt
+
+-r dev.txt
 
 bok-choy
 ddt
 mock
+nose
 pytest
 pytest-cov
 pytest-django

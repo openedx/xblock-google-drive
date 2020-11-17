@@ -44,6 +44,9 @@ msgid ""
 "Calendar, open Settings and copy the ID from the Calendar Address section "
 "into this field."
 msgstr ""
+"Google fournit un identifiant pour les calendriers accessibles au public. "
+"Dans Google Agenda, ouvrez Paramètres et copiez l'ID de la section Adresse "
+"du calendrier dans ce champ."
 
 #: google_drive/google_calendar.py:55
 #: google_drive/templates/html/google_calendar_edit.html:41
@@ -109,6 +112,9 @@ msgid ""
 "Calendar, open Settings and copy the ID from the Calendar Address section "
 "into this field. You can "
 msgstr ""
+"Google fournit un identifiant pour les calendriers accessibles au public. "
+"Dans Google Agenda, ouvrez Paramètres et copiez l'ID de la section Adresse "
+"du calendrier dans ce champ. Vous pouvez"
 
 #: google_drive/templates/html/google_calendar_edit.html:60
 #: google_drive/templates/html/google_docs_edit.html:47

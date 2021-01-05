@@ -32,7 +32,7 @@ def _(text):
 
 
 # Classes ###########################################################
-@XBlock.needs("i18n")  # pylint: disable=too-many-ancestors
+@XBlock.needs("i18n")
 class GoogleCalendarBlock(XBlock, PublishEventMixin):
     """
     XBlock providing a google calendar view for a specific calendar

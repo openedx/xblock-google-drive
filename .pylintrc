@@ -25,7 +25,7 @@ ignore=migrations
 # use - if we separated out into a separate file, we'd have the 5 lines in a separate
 # file and have 2 import statements within each file to get back the stuff - pretty
 # useless warning in this specific case
-disable=I0011,W0232,duplicate-code
+disable=I0011,W0232,duplicate-code,too-many-ancestors
 
 
 [REPORTS]

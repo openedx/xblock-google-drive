@@ -3,6 +3,7 @@ xblock_google_drive.egg-info
 *.log
 *.pyc
 *~
+venv/*
 
 # Unit test / coverage reports
 .cache/

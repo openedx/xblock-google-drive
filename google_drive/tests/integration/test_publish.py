@@ -7,7 +7,7 @@ from .base_test import GoogleCalendarBaseTest, GoogleDocumentBaseTest
 
 
 # Classes ###########################################################
-class GoogleCalendarPublishTestCase(GoogleCalendarBaseTest):  # pylint: disable=too-many-ancestors
+class GoogleCalendarPublishTestCase(GoogleCalendarBaseTest):
     """
     Tests for Google Calendar event publishing functionality.
     """
@@ -22,7 +22,7 @@ class GoogleCalendarPublishTestCase(GoogleCalendarBaseTest):  # pylint: disable=
         )
 
 
-class GoogleDocumentPublishTestCase(GoogleDocumentBaseTest):  # pylint: disable=too-many-ancestors
+class GoogleDocumentPublishTestCase(GoogleDocumentBaseTest):
     """
     Tests for Google Document event publishing functionality.
     """

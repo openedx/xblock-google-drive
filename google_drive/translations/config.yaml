@@ -7,6 +7,7 @@ locales:
     - es_419  # Spanish (Latin America)
     - ja_JP  # Japanese
     - fr  # French
+    - fr_CA  # French (Canada)
     - he  # Hebrew
     - hi  # Hindi
     - ko_KR  # Korean (Korea)

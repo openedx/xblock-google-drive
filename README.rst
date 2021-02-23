@@ -1,6 +1,8 @@
 Google Drive & Calendar XBlock |Build Status|
 ---------------------------------------------
 
+## Notice: This repo will be moved to the [edx organization](https://github.com/edx) in April 2021.
+
 This XBlock allows embedding of Google documents and calendar, within an
 edX course.
 

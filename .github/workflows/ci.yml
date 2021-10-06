@@ -28,6 +28,7 @@ jobs:
       - name: Install Requirements
         run: |
           pip install -r requirements/ci.txt
+	  pip install -r requirements/test.txt
 
       - name: Run Tests
         run: xvfb-run --server-args=-ac -- tox -e ${{ matrix.toxenv }}

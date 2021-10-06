@@ -4,10 +4,6 @@
 #
 #    pip-compile --output-file=requirements/test.txt requirements/base.in requirements/test.in
 #
--e git+https://github.com/edx/xblock-sdk.git#egg=xblock-sdk
-    # via
-    #   -r requirements/dev.in
-    #   -r requirements/test.in
 appdirs==1.4.4
     # via fs
 attrs==21.2.0
@@ -178,6 +174,10 @@ xblock[django]==1.5.1
     # via
     #   -r requirements/base.in
     #   xblock-utils
+xblock-sdk==0.4.0
+    # via
+    #   -r requirements/dev.in
+    #   -r requirements/test.in
 xblock-utils==2.2.0
     # via -r requirements/base.in
 

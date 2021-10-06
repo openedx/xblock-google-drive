@@ -4,10 +4,6 @@
 #
 #    pip-compile --output-file=requirements/dev.txt requirements/base.in requirements/dev.in requirements/quality.in requirements/test.in requirements/travis.in
 #
--e git+https://github.com/edx/xblock-sdk.git#egg=xblock-sdk
-    # via
-    #   -r requirements/dev.in
-    #   -r requirements/test.in
 appdirs==1.4.4
     # via fs
 astroid==2.8.0
@@ -49,7 +45,6 @@ code-annotations==1.2.0
 coverage[toml]==5.5
     # via
     #   coveralls
-    #   edx-i18n-tools
     #   pytest-cov
 coveralls==3.2.0
     # via -r requirements/travis.in
@@ -72,7 +67,7 @@ django-pyfs==3.1.0
     # via xblock
 docopt==0.6.2
     # via coveralls
-edx-i18n-tools==0.8.0
+edx-i18n-tools==0.8.1
     # via -r requirements/travis.in
 edx-lint==5.2.0
     # via -r requirements/quality.in
@@ -289,6 +284,10 @@ xblock[django]==1.5.1
     # via
     #   -r requirements/base.in
     #   xblock-utils
+xblock-sdk==0.4.0
+    # via
+    #   -r requirements/dev.in
+    #   -r requirements/test.in
 xblock-utils==2.2.0
     # via -r requirements/base.in
 

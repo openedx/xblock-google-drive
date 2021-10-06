@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-05 14:27+0300\n"
+"POT-Creation-Date: 2021-10-06 15:15+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,6 +111,7 @@ msgstr ""
 #: google_drive/templates/html/google_calendar_edit.html
 #: google_drive/templates/html/google_calendar_edit.html
 #: google_drive/templates/html/google_docs_edit.html
+#: venv/src/xblock-utils/xblockutils/templates/studio_edit.html
 msgid "Clear Value"
 msgstr "Çléär Välüé Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
@@ -132,11 +133,13 @@ msgstr ""
 
 #: google_drive/templates/html/google_calendar_edit.html
 #: google_drive/templates/html/google_docs_edit.html
+#: venv/src/xblock-utils/xblockutils/templates/studio_edit.html
 msgid "Save"
 msgstr "Sävé Ⱡ'σяєм ι#"
 
 #: google_drive/templates/html/google_calendar_edit.html
 #: google_drive/templates/html/google_docs_edit.html
+#: venv/src/xblock-utils/xblockutils/templates/studio_edit.html
 msgid "Cancel"
 msgstr "Çänçél Ⱡ'σяєм ιρѕυ#"
 
@@ -147,3 +150,1800 @@ msgstr "Ìnvälïd Gööglé Döçümént Ⱡ'σяєм ιρѕυм ∂σłσя ѕ
 #: google_drive/templates/html/google_docs_edit.html
 msgid "Alternative text"
 msgstr "Àltérnätïvé téxt Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/_pytest/config/argparsing.py
+#, python-format
+msgid "ambiguous option: %(option)s could match %(matches)s"
+msgstr ""
+"ämßïgüöüs öptïön: %(option)s çöüld mätçh %(matches)s Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢тєтυ#"
+
+#: venv/lib/python3.8/site-packages/click/_termui_impl.py
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr "{editor}: Édïtïng fäïléd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#: venv/lib/python3.8/site-packages/click/_termui_impl.py
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr "{editor}: Édïtïng fäïléd: {e} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
+
+#: venv/lib/python3.8/site-packages/click/_unicodefun.py
+msgid ""
+"Click will abort further execution because Python was configured to use "
+"ASCII as encoding for the environment. Consult "
+"https://click.palletsprojects.com/unicode-support/ for mitigation steps."
+msgstr ""
+"Çlïçk wïll äßört fürthér éxéçütïön ßéçäüsé Pýthön wäs çönfïgüréd tö üsé "
+"ÀSÇÌÌ äs énçödïng för thé énvïrönmént. Çönsült "
+"https://çlïçk.pällétspröjéçts.çöm/ünïçödé-süppört/ för mïtïgätïön stéps. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ "
+"тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм,"
+" qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ "
+"¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє "
+"¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт "
+"ηση#"
+
+#: venv/lib/python3.8/site-packages/click/_unicodefun.py
+msgid ""
+"Additional information: on this system no suitable UTF-8 locales were "
+"discovered. This most likely requires resolving by reconfiguring the locale "
+"system."
+msgstr ""
+"Àddïtïönäl ïnförmätïön: ön thïs sýstém nö süïtäßlé ÛTF-8 löçälés wéré "
+"dïsçövéréd. Thïs möst lïkélý réqüïrés résölvïng ßý réçönfïgürïng thé löçälé "
+"sýstém. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ "
+"єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм"
+" νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα "
+"¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт"
+" єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт "
+"¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυηт мσłłι#"
+
+#: venv/lib/python3.8/site-packages/click/_unicodefun.py
+msgid ""
+"This system supports the C.UTF-8 locale which is recommended. You might be "
+"able to resolve your issue by exporting the following environment variables:"
+msgstr ""
+"Thïs sýstém süppörts thé Ç.ÛTF-8 löçälé whïçh ïs réçömméndéd. Ýöü mïght ßé "
+"äßlé tö résölvé ýöür ïssüé ßý éxpörtïng thé föllöwïng énvïrönmént värïäßlés:"
+" Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ "
+"тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм,"
+" qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ "
+"¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє "
+"¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт "
+"ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυηт мσłłιт α#"
+
+#: venv/lib/python3.8/site-packages/click/_unicodefun.py
+#, python-brace-format
+msgid ""
+"This system lists some UTF-8 supporting locales that you can pick from. The "
+"following suitable locales were discovered: {locales}"
+msgstr ""
+"Thïs sýstém lïsts sömé ÛTF-8 süppörtïng löçälés thät ýöü çän pïçk fröm. Thé "
+"föllöwïng süïtäßlé löçälés wéré dïsçövéréd: {locales} Ⱡ'σяєм ιρ#"
+
+#: venv/lib/python3.8/site-packages/click/_unicodefun.py
+msgid ""
+"Click discovered that you exported a UTF-8 locale but the locale system "
+"could not pick up from it because it does not exist. The exported locale is "
+"{locale!r} but it is not supported."
+msgstr ""
+"Çlïçk dïsçövéréd thät ýöü éxpörtéd ä ÛTF-8 löçälé ßüt thé löçälé sýstém "
+"çöüld nöt pïçk üp fröm ït ßéçäüsé ït döés nöt éxïst. Thé éxpörtéd löçälé ïs "
+"{locale!r} ßüt ït ïs nöt süppörtéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя"
+" α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє "
+"мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ "
+"łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη "
+"яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα "
+"ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υł#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+msgid "Aborted!"
+msgstr "Àßörtéd! Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+#: venv/lib/python3.8/site-packages/click/decorators.py
+msgid "Show this message and exit."
+msgstr "Shöw thïs méssägé änd éxït. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+#: venv/lib/python3.8/site-packages/click/core.py
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr "(Dépréçätéd) {text} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+msgid "Options"
+msgstr "Öptïöns Ⱡ'σяєм ιρѕυм #"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+"Göt ünéxpéçtéd éxträ ärgümént ({args}) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєт#"
+msgstr[1] ""
+"Göt ünéxpéçtéd éxträ ärgüménts ({args}) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυ#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+"DépréçätïönWärnïng: Thé çömmänd {name!r} ïs dépréçätéd. Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+msgid "Commands"
+msgstr "Çömmänds Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+msgid "Missing command."
+msgstr "Mïssïng çömmänd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+msgid "No such command {name!r}."
+msgstr "Nö süçh çömmänd {name!r}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+msgid "Value must be an iterable."
+msgstr "Välüé müst ßé än ïtéräßlé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+"Täkés {nargs} välüés ßüt 1 wäs gïvén. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+msgstr[1] ""
+"Täkés {nargs} välüés ßüt {len} wéré gïvén. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυ#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+#, python-brace-format
+msgid "env var: {var}"
+msgstr "énv vär: {var} Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+msgid "(dynamic)"
+msgstr "(dýnämïç) Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+#, python-brace-format
+msgid "default: {default}"
+msgstr "défäült: {default} Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: venv/lib/python3.8/site-packages/click/core.py
+msgid "required"
+msgstr "réqüïréd Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/click/decorators.py
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr "%(prog)s, vérsïön %(version)s Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/click/decorators.py
+msgid "Show the version and exit."
+msgstr "Shöw thé vérsïön änd éxït. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+#, python-brace-format
+msgid "Error: {message}"
+msgstr "Érrör: {message} Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr "Trý '{command} {option}' för hélp. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr "Ìnvälïd välüé: {message} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+"Ìnvälïd välüé för {param_hint}: {message} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+msgid "Missing argument"
+msgstr "Mïssïng ärgümént Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+msgid "Missing option"
+msgstr "Mïssïng öptïön Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+msgid "Missing parameter"
+msgstr "Mïssïng pärämétér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr "Mïssïng {param_type} Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr "Mïssïng pärämétér: {param_name} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr "Nö süçh öptïön: {name} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] "Dïd ýöü méän {possibility}? Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
+msgstr[1] ""
+"(Pössïßlé öptïöns: {possibilities}) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+msgid "unknown error"
+msgstr "ünknöwn érrör Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: venv/lib/python3.8/site-packages/click/exceptions.py
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+"Çöüld nöt öpén fïlé {filename!r}: {message} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢#"
+
+#: venv/lib/python3.8/site-packages/click/parser.py
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+"Àrgümént {name!r} täkés {nargs} välüés. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢т#"
+
+#: venv/lib/python3.8/site-packages/click/parser.py
+msgid "Option {name!r} does not take a value."
+msgstr ""
+"Öptïön {name!r} döés nöt täké ä välüé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тє#"
+
+#: venv/lib/python3.8/site-packages/click/parser.py
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+"Öptïön {name!r} réqüïrés än ärgümént. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+msgstr[1] ""
+"Öptïön {name!r} réqüïrés {nargs} ärgüménts. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєт#"
+
+#: venv/lib/python3.8/site-packages/click/shell_completion.py
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+"Shéll çömplétïön ïs nöt süppörtéd för Bäsh vérsïöns öldér thän 4.4. Ⱡ'σяєм "
+"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/click/shell_completion.py
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+"Çöüldn't détéçt Bäsh vérsïön, shéll çömplétïön ïs nöt süppörtéd. Ⱡ'σяєм "
+"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/click/termui.py
+msgid "Repeat for confirmation"
+msgstr "Répéät för çönfïrmätïön Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/click/termui.py
+msgid "Error: The value you entered was invalid."
+msgstr ""
+"Érrör: Thé välüé ýöü éntéréd wäs ïnvälïd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/click/termui.py
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr "Érrör: {e.message} Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: venv/lib/python3.8/site-packages/click/termui.py
+msgid "Error: The two entered values do not match."
+msgstr ""
+"Érrör: Thé twö éntéréd välüés dö nöt mätçh. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/click/termui.py
+msgid "Error: invalid input"
+msgstr "Érrör: ïnvälïd ïnpüt Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/click/termui.py
+msgid "Press any key to continue..."
+msgstr "Préss äný kéý tö çöntïnüé... Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+"Çhöösé fröm:\n"
+"\t{choices} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] "{value!r} ïs nöt {choice}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
+msgstr[1] "{value!r} ïs nöt öné öf {choices}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+"{value!r} döés nöt mätçh thé förmät {format}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєт#"
+msgstr[1] ""
+"{value!r} döés nöt mätçh thé förmäts {formats}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,"
+" ¢σηѕє¢тєт#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+"{value!r} ïs nöt ä välïd {number_type}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr ""
+"{value} ïs nöt ïn thé rängé {range}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{value!r} is not a valid boolean."
+msgstr "{value!r} ïs nöt ä välïd ßööléän. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{value!r} is not a valid UUID."
+msgstr "{value!r} ïs nöt ä välïd ÛÛÌD. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "file"
+msgstr "fïlé Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "directory"
+msgstr "dïréçtörý Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "path"
+msgstr "päth Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{name} {filename!r} does not exist."
+msgstr "{name} {filename!r} döés nöt éxïst. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{name} {filename!r} is a file."
+msgstr "{name} {filename!r} ïs ä fïlé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{name} {filename!r} is a directory."
+msgstr "{name} {filename!r} ïs ä dïréçtörý. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+"{name} {filename!r} ïs nöt wrïtäßlé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+"{name} {filename!r} ïs nöt réädäßlé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
+
+#: venv/lib/python3.8/site-packages/click/types.py
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+"{len_type} välüés äré réqüïréd, ßüt {len_value} wäs gïvén. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+msgstr[1] ""
+"{len_type} välüés äré réqüïréd, ßüt {len_value} wéré gïvén. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/django/contrib/messages/apps.py
+msgid "Messages"
+msgstr "Méssägés Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/contrib/sitemaps/apps.py
+msgid "Site Maps"
+msgstr "Sïté Mäps Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/contrib/staticfiles/apps.py
+msgid "Static Files"
+msgstr "Stätïç Fïlés Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: venv/lib/python3.8/site-packages/django/contrib/syndication/apps.py
+msgid "Syndication"
+msgstr "Sýndïçätïön Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: venv/lib/python3.8/site-packages/django/core/paginator.py
+msgid "…"
+msgstr "… Ⱡ#"
+
+#: venv/lib/python3.8/site-packages/django/core/paginator.py
+msgid "That page number is not an integer"
+msgstr ""
+"Thät pägé nümßér ïs nöt än ïntégér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
+
+#: venv/lib/python3.8/site-packages/django/core/paginator.py
+msgid "That page number is less than 1"
+msgstr "Thät pägé nümßér ïs léss thän 1 Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
+
+#: venv/lib/python3.8/site-packages/django/core/paginator.py
+msgid "That page contains no results"
+msgstr "Thät pägé çöntäïns nö résülts Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid "Enter a valid value."
+msgstr "Éntér ä välïd välüé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a valid URL."
+msgstr "Éntér ä välïd ÛRL. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid "Enter a valid integer."
+msgstr "Éntér ä välïd ïntégér. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid "Enter a valid email address."
+msgstr "Éntér ä välïd émäïl äddréss. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+"Éntér ä välïd “slüg” çönsïstïng öf léttérs, nümßérs, ündérsçörés ör hýphéns."
+" Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυ#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
+msgstr ""
+"Éntér ä välïd “slüg” çönsïstïng öf Ûnïçödé léttérs, nümßérs, ündérsçörés, ör"
+" hýphéns. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid "Enter a valid IPv4 address."
+msgstr "Éntér ä välïd ÌPv4 äddréss. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid "Enter a valid IPv6 address."
+msgstr "Éntér ä välïd ÌPv6 äddréss. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+"Éntér ä välïd ÌPv4 ör ÌPv6 äddréss. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid "Enter only digits separated by commas."
+msgstr ""
+"Éntér önlý dïgïts sépärätéd ßý çömmäs. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+"Énsüré thïs välüé ïs %(limit_value)s (ït ïs %(show_value)s). Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυ#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+"Énsüré thïs välüé ïs léss thän ör éqüäl tö %(limit_value)s. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+"Énsüré thïs välüé ïs gréätér thän ör éqüäl tö %(limit_value)s. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Énsüré thïs välüé häs ät léäst %(limit_value)d çhäräçtér (ït häs "
+"%(show_value)d). Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+msgstr[1] ""
+"Énsüré thïs välüé häs ät léäst %(limit_value)d çhäräçtérs (ït häs "
+"%(show_value)d). Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Énsüré thïs välüé häs ät möst %(limit_value)d çhäräçtér (ït häs "
+"%(show_value)d). Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+msgstr[1] ""
+"Énsüré thïs välüé häs ät möst %(limit_value)d çhäräçtérs (ït häs "
+"%(show_value)d). Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a number."
+msgstr "Éntér ä nümßér. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+"Énsüré thät théré äré nö möré thän %(max)s dïgït ïn tötäl. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+msgstr[1] ""
+"Énsüré thät théré äré nö möré thän %(max)s dïgïts ïn tötäl. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+"Énsüré thät théré äré nö möré thän %(max)s déçïmäl pläçé. Ⱡ'σяєм ιρѕυм ∂σłσя"
+" ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+msgstr[1] ""
+"Énsüré thät théré äré nö möré thän %(max)s déçïmäl pläçés. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+"Énsüré thät théré äré nö möré thän %(max)s dïgït ßéföré thé déçïmäl pöïnt. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+msgstr[1] ""
+"Énsüré thät théré äré nö möré thän %(max)s dïgïts ßéföré thé déçïmäl pöïnt. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+"Fïlé éxténsïön “%(extension)s” ïs nöt ällöwéd. Àllöwéd éxténsïöns äré: "
+"%(allowed_extensions)s. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/core/validators.py
+msgid "Null characters are not allowed."
+msgstr ""
+"Nüll çhäräçtérs äré nöt ällöwéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/base.py
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+msgid "and"
+msgstr "änd Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/base.py
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+"%(model_name)s wïth thïs %(field_labels)s älréädý éxïsts. Ⱡ'σяєм ιρѕυм ∂σłσя"
+" ѕιт αмєт, ¢σηѕє¢тє#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+"Välüé %(value)r ïs nöt ä välïd çhöïçé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тє#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "This field cannot be null."
+msgstr "Thïs fïéld çännöt ßé nüll. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "This field cannot be blank."
+msgstr "Thïs fïéld çännöt ßé ßlänk. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+"%(model_name)s wïth thïs %(field_label)s älréädý éxïsts. Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тє#"
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+"%(field_label)s müst ßé ünïqüé för %(date_field_label)s %(lookup_type)s. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "Fïéld öf týpé: %(field_type)s Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+"“%(value)s” välüé müst ßé éïthér Trüé ör Fälsé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,"
+" ¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+"“%(value)s” välüé müst ßé éïthér Trüé, Fälsé, ör Nöné. Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Boolean (Either True or False)"
+msgstr "Bööléän (Éïthér Trüé ör Fälsé) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "Strïng (üp tö %(max_length)s) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Comma-separated integers"
+msgstr "Çömmä-sépärätéd ïntégérs Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+"“%(value)s” välüé häs än ïnvälïd däté förmät. Ìt müst ßé ïn ÝÝÝÝ-MM-DD "
+"förmät. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+"“%(value)s” välüé häs thé çörréçt förmät (ÝÝÝÝ-MM-DD) ßüt ït ïs än ïnvälïd "
+"däté. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Date (without time)"
+msgstr "Däté (wïthöüt tïmé) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
+msgstr ""
+"“%(value)s” välüé häs än ïnvälïd förmät. Ìt müst ßé ïn ÝÝÝÝ-MM-DD "
+"HH:MM[:ss[.üüüüüü]][TZ] förmät. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
+msgstr ""
+"“%(value)s” välüé häs thé çörréçt förmät (ÝÝÝÝ-MM-DD "
+"HH:MM[:ss[.üüüüüü]][TZ]) ßüt ït ïs än ïnvälïd däté/tïmé. Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Date (with time)"
+msgstr "Däté (wïth tïmé) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+"“%(value)s” välüé müst ßé ä déçïmäl nümßér. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Decimal number"
+msgstr "Déçïmäl nümßér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
+msgstr ""
+"“%(value)s” välüé häs än ïnvälïd förmät. Ìt müst ßé ïn [DD] "
+"[[HH:]MM:]ss[.üüüüüü] förmät. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Duration"
+msgstr "Dürätïön Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Email address"
+msgstr "Émäïl äddréss Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "File path"
+msgstr "Fïlé päth Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+"“%(value)s” välüé müst ßé ä flöät. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Floating point number"
+msgstr "Flöätïng pöïnt nümßér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+"“%(value)s” välüé müst ßé än ïntégér. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Integer"
+msgstr "Ìntégér Ⱡ'σяєм ιρѕυм #"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Big (8 byte) integer"
+msgstr "Bïg (8 ßýté) ïntégér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Small integer"
+msgstr "Smäll ïntégér Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "IPv4 address"
+msgstr "ÌPv4 äddréss Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "IP address"
+msgstr "ÌP äddréss Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+"“%(value)s” välüé müst ßé éïthér Nöné, Trüé ör Fälsé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт"
+" αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+"Bööléän (Éïthér Trüé, Fälsé ör Nöné) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Positive big integer"
+msgstr "Pösïtïvé ßïg ïntégér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Positive integer"
+msgstr "Pösïtïvé ïntégér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Positive small integer"
+msgstr "Pösïtïvé smäll ïntégér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "Slüg (üp tö %(max_length)s) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Text"
+msgstr "Téxt Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+"“%(value)s” välüé häs än ïnvälïd förmät. Ìt müst ßé ïn HH:MM[:ss[.üüüüüü]] "
+"förmät. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+"“%(value)s” välüé häs thé çörréçt förmät (HH:MM[:ss[.üüüüüü]]) ßüt ït ïs än "
+"ïnvälïd tïmé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Time"
+msgstr "Tïmé Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "URL"
+msgstr "ÛRL Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Raw binary data"
+msgstr "Räw ßïnärý dätä Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr "“%(value)s” ïs nöt ä välïd ÛÛÌD. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py
+msgid "Universally unique identifier"
+msgstr "Ûnïvérsällý ünïqüé ïdéntïfïér Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/files.py
+msgid "File"
+msgstr "Fïlé Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/files.py
+msgid "Image"
+msgstr "Ìmägé Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/json.py
+msgid "A JSON object"
+msgstr "À JSÖN ößjéçt Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/json.py
+msgid "Value must be valid JSON."
+msgstr "Välüé müst ßé välïd JSÖN. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/related.py
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+"%(model)s ïnstänçé wïth %(field)s %(value)r döés nöt éxïst. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/related.py
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+"Föréïgn Kéý (týpé détérmïnéd ßý rélätéd fïéld) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/related.py
+msgid "One-to-one relationship"
+msgstr "Öné-tö-öné rélätïönshïp Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/related.py
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr "%(from)s-%(to)s rélätïönshïp Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/related.py
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr "%(from)s-%(to)s rélätïönshïps Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/django/db/models/fields/related.py
+msgid "Many-to-many relationship"
+msgstr "Mäný-tö-mäný rélätïönshïp Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the
+#. label
+#: venv/lib/python3.8/site-packages/django/forms/boundfield.py
+msgid ":?.!"
+msgstr ":?.! Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "This field is required."
+msgstr "Thïs fïéld ïs réqüïréd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a whole number."
+msgstr "Éntér ä whölé nümßér. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a valid date."
+msgstr "Éntér ä välïd däté. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a valid time."
+msgstr "Éntér ä välïd tïmé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a valid date/time."
+msgstr "Éntér ä välïd däté/tïmé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢ση#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a valid duration."
+msgstr "Éntér ä välïd dürätïön. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+"Thé nümßér öf däýs müst ßé ßétwéén {min_days} änd {max_days}. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+"Nö fïlé wäs süßmïttéd. Çhéçk thé énçödïng týpé ön thé förm. Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "No file was submitted."
+msgstr "Nö fïlé wäs süßmïttéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "The submitted file is empty."
+msgstr "Thé süßmïttéd fïlé ïs émptý. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+#, python-format
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+"Énsüré thïs fïlénämé häs ät möst %(max)d çhäräçtér (ït häs %(length)d). "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+msgstr[1] ""
+"Énsüré thïs fïlénämé häs ät möst %(max)d çhäräçtérs (ït häs %(length)d). "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+"Pléäsé éïthér süßmït ä fïlé ör çhéçk thé çléär çhéçkßöx, nöt ßöth. Ⱡ'σяєм "
+"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+"Ûplöäd ä välïd ïmägé. Thé fïlé ýöü üplöädéd wäs éïthér nöt än ïmägé ör ä "
+"çörrüptéd ïmägé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+"Séléçt ä välïd çhöïçé. %(value)s ïs nöt öné öf thé äväïläßlé çhöïçés. Ⱡ'σяєм"
+" ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+msgid "Enter a list of values."
+msgstr "Éntér ä lïst öf välüés. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a complete value."
+msgstr "Éntér ä çömplété välüé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a valid UUID."
+msgstr "Éntér ä välïd ÛÛÌD. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#: venv/lib/python3.8/site-packages/django/forms/fields.py
+msgid "Enter a valid JSON."
+msgstr "Éntér ä välïd JSÖN. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/lib/python3.8/site-packages/django/forms/forms.py
+msgid ":"
+msgstr ": Ⱡ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/forms.py
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(Hïddén fïéld %(name)s) %(error)s Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢#"
+
+#: venv/lib/python3.8/site-packages/django/forms/formsets.py
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+"MänägéméntFörm dätä ïs mïssïng ör häs ßéén tämpéréd wïth. Mïssïng fïélds: "
+"%(field_names)s. Ýöü mäý nééd tö fïlé ä ßüg répört ïf thé ïssüé pérsïsts. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ "
+"тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм,"
+" qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ "
+"¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє "
+"¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт "
+"ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυηт мσłłιт αηιм ι∂ єѕт łαвσяυ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/formsets.py
+#, python-format
+msgid "Please submit at most %d form."
+msgid_plural "Please submit at most %d forms."
+msgstr[0] ""
+"Pléäsé süßmït ät möst %d förm. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
+msgstr[1] ""
+"Pléäsé süßmït ät möst %d förms. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+
+#: venv/lib/python3.8/site-packages/django/forms/formsets.py
+#, python-format
+msgid "Please submit at least %d form."
+msgid_plural "Please submit at least %d forms."
+msgstr[0] ""
+"Pléäsé süßmït ät léäst %d förm. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+msgstr[1] ""
+"Pléäsé süßmït ät léäst %d förms. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+
+#: venv/lib/python3.8/site-packages/django/forms/formsets.py
+#: venv/lib/python3.8/site-packages/django/forms/formsets.py
+msgid "Order"
+msgstr "Ördér Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/formsets.py
+msgid "Delete"
+msgstr "Délété Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+"Pléäsé çörréçt thé düplïçäté dätä för %(field)s. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+"Pléäsé çörréçt thé düplïçäté dätä för %(field)s, whïçh müst ßé ünïqüé. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+"Pléäsé çörréçt thé düplïçäté dätä för %(field_name)s whïçh müst ßé ünïqüé "
+"för thé %(lookup)s ïn %(date_field)s. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+msgid "Please correct the duplicate values below."
+msgstr ""
+"Pléäsé çörréçt thé düplïçäté välüés ßélöw. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+msgid "The inline value did not match the parent instance."
+msgstr ""
+"Thé ïnlïné välüé dïd nöt mätçh thé pärént ïnstänçé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+"Séléçt ä välïd çhöïçé. Thät çhöïçé ïs nöt öné öf thé äväïläßlé çhöïçés. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя#"
+
+#: venv/lib/python3.8/site-packages/django/forms/models.py
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr "“%(pk)s” ïs nöt ä välïd välüé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
+
+#: venv/lib/python3.8/site-packages/django/forms/utils.py
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+"%(datetime)s çöüldn’t ßé ïntérprétéd ïn tïmé zöné %(current_timezone)s; ït "
+"mäý ßé ämßïgüöüs ör ït mäý nöt éxïst. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#: venv/lib/python3.8/site-packages/django/forms/widgets.py
+#: venv/src/xblock-utils/xblockutils/templates/studio_edit.html
+msgid "Clear"
+msgstr "Çléär Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/widgets.py
+msgid "Currently"
+msgstr "Çürréntlý Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/forms/widgets.py
+msgid "Change"
+msgstr "Çhängé Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/forms/widgets.py
+msgid "Unknown"
+msgstr "Ûnknöwn Ⱡ'σяєм ιρѕυм #"
+
+#: venv/lib/python3.8/site-packages/django/forms/widgets.py
+msgid "Yes"
+msgstr "Ýés Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/forms/widgets.py
+msgid "No"
+msgstr "Nö Ⱡ'σя#"
+
+#. Translators: Please do not add spaces around commas.
+#: venv/lib/python3.8/site-packages/django/template/defaultfilters.py
+msgid "yes,no,maybe"
+msgstr "ýés,nö,mäýßé Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: venv/lib/python3.8/site-packages/django/template/defaultfilters.py
+#: venv/lib/python3.8/site-packages/django/template/defaultfilters.py
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] "%(size)d ßýté Ⱡ'σяєм ιρѕυм ∂#"
+msgstr[1] "%(size)d ßýtés Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/template/defaultfilters.py
+#, python-format
+msgid "%s KB"
+msgstr "%s KB Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/template/defaultfilters.py
+#, python-format
+msgid "%s MB"
+msgstr "%s MB Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/template/defaultfilters.py
+#, python-format
+msgid "%s GB"
+msgstr "%s GB Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/template/defaultfilters.py
+#, python-format
+msgid "%s TB"
+msgstr "%s TB Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/template/defaultfilters.py
+#, python-format
+msgid "%s PB"
+msgstr "%s PB Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dateformat.py
+msgid "p.m."
+msgstr "p.m. Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dateformat.py
+msgid "a.m."
+msgstr "ä.m. Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dateformat.py
+msgid "PM"
+msgstr "PM Ⱡ'σя#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dateformat.py
+msgid "AM"
+msgstr "ÀM Ⱡ'σя#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dateformat.py
+msgid "midnight"
+msgstr "mïdnïght Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dateformat.py
+msgid "noon"
+msgstr "nöön Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Monday"
+msgstr "Möndäý Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Tuesday"
+msgstr "Tüésdäý Ⱡ'σяєм ιρѕυм #"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Wednesday"
+msgstr "Wédnésdäý Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Thursday"
+msgstr "Thürsdäý Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Friday"
+msgstr "Frïdäý Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Saturday"
+msgstr "Sätürdäý Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Sunday"
+msgstr "Sündäý Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Mon"
+msgstr "Mön Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Tue"
+msgstr "Tüé Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Wed"
+msgstr "Wéd Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Thu"
+msgstr "Thü Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Fri"
+msgstr "Frï Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Sat"
+msgstr "Sät Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "Sun"
+msgstr "Sün Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "January"
+msgstr "Jänüärý Ⱡ'σяєм ιρѕυм #"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "February"
+msgstr "Féßrüärý Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "March"
+msgstr "Märçh Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "April"
+msgstr "Àprïl Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "May"
+msgstr "Mäý Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "June"
+msgstr "Jüné Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "July"
+msgstr "Jülý Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "August"
+msgstr "Àügüst Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "September"
+msgstr "Séptémßér Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "October"
+msgstr "Öçtößér Ⱡ'σяєм ιρѕυм #"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "November"
+msgstr "Növémßér Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "December"
+msgstr "Déçémßér Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "jan"
+msgstr "jän Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "feb"
+msgstr "féß Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "mar"
+msgstr "mär Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "apr"
+msgstr "äpr Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "may"
+msgstr "mäý Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "jun"
+msgstr "jün Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "jul"
+msgstr "jül Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "aug"
+msgstr "äüg Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "sep"
+msgstr "sép Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "oct"
+msgstr "öçt Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "nov"
+msgstr "növ Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgid "dec"
+msgstr "déç Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "Jän. Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "Féß. Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "Märçh Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "Àprïl Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "Mäý Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "Jüné Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "Jülý Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "Àüg. Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "Sépt. Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "Öçt. Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "Növ. Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "Déç. Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "January"
+msgstr "Jänüärý Ⱡ'σяєм ιρѕυм #"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "February"
+msgstr "Féßrüärý Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "March"
+msgstr "Märçh Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "April"
+msgstr "Àprïl Ⱡ'σяєм ιρѕ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "May"
+msgstr "Mäý Ⱡ'σяєм#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "June"
+msgstr "Jüné Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "July"
+msgstr "Jülý Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "August"
+msgstr "Àügüst Ⱡ'σяєм ιρѕυ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "September"
+msgstr "Séptémßér Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "October"
+msgstr "Öçtößér Ⱡ'σяєм ιρѕυм #"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "November"
+msgstr "Növémßér Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/dates.py
+msgctxt "alt. month"
+msgid "December"
+msgstr "Déçémßér Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/ipv6.py
+msgid "This is not a valid IPv6 address."
+msgstr ""
+"Thïs ïs nöt ä välïd ÌPv6 äddréss. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+
+#: venv/lib/python3.8/site-packages/django/utils/text.py
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr "%(truncated_text)s… Ⱡ'σяєм ι#"
+
+#: venv/lib/python3.8/site-packages/django/utils/text.py
+msgid "or"
+msgstr "ör Ⱡ'σя#"
+
+#. Translators: This string is used as a separator between list elements
+#: venv/lib/python3.8/site-packages/django/utils/text.py
+#: venv/lib/python3.8/site-packages/django/utils/timesince.py
+msgid ", "
+msgstr ",  Ⱡ'σя#"
+
+#: venv/lib/python3.8/site-packages/django/utils/timesince.py
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d ýéär Ⱡ'σяєм ιρѕυм ∂#"
+msgstr[1] "%d ýéärs Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/utils/timesince.py
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d mönth Ⱡ'σяєм ιρѕυм ∂σł#"
+msgstr[1] "%d mönths Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: venv/lib/python3.8/site-packages/django/utils/timesince.py
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d wéék Ⱡ'σяєм ιρѕυм ∂#"
+msgstr[1] "%d wééks Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/utils/timesince.py
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d däý Ⱡ'σяєм ιρѕυм #"
+msgstr[1] "%d däýs Ⱡ'σяєм ιρѕυм ∂#"
+
+#: venv/lib/python3.8/site-packages/django/utils/timesince.py
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d höür Ⱡ'σяєм ιρѕυм ∂#"
+msgstr[1] "%d höürs Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/utils/timesince.py
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d mïnüté Ⱡ'σяєм ιρѕυм ∂σłσ#"
+msgstr[1] "%d mïnütés Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#: venv/lib/python3.8/site-packages/django/views/csrf.py
+msgid "Forbidden"
+msgstr "Förßïddén Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: venv/lib/python3.8/site-packages/django/views/csrf.py
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+"ÇSRF vérïfïçätïön fäïléd. Réqüést äßörtéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/django/views/csrf.py
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+"Ýöü äré sééïng thïs méssägé ßéçäüsé thïs HTTPS sïté réqüïrés ä “Référér "
+"héädér” tö ßé sént ßý ýöür Wéß ßröwsér, ßüt nöné wäs sént. Thïs héädér ïs "
+"réqüïréd för séçürïtý réäsöns, tö énsüré thät ýöür ßröwsér ïs nöt ßéïng "
+"hïjäçkéd ßý thïrd pärtïés. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя "
+"α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα"
+" αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ "
+"ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη "
+"яєρяєнєη∂єяιт ιη νσłυρтαтє#"
+
+#: venv/lib/python3.8/site-packages/django/views/csrf.py
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+"Ìf ýöü hävé çönfïgüréd ýöür ßröwsér tö dïsäßlé “Référér” héädérs, pléäsé ré-"
+"énäßlé thém, ät léäst för thïs sïté, ör för HTTPS çönnéçtïöns, ör för “sämé-"
+"örïgïn” réqüésts. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт,"
+" ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм "
+"α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ "
+"єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє"
+" νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт "
+"¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒ#"
+
+#: venv/lib/python3.8/site-packages/django/views/csrf.py
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+"Ìf ýöü äré üsïng thé <meta name=\"referrer\" content=\"no-referrer\"> täg ör"
+" ïnçlüdïng thé “Référrér-Pölïçý: nö-référrér” héädér, pléäsé rémövé thém. "
+"Thé ÇSRF prötéçtïön réqüïrés thé “Référér” héädér tö dö strïçt référér "
+"çhéçkïng. Ìf ýöü’ré çönçérnéd äßöüt prïväçý, üsé ältérnätïvés lïké <a "
+"rel=\"noreferrer\" …> för lïnks tö thïrd-pärtý sïtés. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт"
+" αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт "
+"łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ "
+"єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σмм#"
+
+#: venv/lib/python3.8/site-packages/django/views/csrf.py
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+"Ýöü äré sééïng thïs méssägé ßéçäüsé thïs sïté réqüïrés ä ÇSRF çöökïé whén "
+"süßmïttïng förms. Thïs çöökïé ïs réqüïréd för séçürïtý réäsöns, tö énsüré "
+"thät ýöür ßröwsér ïs nöt ßéïng hïjäçkéd ßý thïrd pärtïés. Ⱡ'σяєм ιρѕυм ∂σłσя"
+" ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт"
+" łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ "
+"єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ "
+"αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ "
+"ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт #"
+
+#: venv/lib/python3.8/site-packages/django/views/csrf.py
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+"Ìf ýöü hävé çönfïgüréd ýöür ßröwsér tö dïsäßlé çöökïés, pléäsé ré-énäßlé "
+"thém, ät léäst för thïs sïté, ör för “sämé-örïgïn” réqüésts.#"
+
+#: venv/lib/python3.8/site-packages/django/views/csrf.py
+msgid "More information is available with DEBUG=True."
+msgstr ""
+"Möré ïnförmätïön ïs äväïläßlé wïth DÉBÛG=Trüé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+msgid "No year specified"
+msgstr "Nö ýéär spéçïfïéd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+msgid "Date out of range"
+msgstr "Däté öüt öf rängé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+msgid "No month specified"
+msgstr "Nö mönth spéçïfïéd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+msgid "No day specified"
+msgstr "Nö däý spéçïfïéd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+msgid "No week specified"
+msgstr "Nö wéék spéçïfïéd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr "Nö %(verbose_name_plural)s äväïläßlé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
+msgstr ""
+"Fütüré %(verbose_name_plural)s nöt äväïläßlé ßéçäüsé "
+"%(class_name)s.ällöw_fütüré ïs Fälsé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/dates.py
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+"Ìnvälïd däté strïng “%(datestr)s” gïvén förmät “%(format)s” Ⱡ'σяєм ιρѕυм "
+"∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/detail.py
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+"Nö %(verbose_name)s föünd mätçhïng thé qüérý Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢т#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/list.py
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+"Pägé ïs nöt “läst”, nör çän ït ßé çönvértéd tö än ïnt. Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/list.py
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+"Ìnvälïd pägé (%(page_number)s): %(message)s Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/django/views/generic/list.py
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+"Émptý lïst änd “%(class_name)s.ällöw_émptý” ïs Fälsé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт"
+" αмєт, ¢σηѕє¢тєтυя #"
+
+#: venv/lib/python3.8/site-packages/django/views/static.py
+msgid "Directory indexes are not allowed here."
+msgstr ""
+"Dïréçtörý ïndéxés äré nöt ällöwéd héré. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя#"
+
+#: venv/lib/python3.8/site-packages/django/views/static.py
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr "“%(path)s” döés nöt éxïst Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/django/views/static.py
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "Ìndéx öf %(directory)s Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+"Thé ïnställ wörkéd süççéssfüllý! Çöngrätülätïöns! Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢тєтυя α#"
+
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+"Vïéw <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">réléäsé nötés</a> för Djängö %(version)s "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя#"
+
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+#, python-format
+msgid ""
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
+msgstr ""
+"Ýöü äré sééïng thïs pägé ßéçäüsé <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DÉBÛG=Trüé</a> ïs ïn ýöür séttïngs fïlé "
+"änd ýöü hävé nöt çönfïgüréd äný ÛRLs. Ⱡ'σяєм ιρѕυм ∂σłσя#"
+
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+msgid "Django Documentation"
+msgstr "Djängö Döçüméntätïön Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+"Töpïçs, référénçés, &amp; höw-tö’s Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+msgid "Tutorial: A Polling App"
+msgstr "Tütörïäl: À Pöllïng Àpp Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+msgid "Get started with Django"
+msgstr "Gét stärtéd wïth Djängö Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+msgid "Django Community"
+msgstr "Djängö Çömmünïtý Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html
+msgid "Connect, get help, or contribute"
+msgstr ""
+"Çönnéçt, gét hélp, ör çöntrïßüté Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
+
+#: venv/src/xblock-utils/tests/unit/data/trans_django_template.txt
+msgid "Translate 1"
+msgstr "Tränsläté 1 Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#: venv/src/xblock-utils/tests/unit/data/trans_django_template.txt
+msgid "Translate 2"
+msgstr "Tränsläté 2 Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#: venv/src/xblock-utils/tests/unit/data/trans_django_template.txt
+#, python-format
+msgid ""
+"\n"
+"Multi-line translation\n"
+"with variable: %(name)s\n"
+msgstr ""
+"\n"
+"Mültï-lïné tränslätïön\n"
+"wïth värïäßlé: %(name)s\n"
+" Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #\n"
+
+#: venv/src/xblock-utils/xblockutils/templates/add_buttons.html
+msgid "Add New Component"
+msgstr "Àdd Néw Çömpönént Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
+
+#: venv/src/xblock-utils/xblockutils/templates/studio_edit.html
+msgid "None Available"
+msgstr "Nöné Àväïläßlé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт#"

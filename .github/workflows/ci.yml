@@ -1,4 +1,5 @@
 name: CI
+on: [push]
 jobs:
   python-tests:
     runs-on: ubuntu-latest

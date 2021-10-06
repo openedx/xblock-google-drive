@@ -8,7 +8,7 @@ import json
 import unittest
 
 from mock import Mock
-from nose.tools import assert_equals, assert_in
+from nose.tools import assert_equal, assert_in
 from workbench.runtime import WorkbenchRuntime
 from xblock.runtime import DictKeyValueStore, KvsFieldData
 
@@ -100,15 +100,15 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         body = json.dumps(TEST_SUBMIT_DATA)
         res = block.handle('studio_submit', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equals(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
+        assert_equal(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
 
-        assert_equals(block.display_name, TEST_SUBMIT_DATA['display_name'])
-        assert_equals(block.embed_code, TEST_SUBMIT_DATA['embed_code'])
-        assert_equals(block.alt_text, TEST_SUBMIT_DATA['alt_text'])
+        assert_equal(block.display_name, TEST_SUBMIT_DATA['display_name'])
+        assert_equal(block.embed_code, TEST_SUBMIT_DATA['embed_code'])
+        assert_equal(block.alt_text, TEST_SUBMIT_DATA['alt_text'])
 
         body = json.dumps('')
         res = block.handle('studio_submit', make_request(body))
-        assert_equals(json.loads(res.body.decode('utf8')), RESULT_ERROR)
+        assert_equal(json.loads(res.body.decode('utf8')), RESULT_ERROR)
 
     def test_check_document_url(self):  # pylint: disable=no-self-use
         """ Test verification of the provided Google Document URL"""
@@ -117,22 +117,22 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         data = json.dumps(TEST_VALIDATE_URL_DATA)
         res = block.handle('check_url', make_request(data))
         # pylint: disable=no-value-for-parameter
-        assert_equals(json.loads(res.body.decode('utf8')), STATUS_CODE_200)
+        assert_equal(json.loads(res.body.decode('utf8')), STATUS_CODE_200)
 
         data = json.dumps(TEST_VALIDATE_UNDEFINED_DATA)
         res = block.handle('check_url', make_request(data))
 
-        assert_equals(json.loads(res.body.decode('utf8')), STATUS_CODE_400)
+        assert_equal(json.loads(res.body.decode('utf8')), STATUS_CODE_400)
 
         data = json.dumps(TEST_VALIDATE_NONEXISTENT_URL_DATA)
         res = block.handle('check_url', make_request(data))
 
-        assert_equals(json.loads(res.body.decode('utf8')), STATUS_CODE_404)
+        assert_equal(json.loads(res.body.decode('utf8')), STATUS_CODE_404)
 
         data = json.dumps({})
         res = block.handle('check_url', make_request(data))
 
-        assert_equals(json.loads(res.body.decode('utf8')), STATUS_CODE_400)
+        assert_equal(json.loads(res.body.decode('utf8')), STATUS_CODE_400)
 
     def test_document_publish_event(self):  # pylint: disable=no-self-use
         """ Test event publishing in GoogleDocumentBlock"""
@@ -141,14 +141,14 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         body = json.dumps(TEST_COMPLETE_PUBLISH_DOCUMENT_DATA)
         res = block.handle('publish_event', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equals(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
+        assert_equal(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
 
         body = json.dumps(TEST_COMPLETE_PUBLISH_IMAGE_DATA)
         res = block.handle('publish_event', make_request(body))
 
-        assert_equals(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
+        assert_equal(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
 
         body = json.dumps(TEST_INCOMPLETE_PUBLISH_DATA)
         res = block.handle('publish_event', make_request(body))
 
-        assert_equals(json.loads(res.body.decode('utf8')), RESULT_MISSING_EVENT_TYPE)
+        assert_equal(json.loads(res.body.decode('utf8')), RESULT_MISSING_EVENT_TYPE)

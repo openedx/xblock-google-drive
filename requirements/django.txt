@@ -1,1 +1,1 @@
-django==2.2.12            # via -c requirements/constraints.txt, -r requirements/base.in, -r requirements/dev.txt, django-pyfs, edx-i18n-tools, xblock-sdk
+django==2.2.24

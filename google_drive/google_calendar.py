@@ -9,7 +9,7 @@ import logging
 from django import utils
 from xblock.core import XBlock
 from xblock.fields import Integer, Scope, String
-from xblock.fragment import Fragment
+from web_fragments.fragment import Fragment
 from xblockutils.publish_event import PublishEventMixin
 from xblockutils.resources import ResourceLoader
 
@@ -19,7 +19,7 @@ RESOURCE_LOADER = ResourceLoader(__name__)
 # Constants ###########################################################
 DEFAULT_CALENDAR_ID = "edx.org_lom804qe3ttspplj1bgeu1l3ak@group.calendar.google.com"
 DEFAULT_CALENDAR_URL = (
-    'https://www.google.com/calendar/embed?mode=Month&src={}&showCalendars=0&hl=en-us'.format(DEFAULT_CALENDAR_ID))
+    f'https://www.google.com/calendar/embed?mode=Month&src={DEFAULT_CALENDAR_ID}&showCalendars=0&hl=en-us')
 CALENDAR_TEMPLATE = "/templates/html/google_calendar.html"
 CALENDAR_EDIT_TEMPLATE = "/templates/html/google_calendar_edit.html"
 

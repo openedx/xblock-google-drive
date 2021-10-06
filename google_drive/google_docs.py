@@ -10,7 +10,7 @@ import textwrap
 import requests
 from xblock.core import XBlock
 from xblock.fields import Scope, String
-from xblock.fragment import Fragment
+from web_fragments.fragment import Fragment
 from xblockutils.publish_event import PublishEventMixin
 from xblockutils.resources import ResourceLoader
 import six

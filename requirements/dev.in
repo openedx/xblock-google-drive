@@ -4,5 +4,5 @@
 diff-cover                # Changeset diff test coverage
 pip-tools                 # Requirements file management
 transifex-client          # Client for Transifex.com to push and pull translation files
--e git+https://github.com/edx/xblock-sdk.git#egg=xblock-sdk  # XBlock SDK to render Django templates properly
+xblock-sdk                # XBlock SDK to render Django templates properly
 pypng

@@ -5,8 +5,6 @@ python:
   - '3.8'
 env:
   - TOXENV=quality
-  - TOXENV=django22
-  - TOXENV=django30
   - TOXENV=django31
   - TOXENV=django32
 before_install:

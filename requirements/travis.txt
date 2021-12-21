@@ -4,35 +4,35 @@
 #
 #    pip-compile --output-file=requirements/travis.txt requirements/travis.in
 #
-backports.entry-points-selectable==1.1.0
+asgiref==3.4.1
+    # via django
+backports.entry-points-selectable==1.1.1
     # via virtualenv
-certifi==2021.5.30
+certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.6
+charset-normalizer==2.0.9
     # via requests
-coverage==5.5
-    # via
-    #   coveralls
-    #   edx-i18n-tools
-coveralls==3.2.0
+coverage==6.2
+    # via coveralls
+coveralls==3.3.1
     # via -r requirements/travis.in
-distlib==0.3.3
+distlib==0.3.4
     # via virtualenv
-django==2.2.24
+django==3.2.10
     # via
     #   -c requirements/constraints.txt
     #   edx-i18n-tools
 docopt==0.6.2
     # via coveralls
-edx-i18n-tools==0.8.0
+edx-i18n-tools==0.8.1
     # via -r requirements/travis.in
-filelock==3.3.0
+filelock==3.4.0
     # via
     #   tox
     #   virtualenv
-idna==3.2
+idna==3.3
     # via requests
-packaging==21.0
+packaging==21.3
     # via tox
 path==16.2.0
     # via edx-i18n-tools
@@ -42,13 +42,13 @@ pluggy==1.0.0
     # via tox
 polib==1.1.1
     # via edx-i18n-tools
-py==1.10.0
+py==1.11.0
     # via tox
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via packaging
 pytz==2021.3
     # via django
-pyyaml==5.4.1
+pyyaml==6.0
     # via edx-i18n-tools
 requests==2.26.0
     # via coveralls
@@ -68,5 +68,5 @@ tox-battery==0.6.1
     # via -r requirements/travis.in
 urllib3==1.26.7
     # via requests
-virtualenv==20.8.1
+virtualenv==20.10.0
     # via tox

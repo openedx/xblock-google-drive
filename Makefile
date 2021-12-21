@@ -71,7 +71,7 @@ extract_translations: ## extract strings to be translated, outputting .po files
 	# Extract Python and Django template strings
 	mkdir -p locale/en/LC_MESSAGES/
 	rm -f locale/en/LC_MESSAGES/{django,text}.po
-	django-admin makemessages -l en -v1 -d django
+	django-admin makemessages -l en -v1 -d django --ignore="env_pypy/*"
 	mv locale/en/LC_MESSAGES/django.po locale/en/LC_MESSAGES/text.po
 
 compile_translations: ## compile translation files, outputting .mo files for each supported language

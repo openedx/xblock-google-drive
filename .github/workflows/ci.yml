@@ -19,11 +19,12 @@ jobs:
       - name: Set up test environment
         run: |
           sudo apt-get install xvfb
-          wget https://github.com/mozilla/geckodriver/releases/download/v0.25.0/geckodriver-v0.25.0-linux64.tar.gz
+          wget https://github.com/mozilla/geckodriver/releases/download/v0.15.0/geckodriver-v0.15.0-linux64.tar.gz
           mkdir geckodriver
-          tar -xzf geckodriver-v0.25.0-linux64.tar.gz -C geckodriver
+          tar -xzf geckodriver-v0.15.0-linux64.tar.gz -C geckodriver
           export PATH=$PATH:$(pwd)/geckodriver
-          export BOKCHOY_HEADLESS=true
+          export BOTO_CONFIG=/dev/null
+
       - name: Install Requirements
         run: |
           pip install -r requirements/django.txt

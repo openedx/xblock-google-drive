@@ -16,9 +16,10 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      run: |
-        sudo apt-get install xvfb
-        export BOTO_CONFIG=/dev/null
+      - name: Set up test environment
+        run: |
+          sudo apt-get install xvfb
+          export BOTO_CONFIG=/dev/null
 
       - name: Install Requirements
         run: |

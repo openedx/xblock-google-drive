@@ -19,7 +19,7 @@ jobs:
       - name: Set up test environment
         run: |
           sudo apt-get install xvfb
-          wget https://github.com/mozilla/geckodriver/releases/download/v0.15.0/geckodriver-v0.15.0-linux64.tar.gz
+          uses: browser-actions/setup-geckodriver@latest
           mkdir geckodriver
           tar -xzf geckodriver-v0.15.0-linux64.tar.gz -C geckodriver
           export PATH=$PATH:$(pwd)/geckodriver

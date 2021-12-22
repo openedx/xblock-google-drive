@@ -16,6 +16,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      - uses: browser-actions/setup-geckodriver@latest
+
       - name: Set up test environment
         run: |
           sudo apt-get install xvfb

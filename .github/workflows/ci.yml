@@ -16,14 +16,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Set up test environment
-        run: |
-          sudo apt-get install xvfb
-          uses: browser-actions/setup-geckodriver@latest
-          mkdir geckodriver
-          tar -xzf geckodriver-v0.15.0-linux64.tar.gz -C geckodriver
-          export PATH=$PATH:$(pwd)/geckodriver
-          export BOTO_CONFIG=/dev/null
+      run: |
+        sudo apt-get install xvfb
+        export BOTO_CONFIG=/dev/null
 
       - name: Install Requirements
         run: |

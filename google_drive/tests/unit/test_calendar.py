@@ -11,7 +11,7 @@ import ddt
 from django.utils.html import escape
 from django.utils.translation import override as override_language
 from mock import Mock
-from nose.tools import assert_equals, assert_in
+from nose.tools import assert_equal, assert_in
 from workbench.runtime import WorkbenchRuntime
 from xblock.runtime import DictKeyValueStore, KvsFieldData
 
@@ -103,10 +103,8 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         else:
             _block, student_fragment, studio_fragment = self._render_calendar_block()
 
-        src_url = 'https://www.google.com/calendar/embed?mode=Month&src={id}&showCalendars=0&hl={lang}'.format(
-            id=DEFAULT_CALENDAR_ID,
-            lang=expected_lang,
-        )
+        src_url = (f'https://www.google.com/calendar/embed?mode=Month&src'
+                   f'={DEFAULT_CALENDAR_ID}&showCalendars=0&hl={expected_lang}')
 
         assert_in('<div class="google-calendar-xblock-wrapper">', student_fragment.content)
         assert_in(escape(src_url), student_fragment.content)
@@ -124,16 +122,16 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         body = json.dumps(TEST_SUBMIT_DATA)
         res = block.handle('studio_submit', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equals(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
+        assert_equal(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
 
-        assert_equals(block.display_name, TEST_SUBMIT_DATA['display_name'])
-        assert_equals(block.calendar_id, TEST_SUBMIT_DATA['calendar_id'])
-        assert_equals(block.default_view, TEST_SUBMIT_DATA['default_view'])
+        assert_equal(block.display_name, TEST_SUBMIT_DATA['display_name'])
+        assert_equal(block.calendar_id, TEST_SUBMIT_DATA['calendar_id'])
+        assert_equal(block.default_view, TEST_SUBMIT_DATA['default_view'])
 
         body = json.dumps('')
         res = block.handle('studio_submit', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equals(json.loads(res.body.decode('utf8')), RESULT_ERROR)
+        assert_equal(json.loads(res.body.decode('utf8')), RESULT_ERROR)
 
     def test_calendar_publish_event(self):  # pylint: disable=no-self-use
         """ Test event publishing in GoogleCalendarBlock"""
@@ -142,9 +140,9 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         body = json.dumps(TEST_COMPLETE_PUBLISH_DATA)
         res = block.handle('publish_event', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equals(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
+        assert_equal(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
 
         body = json.dumps(TEST_INCOMPLETE_PUBLISH_DATA)
         res = block.handle('publish_event', make_request(body))
 
-        assert_equals(json.loads(res.body.decode('utf8')), RESULT_MISSING_EVENT_TYPE)
+        assert_equal(json.loads(res.body.decode('utf8')), RESULT_MISSING_EVENT_TYPE)

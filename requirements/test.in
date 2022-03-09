@@ -1,7 +1,7 @@
 # Requirements for test runs.
 -c constraints.txt
 
--r dev.txt
+-r dev.in
 
 bok-choy
 ddt
@@ -10,4 +10,4 @@ nose
 pytest
 pytest-cov
 pytest-django
--e git+https://github.com/edx/xblock-sdk.git#egg=xblock-sdk
+xblock-sdk

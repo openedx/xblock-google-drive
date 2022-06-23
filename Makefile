@@ -32,8 +32,19 @@ coverage: clean ## generate and view HTML coverage report
 	pytest --cov-report html
 	$(BROWSER) htmlcov/index.html
 
-upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	pip install -q pip-tools
+COMMON_CONSTRAINTS_TXT=requirements/common_constraints.txt
+.PHONY: $(COMMON_CONSTRAINTS_TXT)
+$(COMMON_CONSTRAINTS_TXT):
+	wget -O "$(@)" https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt || touch "$(@)"
+
+upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
+upgrade: $(COMMON_CONSTRAINTS_TXT)
+	## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+	pip install -qr requirements/pip-tools.txt
+	pip-compile --upgrade --rebuild --allow-unsafe -o requirements/pip.txt requirements/pip.in
+	pip-compile --upgrade --rebuild -o requirements/pip-tools.txt requirements/pip-tools.in
+	pip install -qr requirements/pip.txt
+	pip install -qr requirements/pip-tools.txt
 	pip-compile --upgrade -o requirements/dev.txt requirements/base.in requirements/dev.in requirements/quality.in requirements/test.in requirements/travis.in
 	pip-compile --upgrade -o requirements/quality.txt requirements/base.in requirements/quality.in requirements/test.in
 	pip-compile --upgrade -o requirements/test.txt requirements/base.in requirements/test.in

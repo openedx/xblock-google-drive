@@ -35,7 +35,7 @@ setup(
         'xblock-utils',
     ],
     dependency_links=[
-        'http://github.com/edx-solutions/xblock-utils/tarball/master#egg=xblock-utils',
+        'http://github.com/openedx/xblock-utils/tarball/master#egg=xblock-utils',
     ],
     entry_points={
         'xblock.v1': [

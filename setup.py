@@ -1,6 +1,7 @@
 """Setup for my_google_drive XBlock."""
 
 from __future__ import absolute_import
+
 import os
 
 from setuptools import setup
@@ -43,5 +44,5 @@ setup(
             'google-calendar = google_drive:GoogleCalendarBlock'
         ]
     },
-    package_data=package_data("google_drive", ["static", "templates", "public"]),
+    package_data=package_data("google_drive", ["static", "templates", "public", "translations"]),
 )

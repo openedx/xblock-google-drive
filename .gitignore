@@ -24,3 +24,8 @@ htmlcov/
 .project
 .pycharm_helpers/
 .pydevproject
+.DS_Store
+
+# Build and dist related files
+build/
+dist/

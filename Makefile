@@ -14,6 +14,13 @@ endef
 export BROWSER_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
+WORKING_DIR := google_drive
+JS_TARGET := $(WORKING_DIR)/public/js/translations
+EXTRACT_DIR := $(WORKING_DIR)/conf/locale/en/LC_MESSAGES
+EXTRACTED_DJANGO_PARTIAL := $(EXTRACT_DIR)/django-partial.po
+EXTRACTED_DJANGOJS_PARTIAL := $(EXTRACT_DIR)/djangojs-partial.po
+EXTRACTED_DJANGO := $(EXTRACT_DIR)/django.po
+
 help: ## display this help message
 	@echo "Please use \`make <target>' where <target> is one of"
 	@perl -nle'print $& if m{^[a-zA-Z_-]+:.*?## .*$$}' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
@@ -78,16 +85,18 @@ validate: quality test validate_translations ## run tests and quality checks
 
 ## Localization targets
 extract_translations: ## extract strings to be translated, outputting .po files
-	rm -rf docs/_build
-
-	# Extract Python and Django template strings
-	mkdir -p locale/en/LC_MESSAGES/
-	rm -f locale/en/LC_MESSAGES/{django,text}.po
-	django-admin makemessages -l en -v1 -d django
-	mv locale/en/LC_MESSAGES/django.po locale/en/LC_MESSAGES/text.po
+	cd $(WORKING_DIR) && i18n_tool extract
+	mv $(EXTRACTED_DJANGO_PARTIAL) $(EXTRACTED_DJANGO)
+	# Safely concatenate djangojs if it exists
+	( test -f $(EXTRACTED_DJANGOJS_PARTIAL) && \
+	  msgcat $(EXTRACTED_DJANGO) $(EXTRACTED_DJANGOJS_PARTIAL) -o $(EXTRACTED_DJANGO) \
+	) || ! test -f $(EXTRACTED_DJANGOJS_PARTIAL)
+	rm -rf $(EXTRACTED_DJANGOJS_PARTIAL)
+	sed -i'' -e 's/nplurals=INTEGER/nplurals=2/' $(EXTRACTED_DJANGO)
+	sed -i'' -e 's/plural=EXPRESSION/plural=\(n != 1\)/' $(EXTRACTED_DJANGO)
 
 compile_translations: ## compile translation files, outputting .mo files for each supported language
-	i18n_tool generate
+	cd $(WORKING_DIR) && i18n_tool generate
 	make clean
 
 detect_changed_source_translations: ## Determines if the source translation files are up-to-date, otherwise exit with a non-zero code.

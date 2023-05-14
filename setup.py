@@ -44,5 +44,5 @@ setup(
             'google-calendar = google_drive:GoogleCalendarBlock'
         ]
     },
-    package_data=package_data("google_drive", ["static", "templates", "public", "translations"]),
+    package_data=package_data("google_drive", ["static", "templates", "public", "translations", "conf"]),
 )

@@ -101,10 +101,11 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
         fragment = Fragment()
         # Need to access protected members of fields to get their default value
         default_name = self.fields['display_name']._default  # pylint: disable=protected-access,unsubscriptable-object
-        fragment.add_content(RESOURCE_LOADER.render_template(DOCUMENT_EDIT_TEMPLATE, {
-            'self': self,
-            'defaultName': default_name,
-        }))
+        fragment.add_content(RESOURCE_LOADER.render_django_template(
+            DOCUMENT_EDIT_TEMPLATE,
+            context={'self': self, 'defaultName': default_name},
+            i18n_service=self.runtime.service(self, 'i18n'),
+        ))
         fragment.add_javascript(RESOURCE_LOADER.load_unicode('public/js/google_docs_edit.js'))
         fragment.add_css(RESOURCE_LOADER.load_unicode('public/css/google_edit.css'))
 

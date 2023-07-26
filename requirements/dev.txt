@@ -20,16 +20,14 @@ binaryornot==0.4.4
     # via cookiecutter
 bok-choy==2.0.2
     # via -r requirements/test.in
-boto3==1.28.10
+boto3==1.28.11
     # via fs-s3fs
-botocore==1.31.10
+botocore==1.31.11
     # via
     #   boto3
     #   s3transfer
 build==0.10.0
     # via pip-tools
-cachetools==5.3.1
-    # via tox
 caniusepython3==7.3.0
     # via -r requirements/quality.in
 certifi==2023.7.22
@@ -38,7 +36,6 @@ chardet==5.1.0
     # via
     #   binaryornot
     #   diff-cover
-    #   tox
 charset-normalizer==3.2.0
     # via requests
 click==8.1.6
@@ -52,8 +49,6 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.5.0
     # via edx-lint
-colorama==0.4.6
-    # via tox
 cookiecutter==2.2.3
     # via xblock-sdk
 coverage[toml]==6.5.0
@@ -153,7 +148,6 @@ packaging==23.1
     # via
     #   build
     #   caniusepython3
-    #   pyproject-api
     #   pytest
     #   tox
 path==16.7.1
@@ -165,7 +159,6 @@ pip-tools==7.1.0
 platformdirs==3.9.1
     # via
     #   pylint
-    #   tox
     #   virtualenv
 pluggy==1.2.0
     # via
@@ -174,13 +167,15 @@ pluggy==1.2.0
     #   tox
 polib==1.2.0
     # via edx-i18n-tools
+py==1.11.0
+    # via tox
 pycodestyle==2.10.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
 pygments==2.15.1
     # via diff-cover
-pylint==2.17.4
+pylint==2.17.5
     # via
     #   edx-lint
     #   pylint-celery
@@ -198,8 +193,6 @@ pypng==0.20220715.0
     # via
     #   -r requirements/dev.in
     #   xblock-sdk
-pyproject-api==1.5.3
-    # via tox
 pyproject-hooks==1.0.0
     # via build
 pytest==7.4.0
@@ -253,6 +246,7 @@ six==1.16.0
     #   fs
     #   fs-s3fs
     #   python-dateutil
+    #   tox
     #   transifex-client
 smmap==5.0.0
     # via gitdb
@@ -270,14 +264,14 @@ tomli==2.0.1
     #   coverage
     #   pip-tools
     #   pylint
-    #   pyproject-api
     #   pyproject-hooks
     #   pytest
     #   tox
 tomlkit==0.11.8
     # via pylint
-tox==4.6.4
+tox==3.28.0
     # via
+    #   -c requirements/common_constraints.txt
     #   -r requirements/travis.in
     #   tox-battery
 tox-battery==0.6.1

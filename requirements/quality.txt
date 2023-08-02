@@ -20,9 +20,9 @@ binaryornot==0.4.4
     # via cookiecutter
 bok-choy==2.0.2
     # via -r requirements/test.in
-boto3==1.28.11
+boto3==1.28.15
     # via fs-s3fs
-botocore==1.31.11
+botocore==1.31.15
     # via
     #   boto3
     #   s3transfer
@@ -57,8 +57,6 @@ ddt==1.6.0
     # via -r requirements/test.in
 diff-cover==7.7.0
     # via -r requirements/dev.in
-dill==0.3.7
-    # via pylint
 distlib==0.3.7
     # via caniusepython3
 django==3.2.20
@@ -138,13 +136,13 @@ pbr==5.11.1
     # via stevedore
 pip-tools==7.1.0
     # via -r requirements/dev.in
-platformdirs==3.9.1
+platformdirs==3.10.0
     # via pylint
 pluggy==1.2.0
     # via
     #   diff-cover
     #   pytest
-pycodestyle==2.10.0
+pycodestyle==2.11.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
@@ -152,6 +150,7 @@ pygments==2.15.1
     # via diff-cover
 pylint==2.17.5
     # via
+    #   -c requirements/constraints.txt
     #   edx-lint
     #   pylint-celery
     #   pylint-django
@@ -235,7 +234,6 @@ tomli==2.0.1
     #   build
     #   coverage
     #   pip-tools
-    #   pylint
     #   pyproject-hooks
     #   pytest
 tomlkit==0.11.8

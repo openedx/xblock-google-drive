@@ -14,9 +14,9 @@ binaryornot==0.4.4
     # via cookiecutter
 bok-choy==2.0.2
     # via -r requirements/test.in
-boto3==1.28.15
+boto3==1.28.18
     # via fs-s3fs
-botocore==1.31.15
+botocore==1.31.18
     # via
     #   boto3
     #   s3transfer
@@ -24,7 +24,7 @@ build==0.10.0
     # via pip-tools
 certifi==2023.7.22
     # via requests
-chardet==5.1.0
+chardet==5.2.0
     # via
     #   binaryornot
     #   diff-cover
@@ -102,7 +102,7 @@ packaging==23.1
     # via
     #   build
     #   pytest
-pip-tools==7.1.0
+pip-tools==7.2.0
     # via -r requirements/dev.in
 pluggy==1.2.0
     # via
@@ -185,7 +185,7 @@ urllib3==1.26.16
     #   requests
     #   selenium
     #   transifex-client
-web-fragments==2.0.0
+web-fragments==2.1.0
     # via
     #   xblock
     #   xblock-sdk
@@ -201,7 +201,7 @@ xblock[django]==1.6.2
     #   -r requirements/base.in
     #   xblock-sdk
     #   xblock-utils
-xblock-sdk==0.6.0
+xblock-sdk==0.7.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/test.in

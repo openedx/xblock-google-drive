@@ -10,7 +10,7 @@ arrow==1.2.3
     # via cookiecutter
 asgiref==3.7.2
     # via django
-astroid==2.15.6
+astroid==2.9.3
     # via
     #   pylint
     #   pylint-celery
@@ -20,9 +20,9 @@ binaryornot==0.4.4
     # via cookiecutter
 bok-choy==2.0.2
     # via -r requirements/test.in
-boto3==1.28.15
+boto3==1.28.18
     # via fs-s3fs
-botocore==1.31.15
+botocore==1.31.18
     # via
     #   boto3
     #   s3transfer
@@ -32,7 +32,7 @@ caniusepython3==7.3.0
     # via -r requirements/quality.in
 certifi==2023.7.22
     # via requests
-chardet==5.1.0
+chardet==5.2.0
     # via
     #   binaryornot
     #   diff-cover
@@ -119,7 +119,7 @@ markupsafe==2.1.3
     #   jinja2
     #   mako
     #   xblock
-mccabe==0.7.0
+mccabe==0.6.1
     # via pylint
 mock==5.1.0
     # via -r requirements/test.in
@@ -134,7 +134,7 @@ packaging==23.1
     #   pytest
 pbr==5.11.1
     # via stevedore
-pip-tools==7.1.0
+pip-tools==7.2.0
     # via -r requirements/dev.in
 platformdirs==3.10.0
     # via pylint
@@ -148,7 +148,7 @@ pydocstyle==6.3.0
     # via -r requirements/quality.in
 pygments==2.15.1
     # via diff-cover
-pylint==2.17.5
+pylint==2.12.2
     # via
     #   -c requirements/constraints.txt
     #   edx-lint
@@ -229,6 +229,8 @@ stevedore==5.1.0
     # via code-annotations
 text-unidecode==1.3
     # via python-slugify
+toml==0.10.2
+    # via pylint
 tomli==2.0.1
     # via
     #   build
@@ -236,8 +238,6 @@ tomli==2.0.1
     #   pip-tools
     #   pyproject-hooks
     #   pytest
-tomlkit==0.11.8
-    # via pylint
 transifex-client==0.14.4
     # via -r requirements/dev.in
 typing-extensions==4.7.1
@@ -251,7 +251,7 @@ urllib3==1.26.16
     #   requests
     #   selenium
     #   transifex-client
-web-fragments==2.0.0
+web-fragments==2.1.0
     # via
     #   xblock
     #   xblock-sdk
@@ -262,14 +262,14 @@ webob==1.8.7
     #   xblock-sdk
 wheel==0.41.0
     # via pip-tools
-wrapt==1.15.0
+wrapt==1.13.3
     # via astroid
 xblock[django]==1.6.2
     # via
     #   -r requirements/base.in
     #   xblock-sdk
     #   xblock-utils
-xblock-sdk==0.6.0
+xblock-sdk==0.7.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/test.in

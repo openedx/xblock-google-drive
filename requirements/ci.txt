@@ -23,7 +23,7 @@ django==3.2.20
     #   edx-i18n-tools
 docopt==0.6.2
     # via coveralls
-edx-i18n-tools==1.0.0
+edx-i18n-tools==1.1.0
     # via -r requirements/ci.in
 filelock==3.12.2
     # via

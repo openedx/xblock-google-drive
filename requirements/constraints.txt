@@ -14,3 +14,5 @@
 
 # Use latest Django LTS version
 Django<3.3.0
+
+pylint==2.12.2

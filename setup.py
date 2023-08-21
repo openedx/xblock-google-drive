@@ -27,6 +27,7 @@ setup(
     name='xblock-google-drive',
     version='0.4.0',
     description='An XBlock which allows embedding of Google documents and calendar within an edX course',
+    url='https://github.com/openedx/xblock-google-drive',
     packages=[
         'google_drive',
     ],

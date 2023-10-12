@@ -10,8 +10,12 @@ from django import utils
 from xblock.core import XBlock
 from xblock.fields import Integer, Scope, String
 from web_fragments.fragment import Fragment
-from xblockutils.publish_event import PublishEventMixin
-from xblockutils.resources import ResourceLoader
+try:
+    from xblock.utils.publish_event import PublishEventMixin
+    from xblock.utils.resources import ResourceLoader
+except ModuleNotFoundError:  # For backward compatibility with releases older than Quince.
+    from xblockutils.publish_event import PublishEventMixin
+    from xblockutils.resources import ResourceLoader
 
 LOG = logging.getLogger(__name__)
 RESOURCE_LOADER = ResourceLoader(__name__)

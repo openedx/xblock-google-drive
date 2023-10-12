@@ -2,7 +2,5 @@
 -c constraints.txt
 
 Django                    # Web application framework
-mako                      # Used by xblock-utils.resources, but not declared as a requirement for it
 requests
 XBlock[django]            # Courseware component architecture
-xblock-utils

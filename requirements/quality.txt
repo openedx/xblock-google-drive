@@ -6,7 +6,7 @@
 #
 appdirs==1.4.4
     # via fs
-arrow==1.2.3
+arrow==1.3.0
     # via cookiecutter
 asgiref==3.7.2
     # via django
@@ -18,15 +18,13 @@ backports-functools-lru-cache==1.6.6
     # via caniusepython3
 binaryornot==0.4.4
     # via cookiecutter
-bok-choy==2.0.2
-    # via -r requirements/test.in
-boto3==1.28.18
+boto3==1.28.67
     # via fs-s3fs
-botocore==1.31.18
+botocore==1.31.67
     # via
     #   boto3
     #   s3transfer
-build==0.10.0
+build==1.0.3
     # via pip-tools
 caniusepython3==7.3.0
     # via -r requirements/quality.in
@@ -36,9 +34,9 @@ chardet==5.2.0
     # via
     #   binaryornot
     #   diff-cover
-charset-normalizer==3.2.0
+charset-normalizer==3.3.0
     # via requests
-click==8.1.6
+click==8.1.7
     # via
     #   click-log
     #   code-annotations
@@ -49,17 +47,19 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.5.0
     # via edx-lint
-cookiecutter==2.2.3
+cookiecutter==2.4.0
     # via xblock-sdk
-coverage[toml]==7.2.7
-    # via pytest-cov
+coverage[toml]==7.3.2
+    # via
+    #   coverage
+    #   pytest-cov
 ddt==1.6.0
     # via -r requirements/test.in
-diff-cover==7.7.0
+diff-cover==8.0.0
     # via -r requirements/dev.in
 distlib==0.3.7
     # via caniusepython3
-django==3.2.20
+django==3.2.22
     # via
     #   -c requirements/common_constraints.txt
     #   -c requirements/constraints.txt
@@ -68,7 +68,7 @@ django==3.2.20
     #   xblock-sdk
 edx-lint==5.3.4
     # via -r requirements/quality.in
-exceptiongroup==1.1.2
+exceptiongroup==1.1.3
     # via pytest
 fs==2.4.16
     # via
@@ -79,12 +79,14 @@ fs-s3fs==1.1.1
     # via
     #   openedx-django-pyfs
     #   xblock-sdk
-gitdb==4.0.10
+gitdb==4.0.11
     # via gitpython
-gitpython==3.1.32
+gitpython==3.1.40
     # via transifex-client
 idna==3.4
     # via requests
+importlib-metadata==6.8.0
+    # via build
 iniconfig==2.0.0
     # via pytest
 isort==5.12.0
@@ -100,10 +102,8 @@ jmespath==1.0.1
     # via
     #   boto3
     #   botocore
-lazy==1.5
-    # via
-    #   bok-choy
-    #   xblock
+lazy==1.6
+    # via xblock
 lazy-object-proxy==1.9.0
     # via astroid
 lxml==4.9.3
@@ -113,7 +113,10 @@ lxml==4.9.3
 mako==1.2.4
     # via
     #   -r requirements/base.in
+    #   xblock
     #   xblock-utils
+markdown-it-py==3.0.0
+    # via rich
 markupsafe==2.1.3
     # via
     #   jinja2
@@ -121,33 +124,37 @@ markupsafe==2.1.3
     #   xblock
 mccabe==0.6.1
     # via pylint
+mdurl==0.1.2
+    # via markdown-it-py
 mock==5.1.0
     # via -r requirements/test.in
 nose==1.3.7
     # via -r requirements/test.in
 openedx-django-pyfs==3.4.0
     # via xblock
-packaging==23.1
+packaging==23.2
     # via
     #   build
     #   caniusepython3
     #   pytest
 pbr==5.11.1
     # via stevedore
-pip-tools==7.2.0
+pip-tools==7.3.0
     # via -r requirements/dev.in
-platformdirs==3.10.0
+platformdirs==3.11.0
     # via pylint
-pluggy==1.2.0
+pluggy==1.3.0
     # via
     #   diff-cover
     #   pytest
-pycodestyle==2.11.0
+pycodestyle==2.11.1
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pygments==2.15.1
-    # via diff-cover
+pygments==2.16.1
+    # via
+    #   diff-cover
+    #   rich
 pylint==2.12.2
     # via
     #   -c requirements/constraints.txt
@@ -169,7 +176,7 @@ pypng==0.20220715.0
     #   xblock-sdk
 pyproject-hooks==1.0.0
     # via build
-pytest==7.4.0
+pytest==7.4.2
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -188,7 +195,7 @@ python-slugify==4.0.1
     #   code-annotations
     #   cookiecutter
     #   transifex-client
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   django
     #   xblock
@@ -204,12 +211,13 @@ requests==2.31.0
     #   cookiecutter
     #   transifex-client
     #   xblock-sdk
-s3transfer==0.6.1
+rich==13.6.0
+    # via cookiecutter
+s3transfer==0.7.0
     # via boto3
-selenium==3.141.0
-    # via bok-choy
-simplejson==3.19.1
+simplejson==3.19.2
     # via
+    #   xblock
     #   xblock-sdk
     #   xblock-utils
 six==1.16.0
@@ -219,7 +227,7 @@ six==1.16.0
     #   fs-s3fs
     #   python-dateutil
     #   transifex-client
-smmap==5.0.0
+smmap==5.0.1
     # via gitdb
 snowballstemmer==2.2.0
     # via pydocstyle
@@ -240,16 +248,18 @@ tomli==2.0.1
     #   pytest
 transifex-client==0.14.4
     # via -r requirements/dev.in
-typing-extensions==4.7.1
+types-python-dateutil==2.8.19.14
+    # via arrow
+typing-extensions==4.8.0
     # via
     #   asgiref
     #   astroid
     #   pylint
-urllib3==1.26.16
+    #   rich
+urllib3==1.26.18
     # via
     #   botocore
     #   requests
-    #   selenium
     #   transifex-client
 web-fragments==2.1.0
     # via
@@ -260,11 +270,11 @@ webob==1.8.7
     # via
     #   xblock
     #   xblock-sdk
-wheel==0.41.0
+wheel==0.41.2
     # via pip-tools
 wrapt==1.13.3
     # via astroid
-xblock[django]==1.6.2
+xblock[django]==1.8.1
     # via
     #   -r requirements/base.in
     #   xblock-sdk
@@ -273,8 +283,10 @@ xblock-sdk==0.7.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/test.in
-xblock-utils==3.3.0
+xblock-utils==4.0.0
     # via -r requirements/base.in
+zipp==3.17.0
+    # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

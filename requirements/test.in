@@ -3,7 +3,6 @@
 
 -r dev.in
 
-bok-choy
 ddt
 mock
 nose

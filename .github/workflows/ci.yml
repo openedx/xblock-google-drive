@@ -9,6 +9,8 @@ jobs:
         python-version: [ '3.8' ]
         toxenv: [django32, django42, quality]
     steps:
+      - name: Install system requirements
+        run: sudo apt-get install -y gettext
       - uses: actions/checkout@v2
         continue-on-error: true
       - name: Python setup

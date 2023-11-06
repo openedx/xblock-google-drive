@@ -11,8 +11,8 @@ from xblock.core import XBlock
 from xblock.fields import Integer, Scope, String
 from web_fragments.fragment import Fragment
 try:
-    from xblock.utils.publish_event import PublishEventMixin
-    from xblock.utils.resources import ResourceLoader
+    from xblock.utils.publish_event import PublishEventMixin  # pylint: disable=ungrouped-imports
+    from xblock.utils.resources import ResourceLoader  # pylint: disable=ungrouped-imports
 except ModuleNotFoundError:  # For backward compatibility with releases older than Quince.
     from xblockutils.publish_event import PublishEventMixin
     from xblockutils.resources import ResourceLoader

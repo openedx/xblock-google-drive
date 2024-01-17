@@ -1,26 +1,42 @@
-name: CI
-on: [push]
+name: Python CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
 jobs:
-  python-tests:
-    runs-on: ubuntu-latest
+  tests:
+    runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [ ubuntu-20.04 ]
-        python-version: [ '3.8' ]
-        toxenv: [django32, django42, quality]
+        python-version: [3.8]
+        toxenv: [django32, django42, quality, package]
     steps:
-      - name: Install system requirements
+      - name: Install translations dependencies
         run: sudo apt-get install -y gettext
-      - uses: actions/checkout@v2
-        continue-on-error: true
-      - name: Python setup
-        uses: actions/setup-python@v2
+
+      - name: checkout repo
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: setup python
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install Requirements
-        run: |
-          pip install -r requirements/ci.txt
+      - name: Install Dependencies
+        run: pip install -r requirements/ci.txt
 
       - name: Run Tests
         env:

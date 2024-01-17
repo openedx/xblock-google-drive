@@ -52,10 +52,9 @@ upgrade: $(COMMON_CONSTRAINTS_TXT)
 	pip-compile --upgrade --rebuild -o requirements/pip-tools.txt requirements/pip-tools.in
 	pip install -qr requirements/pip.txt
 	pip install -qr requirements/pip-tools.txt
-	pip-compile --upgrade -o requirements/dev.txt requirements/base.in requirements/dev.in requirements/quality.in requirements/test.in requirements/travis.in
+	pip-compile --upgrade -o requirements/dev.txt requirements/base.in requirements/dev.in requirements/quality.in requirements/test.in
 	pip-compile --upgrade -o requirements/quality.txt requirements/base.in requirements/quality.in requirements/test.in
 	pip-compile --upgrade -o requirements/test.txt requirements/base.in requirements/test.in
-	pip-compile --upgrade -o requirements/travis.txt requirements/travis.in
 	pip-compile --upgrade -o requirements/ci.txt requirements/ci.in
 	# Let tox control the Django version for tests
 	grep -e "^django==" requirements/test.txt > requirements/django.txt

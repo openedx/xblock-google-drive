@@ -1,6 +1,0 @@
-# Requirements for running tests in Travis
--c constraints.txt
-
-coveralls                 # Code coverage reporting
-tox                       # Virtualenv management for tests
-edx-i18n-tools            # Manage translation files, needed both for Travis and development

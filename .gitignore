@@ -1,21 +1,42 @@
-var/
-xblock_google_drive.egg-info
-*.log
-*.pyc
-*~
-venv/*
+*.py[cod]
+__pycache__
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+env
+venv
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
 
 # Unit test / coverage reports
 .cache/
-.pytest_cache/
 .coverage
 .coverage.*
+.pytest_cache
 .tox
 coverage.xml
 htmlcov/
+diff-cover.html
+pii_report
 
 # Translations
-*.pot
+*.mo
 
 # IDEs and text editors
 *~
@@ -24,8 +45,26 @@ htmlcov/
 .project
 .pycharm_helpers/
 .pydevproject
-.DS_Store
 
-# Build and dist related files
-build/
-dist/
+# The Silver Searcher
+.agignore
+
+# OS X artifacts
+*.DS_Store
+
+# Logging
+log/
+logs/
+chromedriver.log
+ghostdriver.log
+
+# Complexity
+output/*.html
+output/*/index.html
+
+# Sphinx
+docs/_build
+
+# Cookiecutter
+output/
+dj-package/

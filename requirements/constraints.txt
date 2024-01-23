@@ -11,8 +11,4 @@
 -c common_constraints.txt
 
 # TODO: Many pinned dependencies should be unpinned and/or moved to this constraints file.
-
-# Use latest Django LTS version
-Django<3.3.0
-
 pylint==2.12.2

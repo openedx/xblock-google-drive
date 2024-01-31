@@ -1,4 +1,4 @@
-.PHONY: build_dummy_translations clean compile_translations coverage detect_changed_source_translations docs dummy_translations extract_translations help pull_translations push_translations quality requirements selfcheck test test-all upgrade validate validate_translations
+.PHONY: build_dummy_translations clean compile_translations coverage detect_changed_source_translations docs dummy_translations extract_translations help quality requirements selfcheck test test-all upgrade validate validate_translations
 
 .DEFAULT_GOAL := help
 
@@ -100,13 +100,6 @@ compile_translations: ## compile translation files, outputting .mo files for eac
 
 detect_changed_source_translations: ## Determines if the source translation files are up-to-date, otherwise exit with a non-zero code.
 	i18n_tool changed
-
-pull_translations: ## pull translations from Transifex
-	i18n_tool transifex pull
-	make compile_translations
-
-push_translations: extract_translations ## push source translation files (.po) to Transifex
-	i18n_tool transifex push
 
 dummy_translations: ## generate dummy translation (.po) files
 	i18n_tool dummy

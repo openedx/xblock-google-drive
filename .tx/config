@@ -1,8 +1,0 @@
-[main]
-host = https://www.transifex.com
-
-[xblocks.xblock-google-drive]
-source_file = google_drive/translations/en/LC_MESSAGES/text.po
-file_filter = google_drive/translations/<lang>/LC_MESSAGES/text.po
-source_lang = en
-type = PO

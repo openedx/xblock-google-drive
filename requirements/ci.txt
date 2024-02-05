@@ -8,7 +8,7 @@ asgiref==3.7.2
     # via django
 cachetools==5.3.2
     # via tox
-certifi==2023.11.17
+certifi==2024.2.2
     # via requests
 chardet==5.2.0
     # via tox
@@ -42,9 +42,9 @@ packaging==23.2
     # via
     #   pyproject-api
     #   tox
-path==16.9.0
+path==16.10.0
     # via edx-i18n-tools
-platformdirs==4.1.0
+platformdirs==4.2.0
     # via
     #   tox
     #   virtualenv
@@ -54,7 +54,7 @@ polib==1.2.0
     # via edx-i18n-tools
 pyproject-api==1.6.1
     # via tox
-pytz==2023.3.post1
+pytz==2024.1
     # via django
 pyyaml==6.0.1
     # via edx-i18n-tools
@@ -70,7 +70,7 @@ tox==4.12.1
     # via -r requirements/ci.in
 typing-extensions==4.9.0
     # via asgiref
-urllib3==2.1.0
+urllib3==2.2.0
     # via requests
 virtualenv==20.25.0
     # via tox

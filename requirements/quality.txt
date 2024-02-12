@@ -18,9 +18,9 @@ backports-functools-lru-cache==2.0.0
     # via caniusepython3
 binaryornot==0.4.4
     # via cookiecutter
-boto3==1.34.34
+boto3==1.34.39
     # via fs-s3fs
-botocore==1.34.34
+botocore==1.34.39
     # via
     #   boto3
     #   s3transfer
@@ -59,7 +59,7 @@ diff-cover==8.0.3
     # via -r requirements/dev.in
 distlib==0.3.8
     # via caniusepython3
-django==3.2.23
+django==3.2.24
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.in

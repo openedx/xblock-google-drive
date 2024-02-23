@@ -115,8 +115,8 @@ setup(
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.11',
         'Framework :: Django',
-        'Framework :: Django :: 3.2',
         'Framework :: Django :: 4.2',
     ],
     url='https://github.com/openedx/xblock-google-drive',

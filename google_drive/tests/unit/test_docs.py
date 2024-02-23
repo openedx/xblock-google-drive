@@ -76,7 +76,7 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         ids = generate_scope_ids(runtime, 'google_document')
         return GoogleDocumentBlock(runtime, db_model, scope_ids=ids)
 
-    def test_document_template_content(self):  # pylint: disable=no-self-use
+    def test_document_template_content(self):
         """ Test content of GoogleDocumentBlock's rendered views """
         block = TestGoogleDocumentBlock.make_document_block()
         block.usage_id = Mock()
@@ -93,7 +93,7 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         assert_in(USER_INPUTS_WRAPPER, studio_fragment.content)
         assert_in(BUTTONS_WRAPPER, studio_fragment.content)
 
-    def test_studio_document_submit(self):  # pylint: disable=no-self-use
+    def test_studio_document_submit(self):
         """ Test studio submission of GoogleDocumentBlock """
         block = TestGoogleDocumentBlock.make_document_block()
 
@@ -110,7 +110,7 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         res = block.handle('studio_submit', make_request(body))
         assert_equal(json.loads(res.body.decode('utf8')), RESULT_ERROR)
 
-    def test_check_document_url(self):  # pylint: disable=no-self-use
+    def test_check_document_url(self):
         """ Test verification of the provided Google Document URL"""
         block = TestGoogleDocumentBlock.make_document_block()
 
@@ -134,7 +134,7 @@ class TestGoogleDocumentBlock(unittest.TestCase):
 
         assert_equal(json.loads(res.body.decode('utf8')), STATUS_CODE_400)
 
-    def test_document_publish_event(self):  # pylint: disable=no-self-use
+    def test_document_publish_event(self):
         """ Test event publishing in GoogleDocumentBlock"""
         block = TestGoogleDocumentBlock.make_document_block()
 

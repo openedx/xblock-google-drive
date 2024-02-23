@@ -85,7 +85,7 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         ids = generate_scope_ids(runtime, 'google_calendar')
         return GoogleCalendarBlock(runtime, db_model, scope_ids=ids)
 
-    def _render_calendar_block(self):  # pylint: disable=no-self-use
+    def _render_calendar_block(self):
         block = TestGoogleCalendarBlock.make_calendar_block()
         block.usage_id = Mock()
         student_fragment = block.render('student_view', Mock())
@@ -115,7 +115,7 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         assert_in(USER_INPUTS_WRAPPER, studio_fragment.content)
         assert_in(BUTTONS_WRAPPER, studio_fragment.content)
 
-    def test_calendar_document_submit(self):  # pylint: disable=no-self-use
+    def test_calendar_document_submit(self):
         """ Test studio submission of GoogleCalendarBlock """
         block = TestGoogleCalendarBlock.make_calendar_block()
 
@@ -133,7 +133,7 @@ class TestGoogleCalendarBlock(unittest.TestCase):
         # pylint: disable=no-value-for-parameter
         assert_equal(json.loads(res.body.decode('utf8')), RESULT_ERROR)
 
-    def test_calendar_publish_event(self):  # pylint: disable=no-self-use
+    def test_calendar_publish_event(self):
         """ Test event publishing in GoogleCalendarBlock"""
         block = TestGoogleCalendarBlock.make_calendar_block()
 

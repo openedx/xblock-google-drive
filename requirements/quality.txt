@@ -16,15 +16,17 @@ astroid==2.9.3
     #   pylint-celery
 backports-functools-lru-cache==2.0.0
     # via caniusepython3
+backports-zoneinfo==0.2.1
+    # via django
 binaryornot==0.4.4
     # via cookiecutter
-boto3==1.34.49
+boto3==1.34.54
     # via fs-s3fs
-botocore==1.34.49
+botocore==1.34.54
     # via
     #   boto3
     #   s3transfer
-build==1.0.3
+build==1.1.1
     # via pip-tools
 caniusepython3==7.3.0
     # via -r requirements/quality.in
@@ -51,13 +53,13 @@ cookiecutter==2.6.0
     # via xblock-sdk
 coverage[toml]==7.4.3
     # via pytest-cov
-ddt==1.7.1
+ddt==1.7.2
     # via -r requirements/test.in
 diff-cover==8.0.3
     # via -r requirements/dev.in
 distlib==0.3.8
     # via caniusepython3
-django==3.2.24
+django==4.2.10
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
@@ -106,7 +108,7 @@ lazy==1.6
     # via xblock
 lazy-object-proxy==1.10.0
     # via astroid
-lxml==5.1.0
+lxml==4.9.4
     # via
     #   edx-i18n-tools
     #   xblock
@@ -180,7 +182,7 @@ pyproject-hooks==1.0.0
     # via
     #   build
     #   pip-tools
-pytest==8.0.2
+pytest==8.1.0
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -189,7 +191,7 @@ pytest-cov==4.1.0
     # via -r requirements/test.in
 pytest-django==4.8.0
     # via -r requirements/test.in
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   arrow
     #   botocore
@@ -200,9 +202,7 @@ python-slugify==4.0.1
     #   cookiecutter
     #   transifex-client
 pytz==2024.1
-    # via
-    #   django
-    #   xblock
+    # via xblock
 pyyaml==6.0.1
     # via
     #   code-annotations
@@ -216,7 +216,7 @@ requests==2.31.0
     #   cookiecutter
     #   transifex-client
     #   xblock-sdk
-rich==13.7.0
+rich==13.7.1
     # via cookiecutter
 s3transfer==0.10.0
     # via boto3
@@ -277,11 +277,11 @@ wheel==0.42.0
     # via pip-tools
 wrapt==1.13.3
     # via astroid
-xblock[django]==1.10.0
+xblock[django]==2.0.0
     # via
     #   -r requirements/base.in
     #   xblock-sdk
-xblock-sdk==0.7.0
+xblock-sdk==0.8.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/test.in

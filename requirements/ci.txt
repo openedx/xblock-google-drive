@@ -6,7 +6,9 @@
 #
 asgiref==3.7.2
     # via django
-cachetools==5.3.2
+backports-zoneinfo==0.2.1
+    # via django
+cachetools==5.3.3
     # via tox
 certifi==2024.2.2
     # via requests
@@ -22,7 +24,7 @@ coveralls==3.3.1
     # via -r requirements/ci.in
 distlib==0.3.8
     # via virtualenv
-django==3.2.24
+django==4.2.11
     # via
     #   -c requirements/common_constraints.txt
     #   edx-i18n-tools
@@ -38,7 +40,7 @@ idna==3.6
     # via requests
 lxml==5.1.0
     # via edx-i18n-tools
-packaging==23.2
+packaging==24.0
     # via
     #   pyproject-api
     #   tox
@@ -54,8 +56,6 @@ polib==1.2.0
     # via edx-i18n-tools
 pyproject-api==1.6.1
     # via tox
-pytz==2024.1
-    # via django
 pyyaml==6.0.1
     # via edx-i18n-tools
 requests==2.31.0
@@ -66,7 +66,7 @@ tomli==2.0.1
     # via
     #   pyproject-api
     #   tox
-tox==4.13.0
+tox==4.14.1
     # via -r requirements/ci.in
 typing-extensions==4.10.0
     # via asgiref

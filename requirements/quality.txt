@@ -79,13 +79,9 @@ fs-s3fs==1.1.1
     # via
     #   openedx-django-pyfs
     #   xblock-sdk
-gitdb==4.0.11
-    # via gitpython
-gitpython==3.1.42
-    # via transifex-client
 idna==3.6
     # via requests
-importlib-metadata==7.0.1
+importlib-metadata==7.0.2
     # via build
 iniconfig==2.0.0
     # via pytest
@@ -198,7 +194,6 @@ python-slugify==4.0.1
     # via
     #   code-annotations
     #   cookiecutter
-    #   transifex-client
 pytz==2024.1
     # via
     #   django
@@ -214,7 +209,6 @@ requests==2.31.0
     #   -r requirements/base.in
     #   caniusepython3
     #   cookiecutter
-    #   transifex-client
     #   xblock-sdk
 rich==13.7.0
     # via cookiecutter
@@ -230,9 +224,6 @@ six==1.16.0
     #   fs
     #   fs-s3fs
     #   python-dateutil
-    #   transifex-client
-smmap==5.0.1
-    # via gitdb
 snowballstemmer==2.2.0
     # via pydocstyle
 sqlparse==0.4.4
@@ -250,8 +241,6 @@ tomli==2.0.1
     #   pip-tools
     #   pyproject-hooks
     #   pytest
-transifex-client==0.14.4
-    # via -r requirements/dev.in
 types-python-dateutil==2.8.19.20240106
     # via arrow
 typing-extensions==4.10.0
@@ -264,7 +253,6 @@ urllib3==1.26.18
     # via
     #   botocore
     #   requests
-    #   transifex-client
 web-fragments==2.1.0
     # via
     #   xblock

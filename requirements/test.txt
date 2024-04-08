@@ -146,9 +146,7 @@ python-dateutil==2.9.0.post0
     #   botocore
     #   xblock
 python-slugify==4.0.1
-    # via
-    #   cookiecutter
-    #   transifex-client
+    # via cookiecutter
 pytz==2024.1
     # via xblock
 pyyaml==6.0.1
@@ -160,7 +158,6 @@ requests==2.31.0
     # via
     #   -r requirements/base.in
     #   cookiecutter
-    #   transifex-client
     #   xblock-sdk
 rich==13.7.1
     # via cookiecutter
@@ -175,9 +172,6 @@ six==1.16.0
     #   fs
     #   fs-s3fs
     #   python-dateutil
-    #   transifex-client
-smmap==5.0.1
-    # via gitdb
 sqlparse==0.4.4
     # via django
 text-unidecode==1.3

@@ -8,7 +8,6 @@ import json
 import unittest
 
 from mock import Mock
-from nose.tools import assert_equal, assert_in
 from workbench.runtime import WorkbenchRuntime
 from xblock.runtime import DictKeyValueStore, KvsFieldData
 
@@ -83,15 +82,15 @@ class TestGoogleDocumentBlock(unittest.TestCase):
 
         student_fragment = block.render('student_view', Mock())
         # pylint: disable=no-value-for-parameter
-        assert_in('<div class="google-docs-xblock-wrapper"', student_fragment.content)
-        assert_in('Google Document', student_fragment.content)
-        assert_in(DEFAULT_EMBED_CODE, student_fragment.content)
+        assert '<div class="google-docs-xblock-wrapper"' in student_fragment.content
+        assert 'Google Document' in student_fragment.content
+        assert DEFAULT_EMBED_CODE in student_fragment.content
 
         studio_fragment = block.render('studio_view', Mock())
-        assert_in(STUDIO_EDIT_WRAPPER, studio_fragment.content)
-        assert_in(VALIDATION_WRAPPER, studio_fragment.content)
-        assert_in(USER_INPUTS_WRAPPER, studio_fragment.content)
-        assert_in(BUTTONS_WRAPPER, studio_fragment.content)
+        assert STUDIO_EDIT_WRAPPER in studio_fragment.content
+        assert VALIDATION_WRAPPER in studio_fragment.content
+        assert USER_INPUTS_WRAPPER in studio_fragment.content
+        assert BUTTONS_WRAPPER in studio_fragment.content
 
     def test_studio_document_submit(self):
         """ Test studio submission of GoogleDocumentBlock """
@@ -100,15 +99,15 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         body = json.dumps(TEST_SUBMIT_DATA)
         res = block.handle('studio_submit', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equal(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
+        assert json.loads(res.body.decode('utf8')) == RESULT_SUCCESS
 
-        assert_equal(block.display_name, TEST_SUBMIT_DATA['display_name'])
-        assert_equal(block.embed_code, TEST_SUBMIT_DATA['embed_code'])
-        assert_equal(block.alt_text, TEST_SUBMIT_DATA['alt_text'])
+        assert block.display_name == TEST_SUBMIT_DATA['display_name']
+        assert block.embed_code == TEST_SUBMIT_DATA['embed_code']
+        assert block.alt_text == TEST_SUBMIT_DATA['alt_text']
 
         body = json.dumps('')
         res = block.handle('studio_submit', make_request(body))
-        assert_equal(json.loads(res.body.decode('utf8')), RESULT_ERROR)
+        assert json.loads(res.body.decode('utf8')) == RESULT_ERROR
 
     def test_check_document_url(self):
         """ Test verification of the provided Google Document URL"""
@@ -117,22 +116,22 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         data = json.dumps(TEST_VALIDATE_URL_DATA)
         res = block.handle('check_url', make_request(data))
         # pylint: disable=no-value-for-parameter
-        assert_equal(json.loads(res.body.decode('utf8')), STATUS_CODE_200)
+        assert json.loads(res.body.decode('utf8')) == STATUS_CODE_200
 
         data = json.dumps(TEST_VALIDATE_UNDEFINED_DATA)
         res = block.handle('check_url', make_request(data))
 
-        assert_equal(json.loads(res.body.decode('utf8')), STATUS_CODE_400)
+        assert json.loads(res.body.decode('utf8')) == STATUS_CODE_400
 
         data = json.dumps(TEST_VALIDATE_NONEXISTENT_URL_DATA)
         res = block.handle('check_url', make_request(data))
 
-        assert_equal(json.loads(res.body.decode('utf8')), STATUS_CODE_404)
+        assert json.loads(res.body.decode('utf8')) == STATUS_CODE_404
 
         data = json.dumps({})
         res = block.handle('check_url', make_request(data))
 
-        assert_equal(json.loads(res.body.decode('utf8')), STATUS_CODE_400)
+        assert json.loads(res.body.decode('utf8')) == STATUS_CODE_400
 
     def test_document_publish_event(self):
         """ Test event publishing in GoogleDocumentBlock"""
@@ -141,14 +140,14 @@ class TestGoogleDocumentBlock(unittest.TestCase):
         body = json.dumps(TEST_COMPLETE_PUBLISH_DOCUMENT_DATA)
         res = block.handle('publish_event', make_request(body))
         # pylint: disable=no-value-for-parameter
-        assert_equal(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
+        assert json.loads(res.body.decode('utf8')) == RESULT_SUCCESS
 
         body = json.dumps(TEST_COMPLETE_PUBLISH_IMAGE_DATA)
         res = block.handle('publish_event', make_request(body))
 
-        assert_equal(json.loads(res.body.decode('utf8')), RESULT_SUCCESS)
+        assert json.loads(res.body.decode('utf8')) == RESULT_SUCCESS
 
         body = json.dumps(TEST_INCOMPLETE_PUBLISH_DATA)
         res = block.handle('publish_event', make_request(body))
 
-        assert_equal(json.loads(res.body.decode('utf8')), RESULT_MISSING_EVENT_TYPE)
+        assert json.loads(res.body.decode('utf8')) == RESULT_MISSING_EVENT_TYPE

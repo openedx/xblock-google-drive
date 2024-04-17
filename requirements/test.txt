@@ -16,9 +16,9 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   django
 binaryornot==0.4.4
     # via cookiecutter
-boto3==1.34.79
+boto3==1.34.85
     # via fs-s3fs
-botocore==1.34.79
+botocore==1.34.85
     # via
     #   boto3
     #   s3transfer
@@ -42,7 +42,7 @@ coverage[toml]==7.4.4
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
-diff-cover==8.0.3
+diff-cover==9.0.0
     # via -r requirements/dev.in
     # via
     #   -c requirements/common_constraints.txt
@@ -50,7 +50,7 @@ diff-cover==8.0.3
     #   edx-i18n-tools
     #   openedx-django-pyfs
     #   xblock-sdk
-edx-i18n-tools==1.3.0
+edx-i18n-tools==1.5.0
     # via -r requirements/test.in
 exceptiongroup==1.2.0
     # via pytest
@@ -63,7 +63,7 @@ fs-s3fs==1.1.1
     # via
     #   openedx-django-pyfs
     #   xblock-sdk
-idna==3.6
+idna==3.7
     # via requests
 importlib-metadata==6.11.0
     # via
@@ -86,7 +86,7 @@ lxml==4.9.4
     #   edx-i18n-tools
     #   xblock
     #   xblock-sdk
-mako==1.3.2
+mako==1.3.3
     # via xblock
 markdown-it-py==3.0.0
     # via rich
@@ -99,15 +99,13 @@ mdurl==0.1.2
     # via markdown-it-py
 mock==5.1.0
     # via -r requirements/test.in
-nose==1.3.7
-    # via -r requirements/test.in
 openedx-django-pyfs==3.6.0
     # via xblock
 packaging==24.0
     # via
     #   build
     #   pytest
-path==16.13.0
+path==16.14.0
     # via edx-i18n-tools
 pip-tools==7.4.1
     # via -r requirements/dev.in
@@ -170,7 +168,7 @@ six==1.16.0
     #   fs
     #   fs-s3fs
     #   python-dateutil
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via django
 text-unidecode==1.3
     # via python-slugify

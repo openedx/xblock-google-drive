@@ -142,7 +142,7 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
 
     # suffix argument is specified for xblocks, but we are not using herein
     @XBlock.json_handler
-    def check_url(self, data, suffix=''):  # pylint: disable=unused-argument,no-self-use
+    def check_url(self, data, suffix=''):  # pylint: disable=unused-argument
         """
         Checks that the given document url is accessible, and therefore assumed to be valid
         """
@@ -155,7 +155,7 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
             }
 
         try:
-            url_response = requests.head(test_url)
+            url_response = requests.head(test_url)  # pylint: disable=missing-timeout
         # Catch wide range of request exceptions
         except requests.exceptions.RequestException as ex:
             LOG.debug("Unable to connect to %s - %s", test_url, six.text_type(ex))

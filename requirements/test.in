@@ -5,7 +5,6 @@
 
 ddt
 mock
-nose
 pytest
 pytest-cov
 pytest-django

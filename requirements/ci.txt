@@ -52,7 +52,7 @@ platformdirs==4.2.0
     # via
     #   tox
     #   virtualenv
-pluggy==1.4.0
+pluggy==1.5.0
     # via tox
 polib==1.2.0
     # via edx-i18n-tools
@@ -74,5 +74,5 @@ typing-extensions==4.11.0
     # via asgiref
 urllib3==2.2.1
     # via requests
-virtualenv==20.25.2
+virtualenv==20.25.3
     # via tox

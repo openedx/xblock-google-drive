@@ -22,9 +22,9 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   django
 binaryornot==0.4.4
     # via cookiecutter
-boto3==1.34.88
+boto3==1.34.93
     # via fs-s3fs
-botocore==1.34.88
+botocore==1.34.93
     # via
     #   boto3
     #   s3transfer
@@ -53,7 +53,7 @@ code-annotations==1.8.0
     # via edx-lint
 cookiecutter==2.6.0
     # via xblock-sdk
-coverage[toml]==7.4.4
+coverage[toml]==7.5.0
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
@@ -70,7 +70,7 @@ django==4.2.11
     #   edx-i18n-tools
     #   openedx-django-pyfs
     #   xblock-sdk
-edx-i18n-tools==1.5.0
+edx-i18n-tools==1.6.0
     # via -r requirements/test.in
 edx-lint==5.3.6
     # via -r requirements/quality.in
@@ -108,11 +108,14 @@ jmespath==1.0.1
     #   botocore
 lazy==1.6
     # via xblock
-lxml==4.9.4
+lxml[html-clean]==5.2.1
     # via
     #   edx-i18n-tools
+    #   lxml-html-clean
     #   xblock
     #   xblock-sdk
+lxml-html-clean==0.1.1
+    # via lxml
 mako==1.3.3
     # via xblock
 markdown-it-py==3.0.0
@@ -141,7 +144,7 @@ pbr==6.0.0
     # via stevedore
 pip-tools==7.4.1
     # via -r requirements/dev.in
-platformdirs==4.2.0
+platformdirs==4.2.1
     # via pylint
 pluggy==1.5.0
     # via
@@ -179,7 +182,7 @@ pyproject-hooks==1.0.0
     # via
     #   build
     #   pip-tools
-pytest==8.1.1
+pytest==8.2.0
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -265,11 +268,11 @@ webob==1.8.7
     #   xblock-sdk
 wheel==0.43.0
     # via pip-tools
-xblock[django]==4.0.0
+xblock[django]==4.0.1
     # via
     #   -r requirements/base.in
     #   xblock-sdk
-xblock-sdk==0.10.0
+xblock-sdk==0.11.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/test.in

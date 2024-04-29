@@ -32,7 +32,7 @@ django==4.2.11
     #   edx-i18n-tools
 docopt==0.6.2
     # via coveralls
-edx-i18n-tools==1.5.0
+edx-i18n-tools==1.6.0
     # via -r requirements/ci.in
 filelock==3.13.4
     # via
@@ -40,15 +40,19 @@ filelock==3.13.4
     #   virtualenv
 idna==3.7
     # via requests
-lxml==5.2.1
-    # via edx-i18n-tools
+lxml[html-clean,html_clean]==5.2.1
+    # via
+    #   edx-i18n-tools
+    #   lxml-html-clean
+lxml-html-clean==0.1.1
+    # via lxml
 packaging==24.0
     # via
     #   pyproject-api
     #   tox
 path==16.14.0
     # via edx-i18n-tools
-platformdirs==4.2.0
+platformdirs==4.2.1
     # via
     #   tox
     #   virtualenv
@@ -68,11 +72,11 @@ tomli==2.0.1
     # via
     #   pyproject-api
     #   tox
-tox==4.14.2
+tox==4.15.0
     # via -r requirements/ci.in
 typing-extensions==4.11.0
     # via asgiref
 urllib3==2.2.1
     # via requests
-virtualenv==20.25.3
+virtualenv==20.26.0
     # via tox

@@ -20,9 +20,9 @@ charset-normalizer==3.3.2
     # via requests
 colorama==0.4.6
     # via tox
-coverage[toml]==7.4.4
+coverage[toml]==7.5.1
     # via coveralls
-coveralls==4.0.0
+coveralls==4.0.1
     # via -r requirements/ci.in
 distlib==0.3.8
     # via virtualenv
@@ -40,7 +40,7 @@ filelock==3.14.0
     #   virtualenv
 idna==3.7
     # via requests
-lxml[html-clean,html_clean]==5.2.1
+lxml[html-clean,html_clean]==5.2.2
     # via
     #   edx-i18n-tools
     #   lxml-html-clean
@@ -52,7 +52,7 @@ packaging==24.0
     #   tox
 path==16.14.0
     # via edx-i18n-tools
-platformdirs==4.2.1
+platformdirs==4.2.2
     # via
     #   tox
     #   virtualenv
@@ -79,5 +79,5 @@ typing-extensions==4.11.0
     # via asgiref
 urllib3==2.2.1
     # via requests
-virtualenv==20.26.1
+virtualenv==20.26.2
     # via tox

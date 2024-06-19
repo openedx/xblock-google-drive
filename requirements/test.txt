@@ -12,7 +12,7 @@ asgiref==3.8.1
     # via django
 backports-zoneinfo==0.2.1 ; python_version < "3.9"
     # via
-    #   -c requirements/constraints.txt
+    #   -c constraints.txt
     #   django
 binaryornot==0.4.4
     # via cookiecutter
@@ -41,33 +41,29 @@ cookiecutter==2.6.0
 coverage[toml]==7.5.3
     # via pytest-cov
 ddt==1.7.2
-    # via -r requirements/test.in
+    # via -r test.in
 diff-cover==9.0.0
-    # via -r requirements/dev.in
+    # via -r dev.in
+django==4.2.13
     # via
-    #   -c requirements/common_constraints.txt
-    #   -r requirements/base.in
+    #   -c common_constraints.txt
     #   edx-i18n-tools
-    #   openedx-django-pyfs
     #   xblock-sdk
 edx-i18n-tools==1.6.0
-    # via -r requirements/test.in
+    # via -r test.in
 exceptiongroup==1.2.1
     # via pytest
 fs==2.4.16
     # via
     #   fs-s3fs
-    #   openedx-django-pyfs
     #   xblock
 fs-s3fs==1.1.1
-    # via
-    #   openedx-django-pyfs
-    #   xblock-sdk
+    # via xblock-sdk
 idna==3.7
     # via requests
 importlib-metadata==6.11.0
     # via
-    #   -c requirements/common_constraints.txt
+    #   -c common_constraints.txt
     #   build
 iniconfig==2.0.0
     # via pytest
@@ -79,8 +75,6 @@ jmespath==1.0.1
     # via
     #   boto3
     #   botocore
-lazy==1.6
-    # via xblock
 lxml[html-clean]==5.2.2
     # via
     #   edx-i18n-tools
@@ -101,9 +95,7 @@ markupsafe==2.1.5
 mdurl==0.1.2
     # via markdown-it-py
 mock==5.1.0
-    # via -r requirements/test.in
-openedx-django-pyfs==3.6.0
-    # via xblock
+    # via -r test.in
 packaging==24.1
     # via
     #   build
@@ -111,7 +103,7 @@ packaging==24.1
 path==16.14.0
     # via edx-i18n-tools
 pip-tools==7.4.1
-    # via -r requirements/dev.in
+    # via -r dev.in
 pluggy==1.5.0
     # via
     #   diff-cover
@@ -124,7 +116,7 @@ pygments==2.18.0
     #   rich
 pypng==0.20220715.0
     # via
-    #   -r requirements/dev.in
+    #   -r dev.in
     #   xblock-sdk
 pyproject-hooks==1.1.0
     # via
@@ -132,13 +124,13 @@ pyproject-hooks==1.1.0
     #   pip-tools
 pytest==8.2.2
     # via
-    #   -r requirements/test.in
+    #   -r test.in
     #   pytest-cov
     #   pytest-django
 pytest-cov==5.0.0
-    # via -r requirements/test.in
+    # via -r test.in
 pytest-django==4.8.0
-    # via -r requirements/test.in
+    # via -r test.in
 python-dateutil==2.9.0.post0
     # via
     #   arrow
@@ -155,7 +147,6 @@ pyyaml==6.0.1
     #   xblock
 requests==2.32.3
     # via
-    #   -r requirements/base.in
     #   cookiecutter
     #   xblock-sdk
 rich==13.7.1
@@ -187,7 +178,7 @@ typing-extensions==4.12.2
     # via
     #   asgiref
     #   rich
-urllib3==1.26.18
+urllib3==1.26.19
     # via
     #   botocore
     #   requests
@@ -201,14 +192,12 @@ webob==1.8.7
     #   xblock-sdk
 wheel==0.43.0
     # via pip-tools
-xblock[django]==4.0.1
-    # via
-    #   -r requirements/base.in
-    #   xblock-sdk
+xblock==4.0.1
+    # via xblock-sdk
 xblock-sdk==0.11.0
     # via
-    #   -r requirements/dev.in
-    #   -r requirements/test.in
+    #   -r dev.in
+    #   -r test.in
 zipp==3.19.2
     # via importlib-metadata
 

@@ -20,7 +20,7 @@ charset-normalizer==3.3.2
     # via requests
 colorama==0.4.6
     # via tox
-coverage[toml]==7.5.3
+coverage[toml]==7.5.4
     # via coveralls
 coveralls==4.0.1
     # via -r requirements/ci.in
@@ -34,7 +34,7 @@ docopt==0.6.2
     # via coveralls
 edx-i18n-tools==1.6.0
     # via -r requirements/ci.in
-filelock==3.15.1
+filelock==3.15.4
     # via
     #   tox
     #   virtualenv
@@ -60,7 +60,7 @@ pluggy==1.5.0
     # via tox
 polib==1.2.0
     # via edx-i18n-tools
-pyproject-api==1.6.1
+pyproject-api==1.7.1
     # via tox
 pyyaml==6.0.1
     # via edx-i18n-tools
@@ -77,7 +77,7 @@ tox==4.15.1
     # via -r requirements/ci.in
 typing-extensions==4.12.2
     # via asgiref
-urllib3==2.2.1
+urllib3==2.2.2
     # via requests
-virtualenv==20.26.2
+virtualenv==20.26.3
     # via tox

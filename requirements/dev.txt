@@ -22,9 +22,9 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   django
 binaryornot==0.4.4
     # via cookiecutter
-boto3==1.34.131
+boto3==1.34.136
     # via fs-s3fs
-botocore==1.34.131
+botocore==1.34.136
     # via
     #   boto3
     #   s3transfer
@@ -57,7 +57,7 @@ coverage[toml]==7.5.4
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
-diff-cover==9.0.0
+diff-cover==9.1.0
     # via -r requirements/dev.in
 dill==0.3.8
     # via pylint
@@ -160,7 +160,7 @@ pygments==2.18.0
     # via
     #   diff-cover
     #   rich
-pylint==3.2.3
+pylint==3.2.5
     # via
     #   edx-lint
     #   pylint-celery
@@ -216,7 +216,7 @@ requests==2.32.3
     #   xblock-sdk
 rich==13.7.1
     # via cookiecutter
-s3transfer==0.10.1
+s3transfer==0.10.2
     # via boto3
 simplejson==3.19.2
     # via

@@ -8,11 +8,11 @@ asgiref==3.8.1
     # via django
 backports-zoneinfo==0.2.1 ; python_version < "3.9"
     # via
-    #   -c requirements/constraints.txt
+    #   -c constraints.txt
     #   django
 cachetools==5.3.3
     # via tox
-certifi==2024.6.2
+certifi==2024.7.4
     # via requests
 chardet==5.2.0
     # via tox
@@ -23,17 +23,17 @@ colorama==0.4.6
 coverage[toml]==7.5.4
     # via coveralls
 coveralls==4.0.1
-    # via -r requirements/ci.in
+    # via -r ci.in
 distlib==0.3.8
     # via virtualenv
 django==4.2.13
     # via
-    #   -c requirements/common_constraints.txt
+    #   -c common_constraints.txt
     #   edx-i18n-tools
 docopt==0.6.2
     # via coveralls
 edx-i18n-tools==1.6.0
-    # via -r requirements/ci.in
+    # via -r ci.in
 filelock==3.15.4
     # via
     #   tox
@@ -74,7 +74,7 @@ tomli==2.0.1
     #   pyproject-api
     #   tox
 tox==4.15.1
-    # via -r requirements/ci.in
+    # via -r ci.in
 typing-extensions==4.12.2
     # via asgiref
 urllib3==2.2.2

@@ -59,6 +59,10 @@ function GoogleDocumentEditBlock(runtime, element) {
                 runtime.notify('save', {state: 'end'})
                 window.location.reload(false);
             } else {
+                runtime.notify('error', {
+                    'title': 'Error saving changes',
+                    'message': response.message,
+                });
                 error_message_div.html('Error: '+response.message);
                 error_message_div.css('display', 'block');
             }

@@ -51,10 +51,18 @@ function GoogleDocumentEditBlock(runtime, element) {
         error_message_div.html();
         error_message_div.css('display', 'none');
         var handlerUrl = runtime.handlerUrl(element, 'studio_submit');
+
+        runtime.notify('save', {state: 'start', message: gettext("Saving")});
+
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
             if (response.result === 'success') {
+                runtime.notify('save', {state: 'end'})
                 window.location.reload(false);
             } else {
+                runtime.notify('error', {
+                    'title': 'Error saving changes',
+                    'message': response.message,
+                });
                 error_message_div.html('Error: '+response.message);
                 error_message_div.css('display', 'block');
             }

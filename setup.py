@@ -114,7 +114,6 @@ setup(
     long_description_content_type='text/x-rst',
     classifiers=[
         'Programming Language :: Python',
-        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
         'Framework :: Django',
@@ -130,5 +129,5 @@ setup(
     },
     packages=['google_drive'],
     package_data=package_data("google_drive", ["static", "templates", "public", "translations", "conf"]),
-    python_requires=">=3.8",
+    python_requires=">=3.11",
 )

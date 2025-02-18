@@ -16,7 +16,7 @@ charset-normalizer==3.4.1
     # via requests
 colorama==0.4.6
     # via tox
-coverage[toml]==7.6.10
+coverage[toml]==7.6.12
     # via coveralls
 coveralls==4.0.1
     # via -r requirements/ci.in
@@ -24,7 +24,7 @@ distlib==0.3.9
     # via virtualenv
 django==4.2.19
     # via
-    #   -c requirements/common_constraints.txt
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   edx-i18n-tools
 docopt==0.6.2
     # via coveralls
@@ -36,7 +36,7 @@ filelock==3.17.0
     #   virtualenv
 idna==3.10
     # via requests
-lxml[html-clean,html_clean]==5.3.0
+lxml[html-clean,html_clean]==5.3.1
     # via
     #   edx-i18n-tools
     #   lxml-html-clean
@@ -68,7 +68,7 @@ tox==4.24.1
     # via -r requirements/ci.in
 urllib3==2.2.3
     # via
-    #   -c requirements/common_constraints.txt
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   requests
-virtualenv==20.29.1
+virtualenv==20.29.2
     # via tox

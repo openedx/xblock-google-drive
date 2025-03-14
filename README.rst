@@ -77,7 +77,7 @@ might also have to prepend ``PYTHONPATH=".:/path/to/xblock"`` to the
 command above. (``/path/to/xblock`` is the path to the xblock-sdk, where
 the workbench resides).
 
-.. _Internationalization Support: http://edx.readthedocs.io/projects/xblock-tutorial/en/latest/edx_platform/edx_lms.html#internationalization-support
+.. _Internationalization Support: https://docs.openedx.org/en/latest/developers/references/developer_guide/internationalization/i18n.html
 .. _Open edX XBlock Tutorial: https://xblock-tutorial.readthedocs.io/en/latest/
 .. _Transifex authentication file: https://openedx.atlassian.net/wiki/display/OpenOPS/Running+Fullstack
 

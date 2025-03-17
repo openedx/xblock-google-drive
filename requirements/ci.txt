@@ -16,7 +16,7 @@ charset-normalizer==3.4.1
     # via requests
 colorama==0.4.6
     # via tox
-coverage[toml]==7.6.12
+coverage[toml]==7.7.0
     # via coveralls
 coveralls==4.0.1
     # via -r requirements/ci.in
@@ -30,7 +30,7 @@ docopt==0.6.2
     # via coveralls
 edx-i18n-tools==1.6.3
     # via -r requirements/ci.in
-filelock==3.17.0
+filelock==3.18.0
     # via
     #   tox
     #   virtualenv

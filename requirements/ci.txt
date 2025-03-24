@@ -16,7 +16,7 @@ charset-normalizer==3.4.1
     # via requests
 colorama==0.4.6
     # via tox
-coverage[toml]==7.7.0
+coverage[toml]==7.7.1
     # via coveralls
 coveralls==4.0.1
     # via -r requirements/ci.in
@@ -28,7 +28,7 @@ django==4.2.20
     #   edx-i18n-tools
 docopt==0.6.2
     # via coveralls
-edx-i18n-tools==1.6.3
+edx-i18n-tools==1.7.0
     # via -r requirements/ci.in
 filelock==3.18.0
     # via
@@ -48,7 +48,7 @@ packaging==24.2
     #   tox
 path==16.16.0
     # via edx-i18n-tools
-platformdirs==4.3.6
+platformdirs==4.3.7
     # via
     #   tox
     #   virtualenv

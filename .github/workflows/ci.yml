@@ -20,7 +20,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         python-version: ['3.11', '3.12']
-        toxenv: [django42, quality, package]
+        toxenv: [django42, django52, quality, package]
     steps:
     - name: Install translations dependencies
       run: sudo apt-get install -y gettext

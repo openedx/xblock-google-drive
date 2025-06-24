@@ -6,7 +6,7 @@
 #
 asgiref==3.8.1
     # via django
-cachetools==6.0.0
+cachetools==6.1.0
     # via tox
 certifi==2025.6.15
     # via requests
@@ -64,7 +64,7 @@ requests==2.32.4
     # via coveralls
 sqlparse==0.5.3
     # via django
-tox==4.26.0
+tox==4.27.0
     # via -r requirements/ci.in
 urllib3==2.2.3
     # via

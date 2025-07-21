@@ -12,15 +12,15 @@ asgiref==3.9.1
     # via django
 binaryornot==0.4.4
     # via cookiecutter
-boto3==1.39.4
+boto3==1.39.9
     # via fs-s3fs
-botocore==1.39.4
+botocore==1.39.9
     # via
     #   boto3
     #   s3transfer
 build==1.2.2.post1
     # via pip-tools
-certifi==2025.7.9
+certifi==2025.7.14
     # via requests
 chardet==5.2.0
     # via
@@ -38,7 +38,7 @@ coverage[toml]==7.9.2
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
-diff-cover==9.5.0
+diff-cover==9.6.0
     # via -r requirements/dev.in
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -152,7 +152,7 @@ requests==2.32.4
     #   xblock-sdk
 rich==14.0.0
     # via cookiecutter
-s3transfer==0.13.0
+s3transfer==0.13.1
     # via boto3
 simplejson==3.20.1
     # via

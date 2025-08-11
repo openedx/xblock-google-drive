@@ -12,11 +12,11 @@ certifi==2025.8.3
     # via requests
 chardet==5.2.0
     # via tox
-charset-normalizer==3.4.2
+charset-normalizer==3.4.3
     # via requests
 colorama==0.4.6
     # via tox
-coverage[toml]==7.10.1
+coverage[toml]==7.10.3
     # via coveralls
 coveralls==4.0.1
     # via -r requirements/ci.in
@@ -68,5 +68,5 @@ tox==4.28.4
     # via -r requirements/ci.in
 urllib3==2.5.0
     # via requests
-virtualenv==20.33.0
+virtualenv==20.33.1
     # via tox

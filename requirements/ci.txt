@@ -22,7 +22,7 @@ coveralls==4.0.1
     # via -r requirements/ci.in
 distlib==0.4.0
     # via virtualenv
-django==4.2.23
+django==4.2.24
     # via
     #   -c https:/raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   edx-i18n-tools
@@ -64,7 +64,7 @@ requests==2.32.5
     # via coveralls
 sqlparse==0.5.3
     # via django
-tox==4.29.0
+tox==4.30.2
     # via -r requirements/ci.in
 urllib3==2.5.0
     # via requests

@@ -18,9 +18,9 @@ backports-functools-lru-cache==2.0.0
     # via caniusepython3
 binaryornot==0.4.4
     # via cookiecutter
-boto3==1.40.30
+boto3==1.40.35
     # via fs-s3fs
-botocore==1.40.30
+botocore==1.40.35
     # via
     #   boto3
     #   s3transfer
@@ -36,7 +36,7 @@ chardet==5.2.0
     #   diff-cover
 charset-normalizer==3.4.3
     # via requests
-click==8.2.1
+click==8.3.0
     # via
     #   click-log
     #   code-annotations
@@ -49,7 +49,7 @@ code-annotations==2.3.0
     # via edx-lint
 cookiecutter==2.6.0
     # via xblock-sdk
-coverage[toml]==7.10.6
+coverage[toml]==7.10.7
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in

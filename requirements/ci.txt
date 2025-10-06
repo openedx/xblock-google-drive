@@ -4,11 +4,11 @@
 #
 #    make upgrade
 #
-asgiref==3.9.2
+asgiref==3.10.0
     # via django
 cachetools==6.2.0
     # via tox
-certifi==2025.8.3
+certifi==2025.10.5
     # via requests
 chardet==5.2.0
     # via tox
@@ -22,9 +22,9 @@ coveralls==4.0.1
     # via -r requirements/ci.in
 distlib==0.4.0
     # via virtualenv
-django==4.2.24
+django==4.2.25
     # via
-    #   -c https:/raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   edx-i18n-tools
 docopt==0.6.2
     # via coveralls
@@ -40,7 +40,7 @@ lxml[html-clean]==6.0.2
     # via
     #   edx-i18n-tools
     #   lxml-html-clean
-lxml-html-clean==0.4.2
+lxml-html-clean==0.4.3
     # via lxml
 packaging==25.0
     # via
@@ -64,7 +64,7 @@ requests==2.32.5
     # via coveralls
 sqlparse==0.5.3
     # via django
-tox==4.30.2
+tox==4.30.3
     # via -r requirements/ci.in
 urllib3==2.5.0
     # via requests

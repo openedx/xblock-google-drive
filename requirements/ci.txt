@@ -6,7 +6,7 @@
 #
 asgiref==3.10.0
     # via django
-cachetools==6.2.0
+cachetools==6.2.1
     # via tox
 certifi==2025.10.5
     # via requests
@@ -30,11 +30,11 @@ docopt==0.6.2
     # via coveralls
 edx-i18n-tools==1.9.0
     # via -r requirements/ci.in
-filelock==3.19.1
+filelock==3.20.0
     # via
     #   tox
     #   virtualenv
-idna==3.10
+idna==3.11
     # via requests
 lxml[html-clean]==6.0.2
     # via
@@ -48,7 +48,7 @@ packaging==25.0
     #   tox
 path==16.16.0
     # via edx-i18n-tools
-platformdirs==4.4.0
+platformdirs==4.5.0
     # via
     #   tox
     #   virtualenv
@@ -56,7 +56,7 @@ pluggy==1.6.0
     # via tox
 polib==1.2.0
     # via edx-i18n-tools
-pyproject-api==1.9.1
+pyproject-api==1.10.0
     # via tox
 pyyaml==6.0.3
     # via edx-i18n-tools
@@ -64,9 +64,9 @@ requests==2.32.5
     # via coveralls
 sqlparse==0.5.3
     # via django
-tox==4.30.3
+tox==4.31.0
     # via -r requirements/ci.in
 urllib3==2.5.0
     # via requests
-virtualenv==20.34.0
+virtualenv==20.35.3
     # via tox

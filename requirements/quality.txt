@@ -18,9 +18,9 @@ backports-functools-lru-cache==2.0.0
     # via caniusepython3
 binaryornot==0.4.4
     # via cookiecutter
-boto3==1.42.30
+boto3==1.42.34
     # via fs-s3fs
-botocore==1.42.30
+botocore==1.42.34
     # via
     #   boto3
     #   s3transfer
@@ -49,13 +49,13 @@ code-annotations==2.3.0
     # via edx-lint
 cookiecutter==2.6.0
     # via xblock-sdk
-coverage[toml]==7.13.1
+coverage[toml]==7.13.2
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
 diff-cover==10.2.0
     # via -r requirements/dev.in
-dill==0.4.0
+dill==0.4.1
     # via pylint
 distlib==0.4.0
     # via caniusepython3
@@ -92,7 +92,7 @@ jinja2==3.1.6
     #   code-annotations
     #   cookiecutter
     #   diff-cover
-jmespath==1.0.1
+jmespath==1.1.0
     # via
     #   boto3
     #   botocore
@@ -123,11 +123,12 @@ mock==5.2.0
     # via -r requirements/test.in
 openedx-django-pyfs==3.8.0
     # via xblock
-packaging==25.0
+packaging==26.0
     # via
     #   build
     #   caniusepython3
     #   pytest
+    #   wheel
 path==16.16.0
     # via edx-i18n-tools
 pip-tools==7.5.2
@@ -204,7 +205,7 @@ requests==2.32.5
     #   caniusepython3
     #   cookiecutter
     #   xblock-sdk
-rich==14.2.0
+rich==14.3.1
     # via cookiecutter
 s3transfer==0.16.0
     # via boto3
@@ -242,7 +243,7 @@ webob==1.8.9
     # via
     #   xblock
     #   xblock-sdk
-wheel==0.45.1
+wheel==0.46.3
     # via pip-tools
 xblock[django]==5.3.0
     # via

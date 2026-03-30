@@ -18,19 +18,19 @@ backports-functools-lru-cache==2.0.0
     # via caniusepython3
 binaryornot==0.6.0
     # via cookiecutter
-boto3==1.42.73
+boto3==1.42.78
     # via fs-s3fs
-botocore==1.42.73
+botocore==1.42.78
     # via
     #   boto3
     #   s3transfer
-build==1.4.0
+build==1.4.2
     # via pip-tools
 caniusepython3==7.3.0
     # via -r requirements/quality.in
 certifi==2026.2.25
     # via requests
-chardet==7.2.0
+chardet==7.4.0.post2
     # via diff-cover
 charset-normalizer==3.4.6
     # via requests
@@ -144,7 +144,7 @@ pycodestyle==2.14.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pygments==2.19.2
+pygments==2.20.0
     # via
     #   diff-cover
     #   pytest
@@ -197,7 +197,7 @@ pyyaml==6.0.3
     #   cookiecutter
     #   edx-i18n-tools
     #   xblock
-requests==2.32.5
+requests==2.33.0
     # via
     #   -r requirements/base.in
     #   caniusepython3
@@ -243,11 +243,11 @@ webob==1.8.9
     #   xblock-sdk
 wheel==0.46.3
     # via pip-tools
-xblock[django]==5.3.0
+xblock[django]==6.0.0
     # via
     #   -r requirements/base.in
     #   xblock-sdk
-xblock-sdk==0.13.0
+xblock-sdk==0.14.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/test.in

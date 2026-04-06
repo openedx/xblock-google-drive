@@ -12,9 +12,9 @@ cachetools==7.0.5
     # via tox
 certifi==2026.2.25
     # via requests
-charset-normalizer==3.4.6
+charset-normalizer==3.4.7
     # via requests
-click==8.3.1
+click==8.3.2
     # via typer
 colorama==0.4.6
     # via tox
@@ -72,7 +72,7 @@ python-discovery==1.2.1
     #   virtualenv
 pyyaml==6.0.3
     # via edx-i18n-tools
-requests==2.33.0
+requests==2.33.1
     # via coveralls
 rich==14.3.3
     # via typer
@@ -82,7 +82,7 @@ sqlparse==0.5.5
     # via django
 tomli-w==1.2.0
     # via tox
-tox==4.51.0
+tox==4.52.0
     # via -r requirements/ci.in
 typer==0.24.1
     # via coveralls

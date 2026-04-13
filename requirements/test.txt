@@ -12,17 +12,17 @@ asgiref==3.11.1
     # via django
 binaryornot==0.6.0
     # via cookiecutter
-boto3==1.42.83
+boto3==1.42.88
     # via fs-s3fs
-botocore==1.42.83
+botocore==1.42.88
     # via
     #   boto3
     #   s3transfer
-build==1.4.2
+build==1.4.3
     # via pip-tools
 certifi==2026.2.25
     # via requests
-chardet==7.4.0.post2
+chardet==7.4.1
     # via diff-cover
 charset-normalizer==3.4.7
     # via requests
@@ -69,7 +69,7 @@ jmespath==1.1.0
     #   botocore
 lazy==1.6
     # via xblock
-lxml[html-clean]==6.0.2
+lxml[html-clean]==6.0.4
     # via
     #   edx-i18n-tools
     #   lxml-html-clean
@@ -121,7 +121,7 @@ pyproject-hooks==1.2.0
     # via
     #   build
     #   pip-tools
-pytest==9.0.2
+pytest==9.0.3
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -149,7 +149,7 @@ requests==2.33.1
     #   -r requirements/base.in
     #   cookiecutter
     #   xblock-sdk
-rich==14.3.3
+rich==15.0.0
     # via cookiecutter
 s3transfer==0.16.0
     # via boto3

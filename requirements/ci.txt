@@ -24,20 +24,20 @@ coveralls==4.1.0
     # via -r requirements/ci.in
 distlib==0.4.0
     # via virtualenv
-django==5.2.12
+django==5.2.13
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   edx-i18n-tools
 edx-i18n-tools==2.0.0
     # via -r requirements/ci.in
-filelock==3.25.2
+filelock==3.29.0
     # via
     #   python-discovery
     #   tox
     #   virtualenv
 idna==3.11
     # via requests
-lxml[html-clean]==6.0.2
+lxml[html-clean]==6.1.0
     # via
     #   edx-i18n-tools
     #   lxml-html-clean
@@ -47,13 +47,13 @@ markdown-it-py==4.0.0
     # via rich
 mdurl==0.1.2
     # via markdown-it-py
-packaging==26.0
+packaging==26.1
     # via
     #   pyproject-api
     #   tox
 path==16.16.0
     # via edx-i18n-tools
-platformdirs==4.9.4
+platformdirs==4.9.6
     # via
     #   python-discovery
     #   tox
@@ -66,7 +66,7 @@ pygments==2.20.0
     # via rich
 pyproject-api==1.10.0
     # via tox
-python-discovery==1.2.1
+python-discovery==1.2.2
     # via
     #   tox
     #   virtualenv
@@ -74,7 +74,7 @@ pyyaml==6.0.3
     # via edx-i18n-tools
 requests==2.33.1
     # via coveralls
-rich==14.3.3
+rich==15.0.0
     # via typer
 shellingham==1.5.4
     # via typer
@@ -82,11 +82,11 @@ sqlparse==0.5.5
     # via django
 tomli-w==1.2.0
     # via tox
-tox==4.52.0
+tox==4.53.0
     # via -r requirements/ci.in
 typer==0.24.1
     # via coveralls
 urllib3==2.6.3
     # via requests
-virtualenv==21.2.0
+virtualenv==21.2.4
     # via tox

@@ -8,7 +8,7 @@ annotated-doc==0.0.4
     # via typer
 asgiref==3.11.1
     # via django
-cachetools==7.0.6
+cachetools==7.1.1
     # via tox
 certifi==2026.4.22
     # via requests
@@ -82,11 +82,11 @@ sqlparse==0.5.5
     # via django
 tomli-w==1.2.0
     # via tox
-tox==4.53.0
+tox==4.53.1
     # via -r requirements/ci.in
-typer==0.25.0
+typer==0.25.1
     # via coveralls
 urllib3==2.6.3
     # via requests
-virtualenv==21.2.4
+virtualenv==21.3.0
     # via tox

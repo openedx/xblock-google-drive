@@ -8,13 +8,13 @@ annotated-doc==0.0.4
     # via typer
 asgiref==3.11.1
     # via django
-cachetools==7.1.2
+cachetools==7.1.4
     # via tox
-certifi==2026.4.22
+certifi==2026.5.20
     # via requests
 charset-normalizer==3.4.7
     # via requests
-click==8.4.0
+click==8.4.1
     # via typer
 colorama==0.4.6
     # via tox
@@ -35,13 +35,13 @@ filelock==3.29.0
     #   python-discovery
     #   tox
     #   virtualenv
-idna==3.15
+idna==3.16
     # via requests
-lxml[html-clean]==6.1.0
+lxml[html-clean]==6.1.1
     # via
     #   edx-i18n-tools
     #   lxml-html-clean
-lxml-html-clean==0.4.4
+lxml-html-clean==0.4.5
     # via lxml
 markdown-it-py==4.2.0
     # via rich

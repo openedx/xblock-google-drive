@@ -20,7 +20,7 @@ coverage[toml]==7.14.1
     # via coveralls
 coveralls==4.1.0
     # via -r requirements/ci.in
-distlib==0.4.1
+distlib==0.4.3
     # via virtualenv
 django==5.2.15
     # via
@@ -28,7 +28,7 @@ django==5.2.15
     #   edx-i18n-tools
 edx-i18n-tools==2.0.0
     # via -r requirements/ci.in
-filelock==3.29.1
+filelock==3.29.4
     # via
     #   python-discovery
     #   tox
@@ -64,7 +64,7 @@ pygments==2.20.0
     # via rich
 pyproject-api==1.10.1
     # via tox
-python-discovery==1.4.0
+python-discovery==1.4.2
     # via
     #   tox
     #   virtualenv
@@ -86,5 +86,5 @@ typer==0.26.7
     # via coveralls
 urllib3==2.7.0
     # via requests
-virtualenv==21.4.2
+virtualenv==21.5.0
     # via tox

@@ -18,9 +18,9 @@ backports-functools-lru-cache==2.0.0
     # via caniusepython3
 binaryornot==0.6.0
     # via cookiecutter
-boto3==1.43.29
+boto3==1.43.34
     # via fs-s3fs
-botocore==1.43.29
+botocore==1.43.34
     # via
     #   boto3
     #   s3transfer
@@ -28,7 +28,7 @@ build==1.5.0
     # via pip-tools
 caniusepython3==7.3.0
     # via -r requirements/quality.in
-certifi==2026.5.20
+certifi==2026.6.17
     # via requests
 chardet==7.4.3
     # via diff-cover
@@ -47,7 +47,7 @@ code-annotations==3.0.0
     # via edx-lint
 cookiecutter==2.7.1
     # via xblock-sdk
-coverage[toml]==7.14.1
+coverage[toml]==7.14.2
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
@@ -177,7 +177,7 @@ pyproject-hooks==1.2.0
     # via
     #   build
     #   pip-tools
-pytest==9.1.0
+pytest==9.1.1
     # via
     #   -r requirements/test.in
     #   pytest-cov
@@ -211,7 +211,7 @@ requests==2.34.2
     #   xblock-sdk
 rich==15.0.0
     # via cookiecutter
-s3transfer==0.18.0
+s3transfer==0.19.0
     # via boto3
 simplejson==4.1.1
     # via

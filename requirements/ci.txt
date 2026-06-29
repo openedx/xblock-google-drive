@@ -16,7 +16,7 @@ charset-normalizer==3.4.7
     # via requests
 colorama==0.4.6
     # via tox
-coverage[toml]==7.14.2
+coverage[toml]==7.14.3
     # via coveralls
 coveralls==4.1.0
     # via -r requirements/ci.in
@@ -80,9 +80,9 @@ sqlparse==0.5.5
     # via django
 tomli-w==1.2.0
     # via tox
-tox==4.55.1
+tox==4.56.1
     # via -r requirements/ci.in
-typer==0.26.7
+typer==0.26.8
     # via coveralls
 urllib3==2.7.0
     # via requests

@@ -16,7 +16,7 @@ charset-normalizer==3.4.7
     # via requests
 colorama==0.4.6
     # via tox
-coverage[toml]==7.14.3
+coverage[toml]==7.15.0
     # via coveralls
 coveralls==4.1.0
     # via -r requirements/ci.in
@@ -28,7 +28,7 @@ django==5.2.15
     #   edx-i18n-tools
 edx-i18n-tools==2.0.0
     # via -r requirements/ci.in
-filelock==3.29.4
+filelock==3.29.5
     # via
     #   python-discovery
     #   tox
@@ -64,7 +64,7 @@ pygments==2.20.0
     # via rich
 pyproject-api==1.10.1
     # via tox
-python-discovery==1.4.2
+python-discovery==1.4.3
     # via
     #   tox
     #   virtualenv

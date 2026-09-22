@@ -1,0 +1,160 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm>8.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xblock-google-drive"
+dynamic = ["version"]
+description = "An XBlock which allows embedding of Google documents and calendar within an edX course"
+readme = "README.rst"
+license = "AGPL-3.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.2",
+]
+dependencies = [
+    "Django>=4.2",
+    "requests",
+    "XBlock[django]",
+]
+
+[project.entry-points."xblock.v1"]
+google-document = "google_drive:GoogleDocumentBlock"
+google-calendar = "google_drive:GoogleCalendarBlock"
+
+[project.urls]
+Homepage = "https://github.com/openedx/xblock-google-drive"
+
+[tool.setuptools_scm]
+version_scheme = "only-version"
+local_scheme = "no-local-version"
+# Dummy version number for when .git isn't accessible.
+# This happens, for example, when bind-mounting into a Docker image.
+fallback_version = "0.0.0.dev0"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["google_drive*"]
+exclude = ["*.tests", "*.tests.*"]
+
+[tool.setuptools.package-data]
+google_drive = [
+    "static/**/*",
+    "templates/**/*",
+    "public/**/*",
+    "conf/**/*",
+]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["tests*", "*.tests*", "spec*", "*.spec*"]
+
+[tool.uv]
+package = true
+default-groups = []
+# Conflicts are needed because test and django42 both pin a Django version.
+# To add a new Django version: add a new group (e.g. django60), add it to
+# conflicts, and add a corresponding tox env.
+conflicts = [
+    [{group = "test"}, {group = "django42"}],
+    [{group = "quality"}, {group = "django42"}],
+]
+
+#  DO NOT EDIT constraint-dependencies DIRECTLY.
+#  This list is managed by `edx_lint write_uv_constraints`
+#  and will be overwritten the next time `make upgrade` is run.
+#  - GLOBAL constraints: edit edx_lint/files/common_constraints.txt
+#  - REPO-SPECIFIC constraints: edit [tool.edx_lint].uv_constraints in this file
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+]
+[dependency-groups]
+# Base test dependencies (no Django pin — included by versioned groups)
+test-base = [
+    "ddt",
+    "mock",
+    "pytest",
+    "pytest-cov",
+    "pytest-django",
+    "xblock-sdk",
+    "edx-i18n-tools",
+]
+# Default test env: Django 5.2
+test = [
+    {include-group = "test-base"},
+    "Django>=5.2,<6.0",
+]
+# Legacy Django 4.2 test env
+django42 = [
+    {include-group = "test-base"},
+    "Django>=4.2,<4.3",
+]
+quality = [
+    {include-group = "test"},
+    "caniusepython3",
+    "edx-lint",
+    "isort",
+    "pycodestyle",
+    "pydocstyle",
+]
+# Minimal CI group: just enough to install tox and run uv run tox
+ci = [
+    "tox",
+    "tox-uv>=1",
+]
+dev = [
+    {include-group = "quality"},
+    {include-group = "ci"},
+    "diff-cover",
+    "pypng",
+]
+package = [
+    "build",
+    "twine",
+]
+
+[tool.semantic_release]
+# Version is managed by setuptools-scm via git tags; no version_toml needed.
+build_command = "python -m pip install --upgrade build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+allow_zero_version = true
+major_on_zero = false
+
+[tool.edx_lint]
+# Repo-specific version overrides for uv constraints.
+# Edit this list; DO NOT edit [tool.uv].constraint-dependencies directly.
+uv_constraints = []
+
+[tool.isort]
+indent = "    "
+line_length = 120
+multi_line_output = 3
+known_first_party = ["google_drive"]
+
+[tool.coverage.run]
+branch = true
+source_pkgs = ["google_drive"]
+omit = [
+    "*/tests/*",
+    "*/migrations/*",
+    "*/__pycache__/*",
+    "*/settings.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+
+[tool.coverage.html]
+directory = "htmlcov"

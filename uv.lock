@@ -1959,7 +1959,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 ci = [
     { name = "tox" },
-    { name = "tox-uv" },
+    { name = "tox-uv", specifier = ">=1" },
 ]
 dev = [
     { name = "caniusepython3" },
@@ -1977,7 +1977,7 @@ dev = [
     { name = "pytest-cov" },
     { name = "pytest-django" },
     { name = "tox" },
-    { name = "tox-uv" },
+    { name = "tox-uv", specifier = ">=1" },
     { name = "xblock-sdk" },
 ]
 django42 = [

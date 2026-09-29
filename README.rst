@@ -32,12 +32,12 @@ Workbench installation and settings
 -----------------------------------
 
 Install to the workbench's virtualenv by running the following command
-form the google-drive repo root:
+from the google-drive repo root:
 
 .. code:: bash
 
-    pip install -r requirements/base.in
-    pip install -e .
+    make requirements
+    source .venv/bin/activate
 
 Running the workbench
 ---------------------

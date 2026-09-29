@@ -7,7 +7,7 @@ name = "xblock-google-drive"
 dynamic = ["version"]
 description = "An XBlock which allows embedding of Google documents and calendar within an edX course"
 readme = "README.rst"
-license = "AGPL-3.0"
+license = "AGPL-3.0-only"
 license-files = ["LICENSE"]
 requires-python = ">=3.12"
 classifiers = [
@@ -52,6 +52,7 @@ google_drive = [
 
 [tool.setuptools.exclude-package-data]
 "*" = ["tests*", "*.tests*", "spec*", "*.spec*"]
+google_drive = ["translations"]
 
 [tool.uv]
 package = true

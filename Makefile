@@ -14,7 +14,7 @@ endef
 export BROWSER_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
-WORKING_DIR := google_drive
+WORKING_DIR := src/google_drive
 JS_TARGET := $(WORKING_DIR)/public/js/translations
 EXTRACT_DIR := $(WORKING_DIR)/conf/locale/en/LC_MESSAGES
 EXTRACTED_DJANGO_PARTIAL := $(EXTRACT_DIR)/django-partial.po
@@ -39,40 +39,24 @@ coverage: clean ## generate and view HTML coverage report
 	pytest --cov-report html
 	$(BROWSER) htmlcov/index.html
 
-upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade:
-	## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	pip install -qr requirements/pip-tools.txt
-	pip-compile --upgrade --rebuild --allow-unsafe -o requirements/pip.txt requirements/pip.in
-	pip-compile --upgrade --rebuild -o requirements/pip-tools.txt requirements/pip-tools.in
-	pip install -qr requirements/pip.txt
-	pip install -qr requirements/pip-tools.txt
-	pip-compile --upgrade -o requirements/dev.txt requirements/base.in requirements/dev.in requirements/quality.in requirements/test.in
-	pip-compile --upgrade -o requirements/quality.txt requirements/base.in requirements/quality.in requirements/test.in
-	pip-compile --upgrade -o requirements/test.txt requirements/base.in requirements/test.in
-	pip-compile --upgrade -o requirements/ci.txt requirements/ci.in
-	# Let tox control the Django version for tests
-	grep -e "^django==" requirements/test.txt > requirements/django.txt
-	sed '/^django==/d' requirements/test.txt > requirements/test.tmp
-	mv requirements/test.tmp requirements/test.txt
+upgrade: ## upgrade all dependencies in uv.lock and write edx-lint uv constraints
+	uv run --with edx-lint edx_lint write_uv_constraints pyproject.toml
+	uv lock --upgrade
 
 quality: ## check coding style with pycodestyle and pylint
 	tox -e quality
 
 requirements: ## install development environment requirements
-	pip install -qr requirements/dev.txt --exists-action w
-	pip-sync requirements/dev.txt requirements/private.*
+	uv sync --group dev
 
 test: clean ## run tests in the current virtualenv
 	mkdir -p var
-	pip install -e .
 	pytest
 
 diff_cover: test ## find diff lines that need test coverage
 	diff-cover coverage.xml
 
 test-all: ## run tests on every supported Python/Django combination
-	tox -e quality
 	tox
 
 validate: quality test validate_translations ## run tests and quality checks
@@ -94,10 +78,10 @@ compile_translations: ## compile translation files, outputting .mo files for eac
 	make clean
 
 detect_changed_source_translations: ## Determines if the source translation files are up-to-date, otherwise exit with a non-zero code.
-	i18n_tool changed
+	cd $(WORKING_DIR) && i18n_tool changed
 
 dummy_translations: ## generate dummy translation (.po) files
-	i18n_tool dummy
+	cd $(WORKING_DIR) && i18n_tool dummy
 
 build_dummy_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
 

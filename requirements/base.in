@@ -1,6 +1,0 @@
-# Core requirements for using this application
--c constraints.txt
-
-Django                    # Web application framework
-requests
-XBlock[django]            # Courseware component architecture
